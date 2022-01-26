@@ -1,0 +1,8 @@
+<map id="millisec_timer.h" name="millisec_timer.h">
+<area shape="rect" id="node1" title="Portable millisecond timer." alt="" coords="391,5,503,32"/>
+<area shape="rect" id="node2" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,80,167,121"/>
+<area shape="rect" id="node3" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="191,80,352,121"/>
+<area shape="rect" id="node4" href="$arduino__uno__adc__streaming_8c.html" title="Uses timer to set interval between ADC single conversions that are then sent as stream messages to ho..." alt="" coords="376,80,519,121"/>
+<area shape="rect" id="node5" href="$millisec__timer_8c.html" title=" " alt="" coords="542,87,654,114"/>
+<area shape="rect" id="node6" href="$test__millisec__timer_8c_source.html" title=" " alt="" coords="678,80,827,121"/>
+</map>
