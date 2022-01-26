@@ -1,2 +1,1 @@
-# ascii-serial-com-c
-C-code for ASCII-Serial-Com
+# ASCII Serial Com for the C Language
