@@ -162,6 +162,8 @@ def main():
         "cortex-m3_gcc",
         "cortex-m4_gcc",
         "cortex-m7_gcc",
+        "rv32i_gcc",
+        "rv32ic_gcc",
     ]
     default_targets = [
         "native_gcc",
