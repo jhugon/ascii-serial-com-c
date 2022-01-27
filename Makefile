@@ -48,6 +48,7 @@ ifeq ($(platform),native)
 endif
 include avr/Makefile
 include arm/Makefile
+include riscv/neorv32/Makefile
 
 $(info alllibs is ${alllibs})
 $(info exes is ${exes})
@@ -55,9 +56,10 @@ $(info allobjs is ${allobjs})
 $(info testexes is ${testexes})
 $(info avrfirmware is ${avrfirmware})
 $(info armfirmware is ${armfirmware})
+$(info riscvfirmware is ${riscvfirmware})
 
 .PHONY: all_later
-all_later: $(alllibs) $(exes) $(testexes) $(avrfirmware) $(armfirmware)
+all_later: $(alllibs) $(exes) $(testexes) $(avrfirmware) $(armfirmware) $(riscvfirmware)
 
 $(allobjs): %.o: %.c
 
@@ -84,7 +86,7 @@ $(builddir)/libthrowtheswitch.a: externals/libthrowtheswitch.a | $(builddir)
 	cp $^ $@
 
 .PHONY: install
-install: $(builddir)/libthrowtheswitch.a $(builddir)/libasciiserialcom.a $(outtestexes) $(outexes) $(outavrfirmware) $(outarmfirmware) all
+install: $(builddir)/libthrowtheswitch.a $(builddir)/libasciiserialcom.a $(outtestexes) $(outexes) $(outavrfirmware) $(outarmfirmware) $(outriscvfirmware) all
 
 ######################################
 
@@ -111,6 +113,7 @@ clean:
 	rm -rf $(testexes)
 	rm -rf $(avrfirmware)
 	rm -rf $(armfirmware)
+	rm -rf $(riscvfirmware)
 	rm -rf $(allgcno)
 	rm -rf $(allgcda)
 	#rm -rf $(allgcov)

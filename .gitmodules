@@ -1,3 +1,6 @@
 [submodule "tools/libopencm3"]
 	path = tools/libopencm3
 	url = https://github.com/libopencm3/libopencm3
+[submodule "riscv/neorv32/neorv32"]
+	path = riscv/neorv32/neorv32
+	url = https://github.com/stnolting/neorv32
