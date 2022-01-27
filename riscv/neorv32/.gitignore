@@ -1,1 +1,4 @@
 *.bin
+image_gen
+image_gen.c
+*.vhd

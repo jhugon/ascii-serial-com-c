@@ -1,9 +1,11 @@
 neorv32firmwareelf=riscv/neorv32/neorv32_blink_led.elf
 neorv32firmwarebin=$(neorv32firmwareelf:.elf=.bin)
+neorv32firmwareuploadable=$(neorv32firmwareelf:.elf=_uploadable.bin)
+neorv32firmwareimage=$(neorv32firmwareelf:.elf=_image.vhd)
 
 ifneq (,$(findstring rv32i,$(platform)))
-  riscvfirmware+=$(neorv32firmwareelf) $(neorv32firmwarebin)
-  outriscvfirmware+=$(addprefix $(builddir),$(notdir $(neorv32firmwareelf) $(neorv32firmwarebin)))
+  riscvfirmware+=$(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage)
+  outriscvfirmware+=$(addprefix $(builddir),$(notdir $(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage)))
 endif
 
 neorv32ldscript=riscv/neorv32/neorv32/sw/common/neorv32.ld
@@ -23,3 +25,15 @@ $(neorv32firmwarebin): %.bin: %.elf
 
 $(outriscvfirmware): $(builddir)%: riscv/neorv32/% | $(builddir)
 	cp $^ $@
+
+## generates image for neorv32 (compiled native)
+riscv/neorv32/image_gen.c: riscv/neorv32/neorv32/sw/image_gen/image_gen.c
+	cp $^ $@
+riscv/neorv32/image_gen: riscv/neorv32/image_gen.c
+	g++ -Wall -O -g $^ -o $@
+$(neorv32firmwareuploadable): %_uploadable.bin: %.bin riscv/neorv32/image_gen
+	@set -e
+	riscv/neorv32/image_gen -app_bin $< $@ $(shell basename $(CURDIR))
+$(neorv32firmwareimage): %_image.vhd: %.bin riscv/neorv32/image_gen
+	@set -e
+	riscv/neorv32/image_gen -app_img $< $@ $(shell basename $(CURDIR))
