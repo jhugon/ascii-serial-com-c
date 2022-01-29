@@ -233,6 +233,8 @@ void ascii_serial_com_register_pointers_handle_message(
 #define _serial_tx_buf_is_empty(usart) ((USART_ISR(usart) & USART_ISR_TXE))
 #elif defined(__AVR)
 #define _serial_tx_buf_is_empty(usart) (UCSR0A & (1 << UDRE0))
+#elif defined(NEORV32)
+#define _serial_tx_buf_is_empty(usart) ((NEORV32_UART1.CTRL & (1<<UART_CTRL_TX_FULL)) == 0)
 #else
 #define _serial_tx_buf_is_empty(usart) __builtin_unreachable()
 #endif
@@ -241,6 +243,8 @@ void ascii_serial_com_register_pointers_handle_message(
 // Already defined by libopencm3
 #elif defined(__AVR)
 #define usart_send(reg, _tmp_byte) reg = _tmp_byte
+#elif defined(NEORV32)
+#define usart_send(reg, _tmp_byte) neorv32_uart1_putc(_tmp_byte)
 #else
 #define usart_send(usart, _tmp_byte) __builtin_unreachable()
 #endif
@@ -249,6 +253,8 @@ void ascii_serial_com_register_pointers_handle_message(
 #define _ATOMIC CM_ATOMIC_BLOCK()
 #elif defined(__AVR)
 #define _ATOMIC ATOMIC_BLOCK(ATOMIC_FORCEON)
+#elif defined(NEORV32)
+#define _ATOMIC
 #else
 #define _ATOMIC __builtin_unreachable()
 #endif
