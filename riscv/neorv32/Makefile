@@ -2,10 +2,11 @@ neorv32firmwareelf=riscv/neorv32/neorv32_blink_led.elf riscv/neorv32/neorv32_cha
 neorv32firmwarebin=$(neorv32firmwareelf:.elf=.bin)
 neorv32firmwareuploadable=$(neorv32firmwareelf:.elf=_uploadable.bin)
 neorv32firmwareimage=$(neorv32firmwareelf:.elf=_image.vhd)
+neorv32firmwareasm=$(neorv32firmwareelf:.elf=.asm)
 
 ifneq (,$(findstring rv32i,$(platform)))
-  riscvfirmware+=$(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage)
-  outriscvfirmware+=$(addprefix $(builddir),$(notdir $(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage)))
+  riscvfirmware+=$(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage) $(neorv32firmwareasm)
+  outriscvfirmware+=$(addprefix $(builddir),$(notdir $(neorv32firmwareelf) $(neorv32firmwarebin) $(neorv32firmwareuploadable) $(neorv32firmwareimage) $(neorv32firmwareasm) ))
 endif
 
 neorv32ldscript=riscv/neorv32/neorv32/sw/common/neorv32.ld
@@ -22,6 +23,9 @@ $(neorv32firmwarebin): %.bin: %.elf
 	riscv32-unknown-elf-objcopy -I elf32-little $< -j .data   -O binary data.bin
 	cat text.bin rodata.bin data.bin > $@
 	rm -f text.bin rodata.bin data.bin
+
+$(neorv32firmwareasm): %.asm: %.elf
+	riscv32-unknown-elf-objdump -d -S -z $< > $@
 
 $(outriscvfirmware): $(builddir)%: riscv/neorv32/% | $(builddir)
 	cp $^ $@

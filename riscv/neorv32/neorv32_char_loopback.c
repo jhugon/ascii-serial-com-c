@@ -51,8 +51,12 @@
 #define BAUD_RATE 19200
 /**@}*/
 
+#define UART1_TX_BUFFER_FULL ((NEORV32_UART1.CTRL & (1<<UART_CTRL_TX_FULL)) != 0)
+
 char tmpChar;
+char loopbackChar;
 bool charReceived=false;
+int rx_status;
 
 /**********************************************************************//**
  * Main function; shows an incrementing 8-bit counter on GPIO.output(7:0).
@@ -80,13 +84,17 @@ int main() {
   // say hello
   neorv32_uart0_print("Starting UART1 loopback demo program\n");
 
+  // Assumes uart has a larger than default fifo
   while(1) {
-    if(!charReceived && neorv32_uart1_char_received()) {
-        tmpChar = neorv32_uart1_char_received_get();
-        charReceived = true;
+    if(!charReceived) {
+        rx_status = neorv32_uart1_getc_safe(&tmpChar);
+        if (rx_status == 0) { // successfully rx a char
+            loopbackChar = tmpChar;
+            charReceived = true;
+        }
     }
-    if(charReceived && !neorv32_uart1_tx_busy()) {
-        neorv32_uart1_putc(tmpChar);
+    if(charReceived && !UART1_TX_BUFFER_FULL) {
+        neorv32_uart1_putc(loopbackChar);
         charReceived = false;
     }
   }
