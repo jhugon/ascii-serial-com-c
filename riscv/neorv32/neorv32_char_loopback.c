@@ -40,6 +40,7 @@
  **************************************************************************/
 
 #include <neorv32.h>
+#include <stdbool.h>
 
 
 /**********************************************************************//**
@@ -50,12 +51,8 @@
 #define BAUD_RATE 19200
 /**@}*/
 
-/**********************************************************************//**
- * C function to blink LEDs
- **************************************************************************/
-void blink_led_c(void);
-
-uint8_t iChar;
+char tmpChar;
+bool charReceived=false;
 
 /**********************************************************************//**
  * Main function; shows an incrementing 8-bit counter on GPIO.output(7:0).
@@ -84,13 +81,13 @@ int main() {
   neorv32_uart0_print("Starting UART1 loopback demo program\n");
 
   while(1) {
-    if(!neorv32_uart1_tx_busy()) {
-        neorv32_uart1_putc('0'+iChar);
-        if (iChar >= 9) {
-            iChar = 0;
-        } else {
-            iChar++;
-        }
+    if(!charReceived && neorv32_uart1_char_received()) {
+        tmpChar = neorv32_uart1_char_received_get();
+        charReceived = true;
+    }
+    if(charReceived && !neorv32_uart1_tx_busy()) {
+        neorv32_uart1_putc(tmpChar);
+        charReceived = false;
     }
   }
 
