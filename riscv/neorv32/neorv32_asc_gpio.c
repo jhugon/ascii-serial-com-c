@@ -24,9 +24,9 @@
 // Lower 16 bits of GPIO.OUTPUT_LO are writable to the leds
 // GPIO.INPUT_HI is readable for the switches (bits 15 down to 1)
 
-
 #define BAUD_RATE 19200
-#define UART1_TX_BUFFER_FULL ((NEORV32_UART1.CTRL & (1<<UART_CTRL_TX_FULL)) != 0)
+#define UART1_TX_BUFFER_FULL                                                   \
+  ((NEORV32_UART1.CTRL & (1 << UART_CTRL_TX_FULL)) != 0)
 
 CEXCEPTION_T e;
 uint16_t nExceptions;
@@ -92,25 +92,25 @@ int main() {
   neorv32_uart0_print("Starting UART1 loopback demo program\n");
 
   Try {
-    neorv32_uart1_setup(9600,PARITY_NONE,FLOW_CONTROL_NONE);
+    neorv32_uart1_setup(9600, PARITY_NONE, FLOW_CONTROL_NONE);
 
     SETUP_ASC_DEVICE_W_REGISTER_POINTERS(register_map, register_write_masks,
                                          nRegs);
   }
   Catch(e) { return e; }
 
-  while(1) {
+  while (1) {
     Try {
-        HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART);
-        // Receive bytes into extraInputBuffer
-        rx_status = neorv32_uart1_getc_safe((char *) &tmp_byte);
-        if (rx_status == 0) { // successfully rx a char
-            circular_buffer_push_back_uint8(&extraInputBuffer,tmp_byte);
-        }
+      HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART);
+      // Receive bytes into extraInputBuffer
+      rx_status = neorv32_uart1_getc_safe((char *)&tmp_byte);
+      if (rx_status == 0) { // successfully rx a char
+        circular_buffer_push_back_uint8(&extraInputBuffer, tmp_byte);
+      }
     }
-    Catch(e) { 
-        nExceptions++; 
-        neorv32_uart0_printf("Found: %d exceptions\n",nExceptions);
+    Catch(e) {
+      nExceptions++;
+      neorv32_uart0_printf("Found: %d exceptions\n", nExceptions);
     }
   }
 

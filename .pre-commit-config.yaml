@@ -1,0 +1,27 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+exclude: 'src/externals/.*'
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: check-docstring-first
+    -   id: check-merge-conflict
+#    -   id: detect-aws-credentials
+#    -   id: detect-private-key
+    -   id: mixed-line-ending
+-   repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.1.1
+    hooks:
+    -   id: clang-format
+        args: [-i]
+#    -   id: clang-tidy
+#        args: [--fix-errors, --, -Isrc/]
+#    -   id: oclint
+#    -   id: uncrustify
+#        args: [--replace, --no-backup]
+#    -   id: cppcheck

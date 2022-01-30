@@ -234,7 +234,8 @@ void ascii_serial_com_register_pointers_handle_message(
 #elif defined(__AVR)
 #define _serial_tx_buf_is_empty(usart) (UCSR0A & (1 << UDRE0))
 #elif defined(NEORV32)
-#define _serial_tx_buf_is_empty(usart) ((NEORV32_UART1.CTRL & (1<<UART_CTRL_TX_FULL)) == 0)
+#define _serial_tx_buf_is_empty(usart)                                         \
+  ((NEORV32_UART1.CTRL & (1 << UART_CTRL_TX_FULL)) == 0)
 #else
 #define _serial_tx_buf_is_empty(usart) __builtin_unreachable()
 #endif
