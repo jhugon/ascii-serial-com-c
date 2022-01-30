@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['millisec_5ftimer_5favr_5ftimer0_5fisr_0',['MILLISEC_TIMER_AVR_TIMER0_ISR',['../millisec__timer_8h.html#ac341bcf5d08d0e648e6cfe7e66dcd479',1,'millisec_timer.h']]],
-  ['millisec_5ftimer_5favr_5ftimer0_5fsetup_5f16mhz_1',['millisec_timer_avr_timer0_setup_16MHz',['../millisec__timer_8h.html#ae84f7802ea986dba00e24ceef4533129',1,'millisec_timer.h']]],
-  ['millisec_5ftimer_5fsystick_5fit_2',['MILLISEC_TIMER_SYSTICK_IT',['../millisec__timer_8h.html#a3a55a2de636115855d68bf37da09ea29',1,'millisec_timer.h']]]
+  ['handle_5fasc_5fcomm_5fin_5fpolling_5floop_0',['HANDLE_ASC_COMM_IN_POLLING_LOOP',['../ascii__serial__com__register__pointers_8h.html#a550d7ab67435657f39b6751133cbcdaa',1,'ascii_serial_com_register_pointers.h']]]
 ];
