@@ -73,6 +73,21 @@ ifneq (,$(findstring cortex,$(platform)))
   LDFLAGS+=-Ltools/libopencm3/lib
 endif
 
+ifneq (,$(findstring rv32i,$(platform)))
+  CC=riscv32-unknown-elf-gcc
+  CFLAGS=$(filter-out -Werror,$(GCCFLAGS)) -std=gnu18 -march=$(platform) -mabi=ilp32 -ffunction-sections -fdata-sections -nostartfiles -mno-fdiv -Wl,--gc-sections -lm -lc -lgcc -lc
+  # only needed for c-extension
+  CFLAGS+= -falign-functions=4 -falign-labels=4 -falign-loops=4 -falign-jumps=4
+  # define NEORV32 flag for my header/library use
+  CFLAGS+= -DNEORV32=1
+  ifeq ($(build_type),debug)
+    CFLAGS+=-g -Og
+  else
+    CFLAGS+=-Os -flto -Wstrict-aliasing -fstrict-aliasing
+  endif
+  LDFLAGS+=-Ltools/libopencm3/lib
+endif
+
 ###############################################
 
 LDFLAGS+=$(CFLAGS)

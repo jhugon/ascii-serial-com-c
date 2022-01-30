@@ -116,6 +116,7 @@ def print_FW_size(targets):
     env["PATH"] = exe_path
     avr_fwfiles = []
     cortex_fwfiles = []
+    rv32_fwfiles = []
     for target in sorted(targets):
         for build_type in ["debug", "opt"]:
             target_list = target.split("_")
@@ -135,12 +136,22 @@ def print_FW_size(targets):
                 outfiles = os.listdir(outdir)
                 fwfiles = [os.path.join(outdir, x) for x in outfiles if x[-2:] != ".a"]
                 cortex_fwfiles += fwfiles
-    if len(avr_fwfiles) + len(cortex_fwfiles) == 0:
+            elif "rv32" in platform:
+                CC = target_list[1]
+                outdir = "build/{}_{}_{}".format(platform, CC, build_type)
+                outdir = os.path.abspath(outdir)
+                outfiles = os.listdir(outdir)
+                fwfiles = [os.path.join(outdir, x) for x in outfiles if x[-4:] == ".elf"]
+                rv32_fwfiles += fwfiles
+    if len(avr_fwfiles) + len(cortex_fwfiles) + len(rv32_fwfiles) == 0:
         return
     print("========= Firmware Size ==========")
     cmpltProc = subprocess.run(["avr-size", "-G"] + avr_fwfiles, env=env, text=True,)
     cmpltProc = subprocess.run(
         ["arm-none-eabi-size", "-G"] + cortex_fwfiles, env=env, text=True,
+    )
+    cmpltProc = subprocess.run(
+        ["riscv32-unknown-elf-size", "-G"] + rv32_fwfiles, env=env, text=True,
     )
 
 
@@ -162,6 +173,8 @@ def main():
         "cortex-m3_gcc",
         "cortex-m4_gcc",
         "cortex-m7_gcc",
+        "rv32i_gcc",
+        "rv32ic_gcc",
     ]
     default_targets = [
         "native_gcc",
