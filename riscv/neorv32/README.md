@@ -20,6 +20,8 @@ sub-module. For example:
 
 ## Upload FW with NeoRV32's serial bootloader
 
+**GTKTerm only works for < 4KB, Cutecom works for larger firmware files**
+
 - Open GTKTerm
 - Click Configuration -> Port
 - Set the port to the relevant (USB) one in /dev/tty\*. Baud rate to 19200, 8 bit, 1 stop bit, no parity, and no flow control.
