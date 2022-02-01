@@ -74,12 +74,13 @@ $(function() {
 <li><code>CPU_EXTENSION_RISCV_C =&gt; true</code> if using compressed instructions</li>
 <li><code>CPU_EXTENSION_RISCV_M =&gt; true</code> if you need muliply/divide</li>
 </ul>
-<p >You can have the fw present as ROM in the FPGA design and/or upload it using NeoRV32's serial bootloader.</p>
+<p >You can have the fw present as ROM in the FPGA design or upload it using NeoRV32's serial bootloader.</p>
 <h1><a class="anchor" id="autotoc_md33"></a>
 Write FW into FPGA design ROM</h1>
-<p >Copy the firmware to <code>rtl/core/neorv32_application_image.vhd</code> in the neorv32 sub-module. For example: </p><pre class="fragment">cp build/rv32ic_gcc_opt/neorv32_blink_led_image.vhd riscv/neorv32/neorv32/rtl/core/neorv32_application_image.vhd
+<p >Disable the bootloader, <code>INT_BOOTLOADER_EN = false</code>, and copy the firmware to <code>rtl/core/neorv32_application_image.vhd</code> in the neorv32 sub-module. For example: </p><pre class="fragment">cp build/rv32ic_gcc_opt/neorv32_blink_led_image.vhd riscv/neorv32/neorv32/rtl/core/neorv32_application_image.vhd
 </pre> <h1><a class="anchor" id="autotoc_md34"></a>
 Upload FW with NeoRV32's serial bootloader</h1>
+<p >Makes sure the bootloader is enabled: <code>INT_BOOTLOADER_EN = true</code></p>
 <p ><b>GTKTerm only works for &lt; 4KB, Cutecom works for larger firmware files</b></p>
 <ul>
 <li>Open GTKTerm</li>
