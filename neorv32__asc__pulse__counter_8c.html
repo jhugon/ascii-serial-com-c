@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ASCII Serial Com: riscv/neorv32/neorv32_asc_gpio.c File Reference</title>
+<title>ASCII Serial Com: riscv/neorv32/neorv32_asc_pulse_counter.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">neorv32_asc_gpio.c File Reference</div></div>
+  <div class="headertitle"><div class="title">neorv32_asc_pulse_counter.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -86,10 +86,10 @@ $(function() {
 <code>#include &quot;<a class="el" href="circular__buffer_8h_source.html">circular_buffer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="millisec__timer_8h_source.html">millisec_timer.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for neorv32_asc_gpio.c:</div>
+Include dependency graph for neorv32_asc_pulse_counter.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="neorv32__asc__gpio_8c__incl.png" border="0" usemap="#ariscv_2neorv32_2neorv32__asc__gpio_8c" alt=""/></div>
-<map name="ariscv_2neorv32_2neorv32__asc__gpio_8c" id="ariscv_2neorv32_2neorv32__asc__gpio_8c">
+<div class="center"><img src="neorv32__asc__pulse__counter_8c__incl.png" border="0" usemap="#ariscv_2neorv32_2neorv32__asc__pulse__counter_8c" alt=""/></div>
+<map name="ariscv_2neorv32_2neorv32__asc__pulse__counter_8c" id="ariscv_2neorv32_2neorv32__asc__pulse__counter_8c">
 <area shape="rect" title="Test that ASC can communicate with GPIOs." alt="" coords="229,5,380,47"/>
 <area shape="rect" title=" " alt="" coords="198,333,273,360"/>
 <area shape="rect" title=" " alt="" coords="75,102,153,129"/>
@@ -109,44 +109,44 @@ Include dependency graph for neorv32_asc_gpio.c:</div>
 </map>
 </div>
 </div>
-<p><a href="neorv32__asc__gpio_8c_source.html">Go to the source code of this file.</a></p>
+<p><a href="neorv32__asc__pulse__counter_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad4455691936f92fdd6c37566fc58ba1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>&#160;&#160;&#160;19200</td></tr>
+<tr class="memitem:ad4455691936f92fdd6c37566fc58ba1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>&#160;&#160;&#160;19200</td></tr>
 <tr class="separator:ad4455691936f92fdd6c37566fc58ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5283882cfe7c96b3f934b7a8e4e31af1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#a5283882cfe7c96b3f934b7a8e4e31af1">UART1_TX_BUFFER_FULL</a>&#160;&#160;&#160;  ((NEORV32_UART1.CTRL &amp; (1 &lt;&lt; UART_CTRL_TX_FULL)) != 0)</td></tr>
+<tr class="memitem:a5283882cfe7c96b3f934b7a8e4e31af1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a5283882cfe7c96b3f934b7a8e4e31af1">UART1_TX_BUFFER_FULL</a>&#160;&#160;&#160;  ((NEORV32_UART1.CTRL &amp; (1 &lt;&lt; UART_CTRL_TX_FULL)) != 0)</td></tr>
 <tr class="separator:a5283882cfe7c96b3f934b7a8e4e31af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7930cd270e0e0c002516d16fac65bc61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#a7930cd270e0e0c002516d16fac65bc61">nRegs</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a7930cd270e0e0c002516d16fac65bc61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a7930cd270e0e0c002516d16fac65bc61">nRegs</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:a7930cd270e0e0c002516d16fac65bc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9736e6cfe63dcd353bd71a14ae03e3a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#a9736e6cfe63dcd353bd71a14ae03e3a8">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</a> () uint8_t tmp_byte</td></tr>
+<tr class="memitem:a9736e6cfe63dcd353bd71a14ae03e3a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a9736e6cfe63dcd353bd71a14ae03e3a8">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</a> () uint8_t tmp_byte</td></tr>
 <tr class="separator:a9736e6cfe63dcd353bd71a14ae03e3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aaf11694002c1f107f65b5da91103ace4"><td class="memItemLeft" align="right" valign="top">CEXCEPTION_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#aaf11694002c1f107f65b5da91103ace4">e</a></td></tr>
+<tr class="memitem:aaf11694002c1f107f65b5da91103ace4"><td class="memItemLeft" align="right" valign="top">CEXCEPTION_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#aaf11694002c1f107f65b5da91103ace4">e</a></td></tr>
 <tr class="separator:aaf11694002c1f107f65b5da91103ace4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae357ae65be9b25ba17ccc86ddbf84471"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#ae357ae65be9b25ba17ccc86ddbf84471">nExceptions</a></td></tr>
+<tr class="memitem:ae357ae65be9b25ba17ccc86ddbf84471"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#ae357ae65be9b25ba17ccc86ddbf84471">nExceptions</a></td></tr>
 <tr class="separator:ae357ae65be9b25ba17ccc86ddbf84471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff7ce78116e86a9fa3895ff53dee84c8"><td class="memItemLeft" align="right" valign="top">volatile REGTYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a> [nRegs]</td></tr>
-<tr class="memdesc:aff7ce78116e86a9fa3895ff53dee84c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register Map.  <a href="neorv32__asc__gpio_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">More...</a><br /></td></tr>
+<tr class="memitem:aff7ce78116e86a9fa3895ff53dee84c8"><td class="memItemLeft" align="right" valign="top">volatile REGTYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a> [nRegs]</td></tr>
+<tr class="memdesc:aff7ce78116e86a9fa3895ff53dee84c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register Map.  <a href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">More...</a><br /></td></tr>
 <tr class="separator:aff7ce78116e86a9fa3895ff53dee84c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce5ed9fb99b3661a174ff2db6345b2a"><td class="memItemLeft" align="right" valign="top">REGTYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a> [nRegs]</td></tr>
-<tr class="memdesc:a8ce5ed9fb99b3661a174ff2db6345b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write masks for <a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>.  <a href="neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">More...</a><br /></td></tr>
+<tr class="memitem:a8ce5ed9fb99b3661a174ff2db6345b2a"><td class="memItemLeft" align="right" valign="top">REGTYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a> [nRegs]</td></tr>
+<tr class="memdesc:a8ce5ed9fb99b3661a174ff2db6345b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write masks for <a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>.  <a href="neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">More...</a><br /></td></tr>
 <tr class="separator:a8ce5ed9fb99b3661a174ff2db6345b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3141d5674fc0fc5fabf77a07e021db39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__gpio_8c.html#a3141d5674fc0fc5fabf77a07e021db39">rx_status</a></td></tr>
+<tr class="memitem:a3141d5674fc0fc5fabf77a07e021db39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a3141d5674fc0fc5fabf77a07e021db39">rx_status</a></td></tr>
 <tr class="separator:a3141d5674fc0fc5fabf77a07e021db39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Test that ASC can communicate with GPIOs. </p>
 <p >Register map is documented at <a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a> </p>
 
-<p class="definition">Definition in file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition in file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad4455691936f92fdd6c37566fc58ba1f" name="ad4455691936f92fdd6c37566fc58ba1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4455691936f92fdd6c37566fc58ba1f">&#9670;&nbsp;</a></span>BAUD_RATE</h2>
@@ -160,7 +160,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00027">27</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00027">27</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -171,12 +171,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define nRegs&#160;&#160;&#160;4</td>
+          <td class="memname">#define nRegs&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00034">34</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00034">34</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -192,7 +192,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00028">28</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00028">28</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00074">74</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00080">80</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -249,7 +249,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00031">31</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00031">31</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00032">32</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00032">32</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -285,10 +285,12 @@ Variables</h2></td></tr>
 <div class="line">    &amp;NEORV32_GPIO.OUTPUT_HI,</div>
 <div class="line">    &amp;NEORV32_GPIO.INPUT_LO,</div>
 <div class="line">    &amp;NEORV32_GPIO.INPUT_HI,</div>
+<div class="line">    0x71000000,</div>
+<div class="line">    0x71000001,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Register Map. </p>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Register Map</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -300,11 +302,17 @@ Register Map</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">GPIO input (lower 32 bits)   </td><td class="markdownTableBodyNone">r    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">GPIO input (upper 32 bits)   </td><td class="markdownTableBodyNone">r   </td></tr>
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">GPIO input (upper 32 bits)   </td><td class="markdownTableBodyNone">r    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">Pulse counter count   </td><td class="markdownTableBodyNone">r    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">Pulse counter CSR*   </td><td class="markdownTableBodyNone">r/w   </td></tr>
 </table>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a" title="Write masks for register_map.">register_write_masks</a> </dd></dl>
+<p >Pulse counter CSR:</p>
+<p >Bit 0: enable Bit 1: reset</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a" title="Write masks for register_map.">register_write_masks</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00050">50</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00057">57</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -320,16 +328,13 @@ Register Map</h2>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0xFFFFFFFF,</div>
-<div class="line">    0xFFFFFFFF,</div>
-<div class="line">    0,</div>
-<div class="line">    0,</div>
+<div class="line">    0xFFFFFFFF, 0xFFFFFFFF, 0, 0, 0, 0x3,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Write masks for <a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>. </p>
 <p >These define whether the given register in register_map is writable or not </p>
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00062">62</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00071">71</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>
@@ -345,7 +350,7 @@ Register Map</h2>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="neorv32__asc__gpio_8c_source.html#l00072">72</a> of file <a class="el" href="neorv32__asc__gpio_8c_source.html">neorv32_asc_gpio.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="neorv32__asc__pulse__counter_8c_source.html#l00078">78</a> of file <a class="el" href="neorv32__asc__pulse__counter_8c_source.html">neorv32_asc_pulse_counter.c</a>.</p>
 
 </div>
 </div>

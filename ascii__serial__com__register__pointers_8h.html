@@ -98,7 +98,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ascii__serial__com__register__pointers_8h__dep__incl.png" border="0" usemap="#aascii__serial__com__register__pointers_8hdep" alt=""/></div>
 <map name="aascii__serial__com__register__pointers_8hdep" id="aascii__serial__com__register__pointers_8hdep">
-<area shape="rect" title="ASCII Serial Com Register Pointers." alt="" coords="644,5,813,47"/>
+<area shape="rect" title="ASCII Serial Com Register Pointers." alt="" coords="733,5,903,47"/>
 <area shape="rect" href="stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,102,167,143"/>
 <area shape="rect" href="stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="191,102,352,143"/>
 <area shape="rect" href="ascii__serial__com__register__pointers_8c.html" title=" " alt="" coords="376,102,545,143"/>
@@ -106,7 +106,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="arduino__uno__register__pointers_8c_source.html" title=" " alt="" coords="736,102,900,143"/>
 <area shape="rect" href="arduino__uno__test__device_8c_source.html" title=" " alt="" coords="924,102,1067,143"/>
 <area shape="rect" href="neorv32__asc__gpio_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1091,102,1241,143"/>
-<area shape="rect" href="test__ascii__serial__com__register__pointers_8c_source.html" title=" " alt="" coords="1265,95,1408,151"/>
+<area shape="rect" href="neorv32__asc__pulse__counter_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1265,102,1416,143"/>
+<area shape="rect" href="test__ascii__serial__com__register__pointers_8c_source.html" title=" " alt="" coords="1440,95,1583,151"/>
 </map>
 </div>
 </div>
@@ -135,7 +136,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a6c3f3a4bf9d312cf768ac51b53070cf8">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</a>()</td></tr>
 <tr class="memdesc:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declarations for ascii_serial_com_device and ascii_serial_com_register_pointers.  <a href="ascii__serial__com__register__pointers_8h.html#a6c3f3a4bf9d312cf768ac51b53070cf8">More...</a><br /></td></tr>
 <tr class="separator:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67bdca177b335fe4b6296cea4500552"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#ae67bdca177b335fe4b6296cea4500552">SETUP_ASC_DEVICE_W_REGISTER_POINTERS</a>(<a class="el" href="neorv32__asc__gpio_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>,  <a class="el" href="neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>,  nRegs)</td></tr>
+<tr class="memitem:ae67bdca177b335fe4b6296cea4500552"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#ae67bdca177b335fe4b6296cea4500552">SETUP_ASC_DEVICE_W_REGISTER_POINTERS</a>(<a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>,  <a class="el" href="neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>,  nRegs)</td></tr>
 <tr class="memdesc:ae67bdca177b335fe4b6296cea4500552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup for ascii_serial_com_device and ascii_serial_com_register_pointers.  <a href="ascii__serial__com__register__pointers_8h.html#ae67bdca177b335fe4b6296cea4500552">More...</a><br /></td></tr>
 <tr class="separator:ae67bdca177b335fe4b6296cea4500552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fde3e11ce9e090a6b721dfef60c8216"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a0fde3e11ce9e090a6b721dfef60c8216">_serial_tx_buf_is_empty</a>(usart)&#160;&#160;&#160;((USART_ISR(usart) &amp; USART_ISR_TXE))</td></tr>
@@ -489,13 +490,13 @@ Notes</h2>
           <td class="memname">#define SETUP_ASC_DEVICE_W_REGISTER_POINTERS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="neorv32__asc__gpio_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>, </td>
+          <td class="paramname"><a class="el" href="neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>, </td>
+          <td class="paramname"><a class="el" href="neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
