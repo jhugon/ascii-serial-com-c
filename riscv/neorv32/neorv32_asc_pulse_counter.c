@@ -60,7 +60,7 @@ volatile REGTYPE *register_map[nRegs] = {
     &NEORV32_GPIO.INPUT_LO,
     &NEORV32_GPIO.INPUT_HI,
     0x71000000,
-    0x71000001,
+    0x71000004,
 };
 
 /** \brief Write masks for \ref register_map
