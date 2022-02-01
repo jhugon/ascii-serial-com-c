@@ -1,4 +1,4 @@
-neorv32firmwareelf=riscv/neorv32/neorv32_blink_led.elf riscv/neorv32/neorv32_char_loopback.elf riscv/neorv32/neorv32_asc_gpio.elf
+neorv32firmwareelf=riscv/neorv32/neorv32_blink_led.elf riscv/neorv32/neorv32_char_loopback.elf riscv/neorv32/neorv32_asc_gpio.elf riscv/neorv32/neorv32_asc_pulse_counter.elf
 neorv32firmwarebin=$(neorv32firmwareelf:.elf=.bin)
 neorv32firmwareuploadable=$(neorv32firmwareelf:.elf=_uploadable.bin)
 neorv32firmwareimage=$(neorv32firmwareelf:.elf=_image.vhd)
