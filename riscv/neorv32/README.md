@@ -9,16 +9,18 @@ Check that:
 - `CPU_EXTENSION_RISCV_C => true` if using compressed instructions
 - `CPU_EXTENSION_RISCV_M => true` if you need muliply/divide
 
-You can have the fw present as ROM in the FPGA design and/or upload it using NeoRV32's serial bootloader.
+You can have the fw present as ROM in the FPGA design or upload it using NeoRV32's serial bootloader.
 
 ## Write FW into FPGA design ROM
 
-Copy the firmware to `rtl/core/neorv32_application_image.vhd` in the neorv32
+Disable the bootloader, `INT_BOOTLOADER_EN = false`, and copy the firmware to `rtl/core/neorv32_application_image.vhd` in the neorv32
 sub-module. For example:
 
     cp build/rv32ic_gcc_opt/neorv32_blink_led_image.vhd riscv/neorv32/neorv32/rtl/core/neorv32_application_image.vhd
 
 ## Upload FW with NeoRV32's serial bootloader
+
+Makes sure the bootloader is enabled: `INT_BOOTLOADER_EN = true`
 
 **GTKTerm only works for < 4KB, Cutecom works for larger firmware files**
 
