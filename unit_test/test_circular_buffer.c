@@ -46,6 +46,8 @@ void test_circular_buffer_init_uint8(void) {
         ASC_ERROR_CB_BAD_CAPACITY, e1,
         "Exception should be ASC_ERROR_CB_BAD_CAPACITY, it isn't!");
   }
+  #pragma GCC diagnostic ignored "-Wstringop-overflow"
+  #pragma GCC diagnostic push
   Try {
     circular_buffer_init_uint8(&cb, CAPACITY + 1, (uint8_t *)(&buf));
     TEST_FAIL_MESSAGE("Should have triggered an exception!");
@@ -55,6 +57,7 @@ void test_circular_buffer_init_uint8(void) {
         ASC_ERROR_CB_BAD_CAPACITY, e1,
         "Exception should be ASC_ERROR_CB_BAD_CAPACITY, it isn't!");
   }
+  #pragma GCC diagnostic pop
 }
 
 void test_circular_buffer_print_uint8(void) {

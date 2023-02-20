@@ -1,4 +1,4 @@
-# ASCII Serial Com for the C Language         {#mainpage}
+# ASCII Serial Com for the C Language
 
 See main project repo at: [ascii-serial-com](https://github.com/jhugon/ascii-serial-com)
 
