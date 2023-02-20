@@ -15,7 +15,7 @@ jobs:
   c-build-unit-test-gcc:
     strategy:
       matrix:
-        compiler-version: [9,10,11,12]
+        compiler-version: [10,11,12]
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
   c-build-unit-test-clang:
     strategy:
       matrix:
-        compiler-version: [11,12,13,14,15]
+        compiler-version: [12,13,14,15]
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
