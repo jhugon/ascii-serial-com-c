@@ -1,4 +1,4 @@
 <map id="arm/stm_timers.h" name="arm/stm_timers.h">
-<area shape="rect" id="node1" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="25,5,147,32"/>
-<area shape="rect" id="node2" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="5,80,167,121"/>
+<area shape="rect" id="node1" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="25,5,147,31"/>
+<area shape="rect" id="node2" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="5,79,167,119"/>
 </map>

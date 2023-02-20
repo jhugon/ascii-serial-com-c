@@ -1,10 +1,10 @@
 <map id="circular_buffer_io_fd_poll.h" name="circular_buffer_io_fd_poll.h">
-<area shape="rect" id="node1" title="Circular buffer IO with file descriptor polling." alt="" coords="336,5,456,47"/>
-<area shape="rect" id="node2" href="$circular__buffer_8h.html" title=" " alt="" coords="225,95,338,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="387,169,447,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="434,95,486,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,169,83,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,169,181,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="206,169,274,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="299,169,363,196"/>
+<area shape="rect" id="node1" title="Circular buffer IO with file descriptor polling." alt="" coords="336,5,456,45"/>
+<area shape="rect" id="node2" href="$circular__buffer_8h.html" title=" " alt="" coords="225,93,338,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="387,167,447,192"/>
+<area shape="rect" id="node8" title=" " alt="" coords="434,93,486,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,167,83,192"/>
+<area shape="rect" id="node4" title=" " alt="" coords="107,167,181,192"/>
+<area shape="rect" id="node5" title=" " alt="" coords="206,167,274,192"/>
+<area shape="rect" id="node6" title=" " alt="" coords="299,167,363,192"/>
 </map>

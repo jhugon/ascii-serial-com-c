@@ -1,6 +1,6 @@
 <map id="arm/stm_timers.h" name="arm/stm_timers.h">
-<area shape="rect" id="node1" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="221,5,343,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,172,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="197,80,367,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="391,80,455,107"/>
+<area shape="rect" id="node1" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="221,5,343,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,172,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="197,79,367,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="391,79,455,104"/>
 </map>

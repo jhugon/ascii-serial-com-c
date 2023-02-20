@@ -1,7 +1,7 @@
 <map id="circular_buffer_io_fd_poll.h" name="circular_buffer_io_fd_poll.h">
-<area shape="rect" id="node1" title="Circular buffer IO with file descriptor polling." alt="" coords="261,5,381,47"/>
-<area shape="rect" id="node2" href="$circular__buffer__io__fd__poll_8c.html" title=" " alt="" coords="5,102,125,143"/>
-<area shape="rect" id="node3" href="$ascii__serial__com__dummy__loopback__device_8c_source.html" title=" " alt="" coords="149,95,312,151"/>
-<area shape="rect" id="node4" href="$ascii__serial__com__dummy__register__device_8c_source.html" title=" " alt="" coords="337,95,490,151"/>
-<area shape="rect" id="node5" href="$test__circular__buffer__io__fd__poll_8c_source.html" title=" " alt="" coords="515,102,661,143"/>
+<area shape="rect" id="node1" title="Circular buffer IO with file descriptor polling." alt="" coords="261,5,381,45"/>
+<area shape="rect" id="node2" href="$circular__buffer__io__fd__poll_8c.html" title=" " alt="" coords="5,101,125,141"/>
+<area shape="rect" id="node3" href="$ascii__serial__com__dummy__loopback__device_8c_source.html" title=" " alt="" coords="149,93,312,148"/>
+<area shape="rect" id="node4" href="$ascii__serial__com__dummy__register__device_8c_source.html" title=" " alt="" coords="337,93,490,148"/>
+<area shape="rect" id="node5" href="$test__circular__buffer__io__fd__poll_8c_source.html" title=" " alt="" coords="515,101,661,141"/>
 </map>

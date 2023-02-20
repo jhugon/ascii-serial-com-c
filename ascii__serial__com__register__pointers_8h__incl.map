@@ -1,13 +1,13 @@
 <map id="ascii_serial_com_register_pointers.h" name="ascii_serial_com_register_pointers.h">
-<area shape="rect" id="node1" title="ASCII Serial Com Register Pointers." alt="" coords="199,5,369,47"/>
-<area shape="rect" id="node2" href="$ascii__serial__com_8h.html" title=" " alt="" coords="219,95,349,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,244,83,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,244,181,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="290,244,358,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="383,244,447,271"/>
-<area shape="rect" id="node7" href="$asc__exception_8h.html" title=" " alt="" coords="464,169,579,196"/>
-<area shape="rect" id="node10" href="$circular__buffer_8h.html" title=" " alt="" coords="181,169,294,196"/>
-<area shape="rect" id="node8" href="$CException_8h_source.html" title=" " alt="" coords="471,244,625,271"/>
-<area shape="rect" id="node9" title=" " alt="" coords="513,319,583,345"/>
-<area shape="rect" id="node11" title=" " alt="" coords="206,244,266,271"/>
+<area shape="rect" id="node1" title="ASCII Serial Com Register Pointers." alt="" coords="199,5,369,45"/>
+<area shape="rect" id="node2" href="$ascii__serial__com_8h.html" title=" " alt="" coords="219,93,349,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,240,83,265"/>
+<area shape="rect" id="node4" title=" " alt="" coords="107,240,181,265"/>
+<area shape="rect" id="node5" title=" " alt="" coords="290,240,358,265"/>
+<area shape="rect" id="node6" title=" " alt="" coords="383,240,447,265"/>
+<area shape="rect" id="node7" href="$asc__exception_8h.html" title=" " alt="" coords="464,167,579,192"/>
+<area shape="rect" id="node10" href="$circular__buffer_8h.html" title=" " alt="" coords="181,167,294,192"/>
+<area shape="rect" id="node8" href="$CException_8h_source.html" title=" " alt="" coords="471,240,625,265"/>
+<area shape="rect" id="node9" title=" " alt="" coords="513,313,583,339"/>
+<area shape="rect" id="node11" title=" " alt="" coords="206,240,266,265"/>
 </map>

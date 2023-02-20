@@ -1,4 +1,4 @@
 <map id="riscv/neorv32/neorv32_blink_led.c" name="riscv/neorv32/neorv32_blink_led.c">
-<area shape="rect" id="node1" title="Simple blinking LED demo program using the lowest 8 bits of the GPIO.output port." alt="" coords="5,5,156,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="41,95,120,121"/>
+<area shape="rect" id="node1" title="Simple blinking LED demo program using the lowest 8 bits of the GPIO.output port." alt="" coords="5,5,156,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="41,93,120,119"/>
 </map>
