@@ -254,7 +254,7 @@ void ascii_serial_com_register_pointers_handle_message(
 #define HANDLE_ASC_COMM_IN_POLLING_LOOP(usart)                                 \
   if (!circular_buffer_is_empty_uint8(                                         \
           ascii_serial_com_device_get_output_buffer(&_ascd)) &&                \
-      _serial_tx_buf_is_empty(usart)) {                                        \
+      is_usart_ready_to_send(usart)) {                                         \
     _tmp_byte = circular_buffer_pop_front_uint8(                               \
         ascii_serial_com_device_get_output_buffer(&_ascd));                    \
     usart_send(usart, _tmp_byte);                                              \

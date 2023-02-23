@@ -310,14 +310,34 @@ uint32_t convert_hex_to_uint32(const char *instr);
 //////////////////////////////////////////////////
 
 #if defined(__ARM_ARCH)
-#define _serial_tx_buf_is_empty(usart) ((USART_ISR(usart) & USART_ISR_TXE))
+#define is_usart_recv_data_waiting(usart) ((USART_ISR(usart) & USART_ISR_RXNE))
 #elif defined(__AVR)
-#define _serial_tx_buf_is_empty(usart) (UCSR0A & (1 << UDRE0))
+#define is_usart_recv_data_waiting(usart) (UCSR0A & (1 << RXC0))
 #elif defined(NEORV32)
-#define _serial_tx_buf_is_empty(usart)                                         \
+#define is_usart_recv_data_waiting(usart) neorv32_uart1_char_received()
+#else
+#define is_usart_recv_data_waiting(usart) __builtin_unreachable()
+#endif
+
+#if defined(__ARM_ARCH)
+#define is_usart_ready_to_send(usart) ((USART_ISR(usart) & USART_ISR_TXE))
+#elif defined(__AVR)
+#define is_usart_ready_to_send(usart) (UCSR0A & (1 << UDRE0))
+#elif defined(NEORV32)
+#define is_usart_ready_to_send(usart)                                          \
   ((NEORV32_UART1.CTRL & (1 << UART_CTRL_TX_FULL)) == 0)
 #else
-#define _serial_tx_buf_is_empty(usart) __builtin_unreachable()
+#define is_usart_ready_to_send(usart) __builtin_unreachable()
+#endif
+
+#if defined(__ARM_ARCH)
+// Already defined by libopencm3
+#elif defined(__AVR)
+#define usart_recv(reg, _tmp_byte) _tmp_byte = reg
+#elif defined(NEORV32)
+#define usart_recv(reg, _tmp_byte) _tmp_byte = neorv32_uart1_getc()
+#else
+#define usart_recv(usart, _tmp_byte) __builtin_unreachable()
 #endif
 
 #if defined(__ARM_ARCH)
