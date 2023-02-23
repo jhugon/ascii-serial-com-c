@@ -305,7 +305,7 @@ uint32_t convert_hex_to_uint32(const char *instr);
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
-//////////////// Helper Macros ///////////////////
+//////////////// Helper Functions/Macros /////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -359,5 +359,22 @@ uint32_t convert_hex_to_uint32(const char *instr);
 #else
 #define _ATOMIC __builtin_unreachable()
 #endif
+
+/** \brief Receive a byte from UART into circular buffer
+ *
+ * Checks if usart has a received byte waiting, and if so,
+ * pushes it onto the back of the circular buffer.
+ *
+ */
+bool usart_recv_to_circ_buf(void *usart, circular_buffer_uint8 *circ_buf_ptr);
+
+/** \brief Transmit a byte from the circular buffer
+ *
+ * Checks if usart can accept a byte and the circular
+ * buffer isn't empty, and if so, pops a byte off of
+ * the circular buffer and transmits it.
+ *
+ */
+bool usart_send_from_circ_buf(void *usart, circular_buffer_uint8 *circ_buf_ptr);
 
 #endif

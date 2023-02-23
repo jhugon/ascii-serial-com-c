@@ -324,3 +324,23 @@ uint32_t convert_hex_to_uint32(const char *instr) {
   }
   return result;
 }
+
+bool usart_recv_to_circ_buf(void *usart, circular_buffer_uint8 *circ_buf_ptr) {
+  uint8_t tmp_byte;
+  if (is_usart_recv_data_waiting(usart)) {
+    usart_recv(usart, tmp_byte);
+    circular_buffer_push_back_uint8(circ_buf_ptr, tmp_byte);
+    return true;
+  }
+  return false;
+}
+
+bool usart_send_from_circ_buf(void *usart,
+                              circular_buffer_uint8 *circ_buf_ptr) {
+  if (is_usart_ready_to_send(usart) &&
+      !circular_buffer_is_empty_uint8(circ_buf_ptr)) {
+    usart_send(usart, circular_buffer_pop_front_uint8(circ_buf_ptr));
+    return true;
+  }
+  return false;
+}
