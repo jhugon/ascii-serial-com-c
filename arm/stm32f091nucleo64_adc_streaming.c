@@ -28,6 +28,7 @@
 
 #include "arm/stm_usart.h"
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "ascii_serial_com.h"
 #include "ascii_serial_com_device.h"
 #include "ascii_serial_com_register_pointers.h"
