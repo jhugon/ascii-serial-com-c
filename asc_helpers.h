@@ -13,45 +13,48 @@
 
 uint8_t ASC_HELPERS_BYTE;
 
+// Use uart_no as 1,2,3, etc.
 #if defined(__ARM_ARCH)
-#define is_usart_recv_data_waiting(usart) ((USART_ISR(usart) & USART_ISR_RXNE))
+#define is_uart_rx_data_waiting(uart_no)                                       \
+  ((USART_ISR(USART##uart_no) & USART_ISR_RXNE))
 #elif defined(__AVR)
-#define is_usart_recv_data_waiting(usart) (UCSR0A & (1 << RXC0))
+#define is_uart_rx_data_waiting(uart_no) (UCSR##uart_no##A & (1 << RXC0))
 #elif defined(NEORV32)
-#define is_usart_recv_data_waiting(usart) neorv32_uart1_char_received()
+#define is_uart_rx_data_waiting(uart_no) neorv32_uart##uart_no##_char_received()
 #else
-#define is_usart_recv_data_waiting(usart) __builtin_unreachable()
+#define is_uart_rx_data_waiting(uart_no) __builtin_unreachable()
 #endif
 
 #if defined(__ARM_ARCH)
-#define is_usart_ready_to_send(usart) ((USART_ISR(usart) & USART_ISR_TXE))
+#define is_uart_ready_to_tx(uart_no)                                           \
+  ((USART_ISR(USART##uart_no) & USART_ISR_TXE))
 #elif defined(__AVR)
-#define is_usart_ready_to_send(usart) (UCSR0A & (1 << UDRE0))
+#define is_uart_ready_to_tx(uart_no) (UCSR##uart_no##A & (1 << UDRE0))
 #elif defined(NEORV32)
-#define is_usart_ready_to_send(usart)                                          \
-  ((NEORV32_UART1.CTRL & (1 << UART_CTRL_TX_FULL)) == 0)
+#define is_uart_ready_to_tx(uart_no)                                           \
+  ((NEORV32_UART##uart_no##.CTRL & (1 << UART_CTRL_TX_FULL)) == 0)
 #else
-#define is_usart_ready_to_send(usart) __builtin_unreachable()
+#define is_uart_ready_to_tx(uart_no) __builtin_unreachable()
 #endif
 
 #if defined(__ARM_ARCH)
-// Already defined by libopencm3
+#define uart_rx(uart_no, _tmp_byte) _tmp_byte = usart_recv(USART##uart_no)
 #elif defined(__AVR)
-#define usart_recv(reg, _tmp_byte) _tmp_byte = reg
+#define uart_rx(uart_no, _tmp_byte) _tmp_byte = UDR##uart_no
 #elif defined(NEORV32)
-#define usart_recv(reg, _tmp_byte) _tmp_byte = neorv32_uart1_getc()
+#define uart_rx(uart_no, _tmp_byte) _tmp_byte = neorv32_uart##uart_no##_getc()
 #else
-#define usart_recv(usart, _tmp_byte) __builtin_unreachable()
+#define uart_rx(uart, _tmp_byte) __builtin_unreachable()
 #endif
 
 #if defined(__ARM_ARCH)
-// Already defined by libopencm3
+#define uart_tx(uart_no, data) usart_send(USART##uart_no, data)
 #elif defined(__AVR)
-#define usart_send(reg, _tmp_byte) reg = _tmp_byte
+#define uart_tx(uart_no, _tmp_byte) UDR##uart_no = _tmp_byte
 #elif defined(NEORV32)
-#define usart_send(reg, _tmp_byte) neorv32_uart1_putc(_tmp_byte)
+#define uart_tx(uart_no, _tmp_byte) neorv32_uart##uart_no##_putc(_tmp_byte)
 #else
-#define usart_send(usart, _tmp_byte) __builtin_unreachable()
+#define uart_tx(uart, _tmp_byte) __builtin_unreachable()
 #endif
 
 #if defined(__ARM_ARCH)
@@ -66,27 +69,27 @@ uint8_t ASC_HELPERS_BYTE;
 
 /** \brief Receive a byte from UART into circular buffer
  *
- * Checks if usart has a received byte waiting, and if so,
+ * Checks if uart has a received byte waiting, and if so,
  * pushes it onto the back of the circular buffer.
  *
  */
-#define usart_recv_to_circ_buf(usart, circ_buf_ptr)                            \
-  if (is_usart_recv_data_waiting(usart)) {                                     \
-    usart_recv(usart, ASC_HELPERS_BYTE);                                       \
+#define uart_rx_to_circ_buf(uart_no, circ_buf_ptr)                             \
+  if (is_uart_rx_data_waiting(uart_no)) {                                      \
+    uart_rx(uart_no, ASC_HELPERS_BYTE);                                        \
     circular_buffer_push_back_uint8(circ_buf_ptr, ASC_HELPERS_BYTE);           \
   }
 
 /** \brief Transmit a byte from the circular buffer
  *
- * Checks if usart can accept a byte and the circular
+ * Checks if uart can accept a byte and the circular
  * buffer isn't empty, and if so, pops a byte off of
  * the circular buffer and transmits it.
  *
  */
-#define usart_send_from_circ_buf(usart, circ_buf_ptr)                          \
-  if (is_usart_ready_to_send(usart) &&                                         \
+#define uart_tx_from_circ_buf(uart_no, circ_buf_ptr)                           \
+  if (is_uart_ready_to_tx(uart_no) &&                                          \
       !circular_buffer_is_empty_uint8(circ_buf_ptr)) {                         \
-    usart_send(usart, circular_buffer_pop_front_uint8(circ_buf_ptr));          \
+    uart_tx(uart_no, circular_buffer_pop_front_uint8(circ_buf_ptr));           \
   }
 
 ///////////////////////////////////////////////////
@@ -194,18 +197,13 @@ uint8_t ASC_HELPERS_BYTE;
  *
  * ## Parameters
  *
- * usart: the address of the USART used for transmitting bytes. For STM32:
+ * uart: the address of the USART used for transmitting bytes. For STM32:
  * USART1, USART2, .... For AVR: UDR0, ....
  *
  */
-#define HANDLE_ASC_COMM_IN_POLLING_LOOP(usart)                                 \
-  if (!circular_buffer_is_empty_uint8(                                         \
-          ascii_serial_com_device_get_output_buffer(&_ascd)) &&                \
-      is_usart_ready_to_send(usart)) {                                         \
-    _tmp_byte = circular_buffer_pop_front_uint8(                               \
-        ascii_serial_com_device_get_output_buffer(&_ascd));                    \
-    usart_send(usart, _tmp_byte);                                              \
-  }                                                                            \
+#define HANDLE_ASC_COMM_IN_POLLING_LOOP(uart_no)                               \
+  uart_tx_from_circ_buf(uart_no,                                               \
+                        ascii_serial_com_device_get_output_buffer(&_ascd));    \
   if (!circular_buffer_is_empty_uint8(&extraInputBuffer)) {                    \
     _ATOMIC {                                                                  \
       _tmp_byte = circular_buffer_pop_front_uint8(&extraInputBuffer);          \
