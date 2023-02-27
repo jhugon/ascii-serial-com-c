@@ -31,7 +31,8 @@ uint8_t ASC_HELPERS_BYTE;
 #elif defined(__AVR)
 #define is_uart_rx_data_waiting(uart_no) (UCSR##uart_no##A & (1 << RXC0))
 #elif defined(NEORV32)
-#define is_uart_rx_data_waiting(uart_no) neorv32_uart##uart_no##_char_received()
+#define is_uart_rx_data_waiting(uart_no)                                       \
+  (neorv32_uart##uart_no##_char_received())
 #else
 #define is_uart_rx_data_waiting(uart_no) __builtin_unreachable()
 #endif
@@ -62,11 +63,20 @@ uint8_t ASC_HELPERS_BYTE;
  *
  */
 #if defined(__ARM_ARCH)
-#define uart_rx(uart_no, _tmp_byte) _tmp_byte = usart_recv(USART##uart_no)
+#define uart_rx(uart_no, _tmp_byte)                                            \
+  do {                                                                         \
+    _tmp_byte = usart_recv(USART##uart_no);                                    \
+  } while (0)
 #elif defined(__AVR)
-#define uart_rx(uart_no, _tmp_byte) _tmp_byte = UDR##uart_no
+#define uart_rx(uart_no, _tmp_byte)                                            \
+  do {                                                                         \
+    _tmp_byte = UDR##uart_no;                                                  \
+  } while (0)
 #elif defined(NEORV32)
-#define uart_rx(uart_no, _tmp_byte) _tmp_byte = neorv32_uart##uart_no##_getc()
+#define uart_rx(uart_no, _tmp_byte)                                            \
+  do {                                                                         \
+    _tmp_byte = neorv32_uart##uart_no##_getc();                                \
+  } while (0)
 #else
 #define uart_rx(uart, _tmp_byte) __builtin_unreachable()
 #endif
@@ -80,9 +90,12 @@ uint8_t ASC_HELPERS_BYTE;
 #if defined(__ARM_ARCH)
 #define uart_tx(uart_no, data) usart_send(USART##uart_no, data)
 #elif defined(__AVR)
-#define uart_tx(uart_no, _tmp_byte) UDR##uart_no = _tmp_byte
+#define uart_tx(uart_no, _tmp_byte)                                            \
+  do {                                                                         \
+    UDR##uart_no = _tmp_byte;                                                  \
+  } while (0)
 #elif defined(NEORV32)
-#define uart_tx(uart_no, _tmp_byte) neorv32_uart##uart_no##_putc(_tmp_byte)
+#define uart_tx(uart_no, _tmp_byte) (neorv32_uart##uart_no##_putc(_tmp_byte))
 #else
 #define uart_tx(uart, _tmp_byte) __builtin_unreachable()
 #endif
@@ -109,10 +122,12 @@ uint8_t ASC_HELPERS_BYTE;
  *
  */
 #define uart_rx_to_circ_buf(uart_no, circ_buf_ptr)                             \
-  if (is_uart_rx_data_waiting(uart_no)) {                                      \
-    uart_rx(uart_no, ASC_HELPERS_BYTE);                                        \
-    circular_buffer_push_back_uint8(circ_buf_ptr, ASC_HELPERS_BYTE);           \
-  }
+  do {                                                                         \
+    if (is_uart_rx_data_waiting(uart_no)) {                                    \
+      uart_rx(uart_no, ASC_HELPERS_BYTE);                                      \
+      circular_buffer_push_back_uint8(circ_buf_ptr, ASC_HELPERS_BYTE);         \
+    }                                                                          \
+  } while (0)
 
 /** \brief Transmit a byte from the circular buffer
  *
@@ -122,10 +137,12 @@ uint8_t ASC_HELPERS_BYTE;
  *
  */
 #define uart_tx_from_circ_buf(uart_no, circ_buf_ptr)                           \
-  if (is_uart_ready_to_tx(uart_no) &&                                          \
-      !circular_buffer_is_empty_uint8(circ_buf_ptr)) {                         \
-    uart_tx(uart_no, circular_buffer_pop_front_uint8(circ_buf_ptr));           \
-  }
+  do {                                                                         \
+    if (is_uart_ready_to_tx(uart_no) &&                                        \
+        !circular_buffer_is_empty_uint8(circ_buf_ptr)) {                       \
+      uart_tx(uart_no, circular_buffer_pop_front_uint8(circ_buf_ptr));         \
+    }                                                                          \
+  } while (0)
 
 ///////////////////////////////////////////////////
 ////// For ASC Device with Register Pointers //////
@@ -207,12 +224,14 @@ uint8_t ASC_HELPERS_BYTE;
  */
 #define SETUP_ASC_DEVICE_W_REGISTER_POINTERS(register_map,                     \
                                              register_write_masks, nRegs)      \
-  ascii_serial_com_register_pointers_init(&_reg_pointers_state, register_map,  \
-                                          register_write_masks, nRegs);        \
-  ascii_serial_com_device_init(&_ascd, &_ascd_config);                         \
+  do {                                                                         \
+    ascii_serial_com_register_pointers_init(                                   \
+        &_reg_pointers_state, register_map, register_write_masks, nRegs);      \
+    ascii_serial_com_device_init(&_ascd, &_ascd_config);                       \
                                                                                \
-  circular_buffer_init_uint8(&extraInputBuffer, _extraInputBuffer_size_,       \
-                             _extraInputBuffer_raw)
+    circular_buffer_init_uint8(&extraInputBuffer, _extraInputBuffer_size_,     \
+                               _extraInputBuffer_raw);                         \
+  } while (0)
 
 /** \brief Polling for ascii_serial_com_device and
  * ascii_serial_com_register_pointers
@@ -237,16 +256,18 @@ uint8_t ASC_HELPERS_BYTE;
  *
  */
 #define HANDLE_ASC_COMM_IN_POLLING_LOOP(uart_no)                               \
-  uart_tx_from_circ_buf(uart_no,                                               \
-                        ascii_serial_com_device_get_output_buffer(&_ascd));    \
-  if (!circular_buffer_is_empty_uint8(&extraInputBuffer)) {                    \
-    _ATOMIC {                                                                  \
-      _tmp_byte = circular_buffer_pop_front_uint8(&extraInputBuffer);          \
+  do {                                                                         \
+    uart_tx_from_circ_buf(uart_no,                                             \
+                          ascii_serial_com_device_get_output_buffer(&_ascd));  \
+    if (!circular_buffer_is_empty_uint8(&extraInputBuffer)) {                  \
+      _ATOMIC {                                                                \
+        _tmp_byte = circular_buffer_pop_front_uint8(&extraInputBuffer);        \
+      }                                                                        \
+      circular_buffer_push_back_uint8(                                         \
+          ascii_serial_com_device_get_input_buffer(&_ascd), _tmp_byte);        \
     }                                                                          \
-    circular_buffer_push_back_uint8(                                           \
-        ascii_serial_com_device_get_input_buffer(&_ascd), _tmp_byte);          \
-  }                                                                            \
-  ascii_serial_com_device_receive(&_ascd)
+    ascii_serial_com_device_receive(&_ascd);                                   \
+  } while (0)
 
 /** \brief Check if you should stream a message to the host
  *
