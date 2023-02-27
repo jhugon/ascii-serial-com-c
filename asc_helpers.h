@@ -1,7 +1,11 @@
 #ifndef ASC_HELPERS_H
 #define ASC_HELPERS_H
 
-/** \file */
+/** \file
+ *
+ * Helper macros to help with UARTs, etc.
+ *
+ * */
 
 #include <inttypes.h>
 #include <stdbool.h>
@@ -13,7 +17,14 @@
 
 uint8_t ASC_HELPERS_BYTE;
 
-// Use uart_no as 1,2,3, etc.
+/**
+ *
+ * Helper to check if UART has a received a byte and is waiting on the user to
+ * read it
+ *
+ * Use uart_no as 1,2,3, etc.
+ *
+ */
 #if defined(__ARM_ARCH)
 #define is_uart_rx_data_waiting(uart_no)                                       \
   ((USART_ISR(USART##uart_no) & USART_ISR_RXNE))
@@ -25,6 +36,13 @@ uint8_t ASC_HELPERS_BYTE;
 #define is_uart_rx_data_waiting(uart_no) __builtin_unreachable()
 #endif
 
+/**
+ *
+ * Helper to check if UART tx buffer is ready for the user to write to it
+ *
+ * Use uart_no as 1,2,3, etc.
+ *
+ */
 #if defined(__ARM_ARCH)
 #define is_uart_ready_to_tx(uart_no)                                           \
   ((USART_ISR(USART##uart_no) & USART_ISR_TXE))
@@ -37,6 +55,12 @@ uint8_t ASC_HELPERS_BYTE;
 #define is_uart_ready_to_tx(uart_no) __builtin_unreachable()
 #endif
 
+/**
+ *
+ * Reads from the UART rx buffer, non-blocking, without checking if data is
+ * there
+ *
+ */
 #if defined(__ARM_ARCH)
 #define uart_rx(uart_no, _tmp_byte) _tmp_byte = usart_recv(USART##uart_no)
 #elif defined(__AVR)
@@ -47,6 +71,12 @@ uint8_t ASC_HELPERS_BYTE;
 #define uart_rx(uart, _tmp_byte) __builtin_unreachable()
 #endif
 
+/**
+ *
+ * Writes to the UART tx buffer, non-blocking, without checking if it's ready to
+ * receive data
+ *
+ */
 #if defined(__ARM_ARCH)
 #define uart_tx(uart_no, data) usart_send(USART##uart_no, data)
 #elif defined(__AVR)
@@ -57,6 +87,11 @@ uint8_t ASC_HELPERS_BYTE;
 #define uart_tx(uart, _tmp_byte) __builtin_unreachable()
 #endif
 
+/**
+ *
+ * Cross-platform atomic block
+ *
+ */
 #if defined(__ARM_ARCH)
 #define _ATOMIC CM_ATOMIC_BLOCK()
 #elif defined(__AVR)
