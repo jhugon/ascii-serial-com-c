@@ -147,7 +147,7 @@ int main(void) {
   while (true) {
     Try {
       const bool stream_state_before_receiving = streaming_is_on;
-      HANDLE_ASC_COMM_IN_POLLING_LOOP(UDR0);
+      HANDLE_ASC_COMM_IN_POLLING_LOOP(0);
       // just started streaming so start this timer
       if (streaming_is_on && !stream_state_before_receiving) {
         millisec_timer_set_rel(&adc_timer, MILLISEC_TIMER_NOW,

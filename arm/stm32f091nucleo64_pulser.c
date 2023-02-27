@@ -31,6 +31,7 @@
 #include "millisec_timer.h"
 
 // USART2 should be connected through USB
+#define ASC_USART_NO 2
 #define ASC_USART USART2
 
 #define PORT_LED GPIOA
@@ -163,7 +164,7 @@ int main(void) {
 
   while (1) {
     Try {
-      HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART);
+      HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART_NO);
 
       if (timer_get_flag(IC_TIM, TIM_SR_CC1IF)) {
         ic_pulse_length = TIM_CCR2(IC_TIM);
