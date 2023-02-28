@@ -4,7 +4,7 @@ See main project repo at: [ascii-serial-com](https://github.com/jhugon/ascii-ser
 
 You may need to download and compile libopencm3:
 
-    git submodule init
+    git submodule update
     cd tools/libopencm3/
     make
 
@@ -59,13 +59,13 @@ Try/Catch block, put:
 `SETUP_ASC_DEVICE_W_REGISTER_POINTERS(reg_map,reg_write_masks, NREGS);`,
 where the variables are declared as in the previous section.
 4. Inside the polling loop and a Try/Catch block, put:
-`HANDLE_ASC_COMM_IN_POLLING_LOOP(USART1);`, replacing USART1 with the
-appropriate USART.
+`HANDLE_ASC_COMM_IN_POLLING_LOOP(1);`, replacing 1 with the
+appropriate USART number.
 
 Number 4 assumes something is putting received bytes into a
 circular_buffer_uint8 called `extraInputBuffer` (declared and setup by the
 macros). This can be accomplished using, for STM32,
-`def_usart_isr_push_rx_to_circ_buf(<usart_isr>,<usart>,&extraInputBuffer)`
+`def_usart_isr_push_rx_to_circ_buf(<usart_isr>,USART1,&extraInputBuffer)`
 (no semicolon)
 
 ### Streaming

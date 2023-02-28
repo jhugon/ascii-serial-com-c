@@ -1,10 +1,12 @@
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "avr/avr_uart.h"
 #include "circular_buffer.h"
 #include <avr/io.h>
 
 #define FOSC 16000000L
 #define BAUD 9600
+#define UART_NO 0
 #define MYUBRR (FOSC / 16 / BAUD - 1)
 
 #define bufCap 64
@@ -19,16 +21,12 @@ int main(void) {
   Try { circular_buffer_init_uint8(&cb, bufCap, rawBuffer); }
   Catch(e) { return e; }
 
-  USART0_Init(MYUBRR, 0);
+  UART_Init(UART_NO, MYUBRR, 0);
 
   while (1) {
     Try {
-      if (USART0_can_read_Rx_data) {
-        circular_buffer_push_back_uint8(&cb, UDR0);
-      }
-      if (circular_buffer_get_size_uint8(&cb) > 0 && USART0_can_write_Tx_data) {
-        UDR0 = circular_buffer_pop_front_uint8(&cb);
-      }
+      uart_rx_to_circ_buf(UART_NO, &cb);
+      uart_tx_from_circ_buf(UART_NO, &cb);
     }
     Catch(e) { return e; }
   }

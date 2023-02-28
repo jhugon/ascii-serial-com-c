@@ -1,9 +1,11 @@
+#include "asc_helpers.h"
 #include "avr/avr_uart.h"
 #include <avr/io.h>
 
 #define FOSC 16000000L
 #define BAUD 9600
 #define MYUBRR (FOSC / 16 / BAUD - 1)
+#define UART_NO 0
 
 #define bufCap 64
 
@@ -13,10 +15,10 @@ uint8_t iChar = 0;
 
 int main(void) {
 
-  USART0_Init(MYUBRR, 0);
+  UART_Init(UART_NO, MYUBRR, 0);
 
   while (1) {
-    USART0_Tx(message[iChar]);
+    uart_tx_blocking(UART_NO, message[iChar]);
     iChar++;
     if (iChar == message_len) {
       iChar = 0;

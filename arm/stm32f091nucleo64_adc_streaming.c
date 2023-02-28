@@ -28,6 +28,7 @@
 
 #include "arm/stm_usart.h"
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "ascii_serial_com.h"
 #include "ascii_serial_com_device.h"
 #include "ascii_serial_com_register_pointers.h"
@@ -35,6 +36,7 @@
 #include "millisec_timer.h"
 
 // ASC_USART should be connected through USB
+#define ASC_USART_NO 2
 #define ASC_USART USART2
 
 #define PORT_LED GPIOA
@@ -244,7 +246,7 @@ int main(void) {
   while (1) {
     Try {
       const bool stream_state_before_receiving = streaming_is_on;
-      HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART);
+      HANDLE_ASC_COMM_IN_POLLING_LOOP(ASC_USART_NO);
       // just started streaming so start this timer
       if (streaming_is_on && !stream_state_before_receiving) {
         millisec_timer_set_rel(&adc_timer, MILLISEC_TIMER_NOW,
