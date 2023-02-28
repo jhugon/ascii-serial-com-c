@@ -14,21 +14,25 @@
  *
  * Before the polling starts:
  *
- *     ascii_serial_com_host_init(&host);
- *     ascii_serial_com_host_get_input_buffer(&host, in_buf);
- *     ascii_serial_com_host_get_output_buffer(&host, out_buf);
+ *     ascii_serial_com_host_init(&host,'0');
+ *     in_buf = ascii_serial_com_host_get_input_buffer(&host);
+ *     out_buf = ascii_serial_com_host_get_output_buffer(&host);
  *
  * In the polling loop:
  *
- *     check that uart has data waiting first
- *     circular_buffer_push_back_uint8(in_buf,usart_receive(UART));
+ *     uart_rx_to_circ_buf(UART_NO,in_buf);
  *
  *     ascii_serial_com_host_poll_input_buffer(&host);
  *
- *     check host status
+ *     // to just read once
+ *     if (host.status == NOT_AWAITING_RESPONSE) {
+ *       ascii_serial_com_host_read_register(&host,REGNUM);
+ *     } elif (host.status == VALID_RESPONSE {
+ *       uint32_t readval = host.registerVal;
+ *       // ... do stuff with readval ....
+ *     })
  *
- *     check that out buf has data and uart is empty first
- *     usart_send(UART,circular_buffer_pop_front_uint8(out_buf));
+ *     uart_tx_from_circ_buf(UART_NO,out_buf);
  *
  */
 
@@ -77,7 +81,7 @@ typedef struct __ascii_serial_com_host {
  */
 void ascii_serial_com_host_init(
     ascii_serial_com_host *asch,
-    char appVersion /**< app version used for sent messages */
+    const char appVersion /**< app version used for sent messages */
 );
 
 /** \brief ASCII Serial Com Host poll input buffer
@@ -112,16 +116,41 @@ ascii_serial_com_host_get_output_buffer(ascii_serial_com_host *asch);
 
 /** \brief ASCII Serial Com Host start a register read
  *
+ * Reads into uint32_t, but can read from devices
+ * with either 8 bit or 32 bit register widths
+ *
  * MAKE SURE asch IS ALREADY INITIALIZED!
  *
  */
 void ascii_serial_com_host_read_register(
     ascii_serial_com_host *asch, /**< initialized host state */
-    uint16_t regnum              /**< register number to read */
+    const uint16_t regnum        /**< register number to read */
 );
 
-///////////////////
-// Helper macros //
-///////////////////
+/** \brief ASCII Serial Com Host start a register write
+ *
+ * MAKE SURE THE DEVICE HAS 8 BIT REGISTERS!
+ *
+ * MAKE SURE asch IS ALREADY INITIALIZED!
+ *
+ */
+void ascii_serial_com_host_write_register_8bit(
+    ascii_serial_com_host *asch, /**< initialized host state */
+    const uint16_t regnum,       /**< register number to write */
+    const uint8_t regval         /**< register value to write */
+);
+
+/** \brief ASCII Serial Com Host start a register write
+ *
+ * MAKE SURE THE DEVICE HAS 32 BIT REGISTERS!
+ *
+ * MAKE SURE asch IS ALREADY INITIALIZED!
+ *
+ */
+void ascii_serial_com_host_write_register_32bit(
+    ascii_serial_com_host *asch, /**< initialized host state */
+    const uint16_t regnum,       /**< register number to write */
+    const uint32_t regval        /**< register value to write */
+);
 
 #endif
