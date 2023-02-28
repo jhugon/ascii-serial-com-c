@@ -16,6 +16,7 @@
  */
 
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "ascii_serial_com.h"
 #include "ascii_serial_com_device.h"
 #include "ascii_serial_com_register_pointers.h"
@@ -30,6 +31,7 @@
 #define F_CPU 16000000L
 #define BAUD 9600
 #define MYUBRR (F_CPU / 16 / BAUD - 1)
+#define UART_NO 0
 
 bool have_started_ADC_conversion = false;
 #define have_finished_ADC_conversion (!(ADCSRA & (1 << ADSC)))
@@ -139,14 +141,14 @@ int main(void) {
   }
   Catch(e) { return e; }
 
-  USART0_Init(MYUBRR, 1);
+  UART_Init(UART_NO, MYUBRR, 1);
 
   sei();
 
   while (true) {
     Try {
       const bool stream_state_before_receiving = streaming_is_on;
-      HANDLE_ASC_COMM_IN_POLLING_LOOP(UDR0);
+      HANDLE_ASC_COMM_IN_POLLING_LOOP(0);
       // just started streaming so start this timer
       if (streaming_is_on && !stream_state_before_receiving) {
         millisec_timer_set_rel(&adc_timer, MILLISEC_TIMER_NOW,

@@ -1,4 +1,5 @@
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "ascii_serial_com.h"
 #include "ascii_serial_com_device.h"
 #include "ascii_serial_com_register_pointers.h"
@@ -12,6 +13,7 @@
 #define F_CPU 16000000L
 #define BAUD 9600
 #define MYUBRR (F_CPU / 16 / BAUD - 1)
+#define UART_NO 0
 
 char dataBuffer[MAXDATALEN];
 #define nRegs 3
@@ -72,7 +74,7 @@ int main(void) {
   }
   Catch(e) { return e; }
 
-  USART0_Init(MYUBRR, 1);
+  UART_Init(UART_NO, MYUBRR, 1);
 
   sei();
 
@@ -98,10 +100,7 @@ int main(void) {
             &ascd, '0', '0', counter_buffer, 2);
         counter++;
       }
-      if (circular_buffer_get_size_uint8(asc_out_buf) > 0 &&
-          USART0_can_write_Tx_data) {
-        UDR0 = circular_buffer_pop_front_uint8(asc_out_buf);
-      }
+      uart_tx_from_circ_buf(UART_NO, asc_out_buf);
     }
     Catch(e) { nExceptions++; }
   }
@@ -109,10 +108,7 @@ int main(void) {
   return 0;
 }
 
-ISR(USART_RX_vect) {
-  char c = UDR0;
-  circular_buffer_push_back_uint8(&extraInputBuffer, c);
-}
+ISR(USART_RX_vect) { uart_rx_to_circ_buf(UART_NO, &extraInputBuffer); }
 
 void handle_nf_messages(__attribute__((unused)) ascii_serial_com *asc,
                         __attribute__((unused)) char ascVersion,
