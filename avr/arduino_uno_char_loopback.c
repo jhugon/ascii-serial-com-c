@@ -17,19 +17,9 @@ int main(void) {
   UART_Init(UART_NO, MYUBRR, 0);
 
   while (1) {
-    while (1) {
-      if (is_uart_rx_data_waiting(UART_NO)) {
-        uart_rx(UART_NO, byteBuffer);
-        break;
-      }
-    }
+    uart_rx_blocking(UART_NO, byteBuffer);
     //_delay_ms(100);
-    while (1) {
-      if (is_uart_ready_to_tx(UART_NO)) {
-        uart_tx(UART_NO, byteBuffer);
-        break;
-      }
-    }
+    uart_tx_blocking(UART_NO, byteBuffer);
   }
   return 0;
 }

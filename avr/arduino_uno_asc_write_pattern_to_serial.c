@@ -1,7 +1,9 @@
 #include "asc_exception.h"
+#include "asc_helpers.h"
 #include "ascii_serial_com.h"
 #include "avr/avr_uart.h"
 #include <avr/io.h>
+#define UART_NO 0
 
 #define F_CPU 16000000L
 #include <util/delay.h>
@@ -30,7 +32,7 @@ int main(void) {
   }
   Catch(e) { return e; }
 
-  USART0_Init(MYUBRR, 0);
+  UART_Init(UART_NO, MYUBRR, 0);
 
   while (true) {
     Try {
@@ -43,10 +45,7 @@ int main(void) {
           dataBuffer[0]++;
         }
       }
-      if (!circular_buffer_is_empty_uint8(asc_out_buf) &&
-          USART0_can_write_Tx_data) {
-        UDR0 = circular_buffer_pop_front_uint8(asc_out_buf);
-      }
+      uart_tx_from_circ_buf(UART_NO, asc_out_buf);
     }
     Catch(e) { nExceptions++; }
   }

@@ -21,12 +21,12 @@ int main(void) {
   Try { circular_buffer_init_uint8(&cb, bufCap, rawBuffer); }
   Catch(e) { return e; }
 
-  USART_Init(0, MYUBRR, 0);
+  UART_Init(UART_NO, MYUBRR, 0);
 
   while (1) {
     Try {
-      uart_rx_to_circ_buf(0, &cb);
-      uart_tx_from_circ_buf(0, &cb);
+      uart_rx_to_circ_buf(UART_NO, &cb);
+      uart_tx_from_circ_buf(UART_NO, &cb);
     }
     Catch(e) { return e; }
   }

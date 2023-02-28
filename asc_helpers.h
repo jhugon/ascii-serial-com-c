@@ -25,16 +25,22 @@ uint8_t ASC_HELPERS_BYTE;
  * Use uart_no as 1,2,3, etc.
  *
  */
+#define is_uart_rx_data_waiting(uart_no) _is_uart_rx_data_waiting(uart_no)
+
+/**
+ * Second level of macro makes sure parameters are expanded before subbing into
+ * string concatenation
+ */
 #if defined(__ARM_ARCH)
-#define is_uart_rx_data_waiting(uart_no)                                       \
+#define _is_uart_rx_data_waiting(uart_no)                                      \
   ((USART_ISR(USART##uart_no) & USART_ISR_RXNE))
 #elif defined(__AVR)
-#define is_uart_rx_data_waiting(uart_no) (UCSR##uart_no##A & (1 << RXC0))
+#define _is_uart_rx_data_waiting(uart_no) (UCSR##uart_no##A & (1 << RXC0))
 #elif defined(NEORV32)
-#define is_uart_rx_data_waiting(uart_no)                                       \
+#define _is_uart_rx_data_waiting(uart_no)                                      \
   (neorv32_uart##uart_no##_char_received())
 #else
-#define is_uart_rx_data_waiting(uart_no) __builtin_unreachable()
+#define _is_uart_rx_data_waiting(uart_no) __builtin_unreachable()
 #endif
 
 /**
@@ -44,16 +50,22 @@ uint8_t ASC_HELPERS_BYTE;
  * Use uart_no as 1,2,3, etc.
  *
  */
+#define is_uart_ready_to_tx(uart_no) _is_uart_ready_to_tx(uart_no)
+
+/**
+ * Second level of macro makes sure parameters are expanded before subbing into
+ * string concatenation
+ */
 #if defined(__ARM_ARCH)
-#define is_uart_ready_to_tx(uart_no)                                           \
+#define _is_uart_ready_to_tx(uart_no)                                          \
   ((USART_ISR(USART##uart_no) & USART_ISR_TXE))
 #elif defined(__AVR)
-#define is_uart_ready_to_tx(uart_no) (UCSR##uart_no##A & (1 << UDRE0))
+#define _is_uart_ready_to_tx(uart_no) (UCSR##uart_no##A & (1 << UDRE0))
 #elif defined(NEORV32)
-#define is_uart_ready_to_tx(uart_no)                                           \
+#define _is_uart_ready_to_tx(uart_no)                                          \
   ((NEORV32_UART##uart_no##.CTRL & (1 << UART_CTRL_TX_FULL)) == 0)
 #else
-#define is_uart_ready_to_tx(uart_no) __builtin_unreachable()
+#define _is_uart_ready_to_tx(uart_no) __builtin_unreachable()
 #endif
 
 /**
@@ -62,24 +74,45 @@ uint8_t ASC_HELPERS_BYTE;
  * there
  *
  */
+#define uart_rx(uart_no, _tmp_byte) _uart_rx(uart_no, _tmp_byte)
+
+/**
+ * Second level of macro makes sure parameters are expanded before subbing into
+ * string concatenation
+ */
 #if defined(__ARM_ARCH)
-#define uart_rx(uart_no, _tmp_byte)                                            \
+#define _uart_rx(uart_no, _tmp_byte)                                           \
   do {                                                                         \
     _tmp_byte = usart_recv(USART##uart_no);                                    \
   } while (0)
 #elif defined(__AVR)
-#define uart_rx(uart_no, _tmp_byte)                                            \
+#define _uart_rx(uart_no, _tmp_byte)                                           \
   do {                                                                         \
     _tmp_byte = UDR##uart_no;                                                  \
   } while (0)
 #elif defined(NEORV32)
-#define uart_rx(uart_no, _tmp_byte)                                            \
+#define _uart_rx(uart_no, _tmp_byte)                                           \
   do {                                                                         \
     _tmp_byte = neorv32_uart##uart_no##_getc();                                \
   } while (0)
 #else
-#define uart_rx(uart, _tmp_byte) __builtin_unreachable()
+#define _uart_rx(uart, _tmp_byte) __builtin_unreachable()
 #endif
+
+/**
+ *
+ * Reads from the UART rx buffer, blocking until data is there
+ *
+ */
+#define uart_rx_blocking(uart_no, _tmp_byte)                                   \
+  do {                                                                         \
+    while (1) {                                                                \
+      if (is_uart_rx_data_waiting(uart_no)) {                                  \
+        uart_rx(uart_no, _tmp_byte);                                           \
+        break;                                                                 \
+      }                                                                        \
+    }                                                                          \
+  } while (0)
 
 /**
  *
@@ -87,18 +120,40 @@ uint8_t ASC_HELPERS_BYTE;
  * receive data
  *
  */
+#define uart_tx(uart_no, data) _uart_tx(uart_no, data)
+
+/**
+ * Second level of macro makes sure parameters are expanded before subbing into
+ * string concatenation
+ */
 #if defined(__ARM_ARCH)
-#define uart_tx(uart_no, data) usart_send(USART##uart_no, data)
+#define _uart_tx(uart_no, data) usart_send(USART##uart_no, data)
 #elif defined(__AVR)
-#define uart_tx(uart_no, _tmp_byte)                                            \
+#define _uart_tx(uart_no, _tmp_byte)                                           \
   do {                                                                         \
     UDR##uart_no = _tmp_byte;                                                  \
   } while (0)
 #elif defined(NEORV32)
-#define uart_tx(uart_no, _tmp_byte) (neorv32_uart##uart_no##_putc(_tmp_byte))
+#define _uart_tx(uart_no, _tmp_byte) (neorv32_uart##uart_no##_putc(_tmp_byte))
 #else
-#define uart_tx(uart, _tmp_byte) __builtin_unreachable()
+#define _uart_tx(uart, _tmp_byte) __builtin_unreachable()
 #endif
+
+/**
+ *
+ * Writes to the UART tx buffer, blocking until the
+ * buffer is ready for writing
+ *
+ */
+#define uart_tx_blocking(uart_no, _tmp_byte)                                   \
+  do {                                                                         \
+    while (1) {                                                                \
+      if (is_uart_ready_to_tx(uart_no)) {                                      \
+        uart_tx(uart_no, _tmp_byte);                                           \
+        break;                                                                 \
+      }                                                                        \
+    }                                                                          \
+  } while (0)
 
 /**
  *

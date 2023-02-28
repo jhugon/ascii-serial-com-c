@@ -31,6 +31,7 @@
 #define F_CPU 16000000L
 #define BAUD 9600
 #define MYUBRR (F_CPU / 16 / BAUD - 1)
+#define UART_NO 0
 
 bool have_started_ADC_conversion = false;
 #define have_finished_ADC_conversion (!(ADCSRA & (1 << ADSC)))
@@ -140,7 +141,7 @@ int main(void) {
   }
   Catch(e) { return e; }
 
-  USART0_Init(MYUBRR, 1);
+  UART_Init(UART_NO, MYUBRR, 1);
 
   sei();
 

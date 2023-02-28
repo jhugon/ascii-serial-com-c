@@ -6,13 +6,6 @@
 #include <avr/io.h>
 #include <stdint.h>
 
-// Enable/disable USART_UDRE_vect interrupt that triggers when USART (transmit)
-// data register is empty i.e. ready for more data
-#define USART_enable_udre_interrupt(uart_no)                                   \
-  UCSR##uart_no##B |= (1 << UDRIE##uart_no)
-#define USART_disable_udre_interrupt(uart_no)                                  \
-  UCSR##uart_no##B &= ~(1 << UDRIE##uart_no)
-
 /** \brief Initialize USART
  *
  *  8 bit, 1 stop bit, no parity bit
@@ -25,11 +18,25 @@
  *
  */
 #define UART_Init(uart_no, ubrr, rxIntEnable)                                  \
+  _UART_Init(uart_no, ubrr, rxIntEnable)
+
+/**
+ * Second level of macro makes sure parameters are expanded before subbing into
+ * string concatenation
+ */
+#define _UART_Init(uart_no, ubrr, rxIntEnable)                                 \
   UBRR##uart_no##H = (uint8_t)(ubrr >> 8) & 0xFF;                              \
   UBRR##uart_no##L = (uint8_t)(ubrr)&0xFF;                                     \
   UCSR##uart_no##A = 0;                                                        \
   UCSR##uart_no##C = (3 << UCSZ00);                                            \
   UCSR##uart_no##B = (1 << RXEN0) | (1 << TXEN0) | (rxIntEnable << RXCIE0);
+
+// Enable/disable USART_UDRE_vect interrupt that triggers when USART (transmit)
+// data register is empty i.e. ready for more data
+#define USART_enable_udre_interrupt(uart_no)                                   \
+  UCSR##uart_no##B |= (1 << UDRIE##uart_no)
+#define USART_disable_udre_interrupt(uart_no)                                  \
+  UCSR##uart_no##B &= ~(1 << UDRIE##uart_no)
 
 /** \brief Define the ISR for a USART to push rx bytes to a circular buffer
  *
