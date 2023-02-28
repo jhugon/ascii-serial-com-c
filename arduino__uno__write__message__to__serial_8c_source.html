@@ -77,35 +77,38 @@ $(function() {
   <div class="headertitle"><div class="title">arduino_uno_write_message_to_serial.c</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="avr__uart_8h.html">avr/avr_uart.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define FOSC 16000000L</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define BAUD 9600</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MYUBRR (FOSC / 16 / BAUD - 1)</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define bufCap 64</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="asc__helpers_8h.html">asc_helpers.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="avr__uart_8h.html">avr/avr_uart.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define FOSC 16000000L</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define BAUD 9600</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define MYUBRR (FOSC / 16 / BAUD - 1)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define UART_NO 0</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> message[] = <span class="stringliteral">&quot;&gt;00s0 0 0 0.DE10\n&quot;</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t message_len = 17;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>uint8_t iChar = 0;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define bufCap 64</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> message[] = <span class="stringliteral">&quot;&gt;00s0 0 0 0.DE10\n&quot;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t message_len = 17;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>uint8_t iChar = 0;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_define" href="avr__uart_8h.html#a2ef527bf344a6998c2fd77d087652e82">USART0_Init</a>(MYUBRR, 0);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">while</span> (1) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_define" href="avr__uart_8h.html#aec74d3faa3d41f141e3f10b6e69e6c45">USART0_Tx</a>(message[iChar]);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    iChar++;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">if</span> (iChar == message_len) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      iChar = 0;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_define" href="avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe">UART_Init</a>(UART_NO, MYUBRR, 0);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_define" href="asc__helpers_8h.html#a912691f94aae1f6f8d7ddce5811bef16">uart_tx_blocking</a>(UART_NO, message[iChar]);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    iChar++;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span> (iChar == message_len) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      iChar = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="ttc" id="aasc__helpers_8h_html"><div class="ttname"><a href="asc__helpers_8h.html">asc_helpers.h</a></div></div>
+<div class="ttc" id="aasc__helpers_8h_html_a912691f94aae1f6f8d7ddce5811bef16"><div class="ttname"><a href="asc__helpers_8h.html#a912691f94aae1f6f8d7ddce5811bef16">uart_tx_blocking</a></div><div class="ttdeci">#define uart_tx_blocking(uart_no, _tmp_byte)</div><div class="ttdef"><b>Definition:</b> <a href="asc__helpers_8h_source.html#l00148">asc_helpers.h:148</a></div></div>
 <div class="ttc" id="aavr__uart_8h_html"><div class="ttname"><a href="avr__uart_8h.html">avr_uart.h</a></div></div>
-<div class="ttc" id="aavr__uart_8h_html_a2ef527bf344a6998c2fd77d087652e82"><div class="ttname"><a href="avr__uart_8h.html#a2ef527bf344a6998c2fd77d087652e82">USART0_Init</a></div><div class="ttdeci">#define USART0_Init(ubrr, rxIntEnable)</div><div class="ttdoc">Initialize USART0.</div><div class="ttdef"><b>Definition:</b> <a href="avr__uart_8h_source.html#l00027">avr_uart.h:27</a></div></div>
-<div class="ttc" id="aavr__uart_8h_html_aec74d3faa3d41f141e3f10b6e69e6c45"><div class="ttname"><a href="avr__uart_8h.html#aec74d3faa3d41f141e3f10b6e69e6c45">USART0_Tx</a></div><div class="ttdeci">#define USART0_Tx(data)</div><div class="ttdoc">Transmit data with USART0 (blocking)</div><div class="ttdef"><b>Definition:</b> <a href="avr__uart_8h_source.html#l00039">avr_uart.h:39</a></div></div>
+<div class="ttc" id="aavr__uart_8h_html_a7eb4809457317a59f4ac4ded3bcffdfe"><div class="ttname"><a href="avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe">UART_Init</a></div><div class="ttdeci">#define UART_Init(uart_no, ubrr, rxIntEnable)</div><div class="ttdoc">Initialize USART.</div><div class="ttdef"><b>Definition:</b> <a href="avr__uart_8h_source.html#l00020">avr_uart.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

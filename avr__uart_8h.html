@@ -114,28 +114,62 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5e657ae5fdc29061a5f23a44faf4f556"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a5e657ae5fdc29061a5f23a44faf4f556">USART0_can_write_Tx_data</a>&#160;&#160;&#160;(UCSR0A &amp; (1 &lt;&lt; UDRE0))</td></tr>
-<tr class="separator:a5e657ae5fdc29061a5f23a44faf4f556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcda08af186b7aeb9ec589557baa0193"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#adcda08af186b7aeb9ec589557baa0193">USART0_can_read_Rx_data</a>&#160;&#160;&#160;(UCSR0A &amp; (1 &lt;&lt; RXC0))</td></tr>
-<tr class="separator:adcda08af186b7aeb9ec589557baa0193"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58416f9c5d46082dbd416071977e9a64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a58416f9c5d46082dbd416071977e9a64">USART0_enable_udre_interrupt</a>&#160;&#160;&#160;UCSR0B |= (1 &lt;&lt; UDRIE0)</td></tr>
-<tr class="separator:a58416f9c5d46082dbd416071977e9a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916d760b4bf166baf114fb8f443460d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a916d760b4bf166baf114fb8f443460d8">USART0_disable_udre_interrupt</a>&#160;&#160;&#160;UCSR0B &amp;= ~(1 &lt;&lt; UDRIE0)</td></tr>
-<tr class="separator:a916d760b4bf166baf114fb8f443460d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ef527bf344a6998c2fd77d087652e82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a2ef527bf344a6998c2fd77d087652e82">USART0_Init</a>(ubrr,  rxIntEnable)</td></tr>
-<tr class="memdesc:a2ef527bf344a6998c2fd77d087652e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize USART0.  <br /></td></tr>
-<tr class="separator:a2ef527bf344a6998c2fd77d087652e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec74d3faa3d41f141e3f10b6e69e6c45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#aec74d3faa3d41f141e3f10b6e69e6c45">USART0_Tx</a>(data)</td></tr>
-<tr class="memdesc:aec74d3faa3d41f141e3f10b6e69e6c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit data with USART0 (blocking)  <br /></td></tr>
-<tr class="separator:aec74d3faa3d41f141e3f10b6e69e6c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd2051f3f25ba9cf933550f7fcf0f18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#aefd2051f3f25ba9cf933550f7fcf0f18">USART0_Rx</a>(destVar)</td></tr>
-<tr class="memdesc:aefd2051f3f25ba9cf933550f7fcf0f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive data with USART0 (blocking)  <br /></td></tr>
-<tr class="separator:aefd2051f3f25ba9cf933550f7fcf0f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb4809457317a59f4ac4ded3bcffdfe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe">UART_Init</a>(uart_no,  ubrr,  rxIntEnable)&#160;&#160;&#160;  <a class="el" href="avr__uart_8h.html#a902a1280cc708fdf8a73e5bcddaa0a66">_UART_Init</a>(uart_no, ubrr, rxIntEnable)</td></tr>
+<tr class="memdesc:a7eb4809457317a59f4ac4ded3bcffdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize USART.  <br /></td></tr>
+<tr class="separator:a7eb4809457317a59f4ac4ded3bcffdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902a1280cc708fdf8a73e5bcddaa0a66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a902a1280cc708fdf8a73e5bcddaa0a66">_UART_Init</a>(uart_no,  ubrr,  rxIntEnable)</td></tr>
+<tr class="separator:a902a1280cc708fdf8a73e5bcddaa0a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d55d88a311aa85fadd2159b66a4e545"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#a6d55d88a311aa85fadd2159b66a4e545">USART_enable_udre_interrupt</a>(uart_no)&#160;&#160;&#160;  UCSR##uart_no##B |= (1 &lt;&lt; UDRIE##uart_no)</td></tr>
+<tr class="separator:a6d55d88a311aa85fadd2159b66a4e545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab941ecd64870748a76a0ba5336a6b977"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#ab941ecd64870748a76a0ba5336a6b977">USART_disable_udre_interrupt</a>(uart_no)&#160;&#160;&#160;  UCSR##uart_no##B &amp;= ~(1 &lt;&lt; UDRIE##uart_no)</td></tr>
+<tr class="separator:ab941ecd64870748a76a0ba5336a6b977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5dea5b064773c2828a091767177b9c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="avr__uart_8h.html#ae5dea5b064773c2828a091767177b9c0">def_usart_isr_push_rx_to_circ_buf</a>(isr_name,  data_register,  circular_buffer)&#160;&#160;&#160;  ISR(USART_RX_vect) { <a class="el" href="circular__buffer_8c.html#acaa26f17825a87ec012fcaa9995ddefb">circular_buffer_push_back_uint8</a>(circular_buffer, UDR0); }</td></tr>
 <tr class="memdesc:ae5dea5b064773c2828a091767177b9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the ISR for a USART to push rx bytes to a circular buffer.  <br /></td></tr>
 <tr class="separator:ae5dea5b064773c2828a091767177b9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a902a1280cc708fdf8a73e5bcddaa0a66" name="a902a1280cc708fdf8a73e5bcddaa0a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902a1280cc708fdf8a73e5bcddaa0a66">&#9670;&#160;</a></span>_UART_Init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _UART_Init</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uart_no, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ubrr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">rxIntEnable&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  UBRR##uart_no##H = (uint8_t)(ubrr &gt;&gt; 8) &amp; 0xFF;                              \</div>
+<div class="line">  UBRR##uart_no##L = (uint8_t)(ubrr)&amp;0xFF;                                     \</div>
+<div class="line">  UCSR##uart_no##A = 0;                                                        \</div>
+<div class="line">  UCSR##uart_no##C = (3 &lt;&lt; UCSZ00);                                            \</div>
+<div class="line">  UCSR##uart_no##B = (1 &lt;&lt; RXEN0) | (1 &lt;&lt; TXEN0) | (rxIntEnable &lt;&lt; RXCIE0);</div>
+</div><!-- fragment --><p>Second level of macro makes sure parameters are expanded before subbing into string concatenation </p>
+
+<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00027">27</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
+
+</div>
+</div>
 <a id="ae5dea5b064773c2828a091767177b9c0" name="ae5dea5b064773c2828a091767177b9c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5dea5b064773c2828a091767177b9c0">&#9670;&#160;</a></span>def_usart_isr_push_rx_to_circ_buf</h2>
 
@@ -182,83 +216,25 @@ Parameters</h2>
 <p>data_register: UDR0 for 328</p>
 <p>circular_buffer: a pointer to a circular_buffer_uint8 that you want received bytes pushed_back on. </p>
 
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00081">81</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00068">68</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
 
 </div>
 </div>
-<a id="adcda08af186b7aeb9ec589557baa0193" name="adcda08af186b7aeb9ec589557baa0193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcda08af186b7aeb9ec589557baa0193">&#9670;&#160;</a></span>USART0_can_read_Rx_data</h2>
+<a id="a7eb4809457317a59f4ac4ded3bcffdfe" name="a7eb4809457317a59f4ac4ded3bcffdfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb4809457317a59f4ac4ded3bcffdfe">&#9670;&#160;</a></span>UART_Init</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USART0_can_read_Rx_data&#160;&#160;&#160;(UCSR0A &amp; (1 &lt;&lt; RXC0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00011">11</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
-
-</div>
-</div>
-<a id="a5e657ae5fdc29061a5f23a44faf4f556" name="a5e657ae5fdc29061a5f23a44faf4f556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e657ae5fdc29061a5f23a44faf4f556">&#9670;&#160;</a></span>USART0_can_write_Tx_data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USART0_can_write_Tx_data&#160;&#160;&#160;(UCSR0A &amp; (1 &lt;&lt; UDRE0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00010">10</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
-
-</div>
-</div>
-<a id="a916d760b4bf166baf114fb8f443460d8" name="a916d760b4bf166baf114fb8f443460d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a916d760b4bf166baf114fb8f443460d8">&#9670;&#160;</a></span>USART0_disable_udre_interrupt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USART0_disable_udre_interrupt&#160;&#160;&#160;UCSR0B &amp;= ~(1 &lt;&lt; UDRIE0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00016">16</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
-
-</div>
-</div>
-<a id="a58416f9c5d46082dbd416071977e9a64" name="a58416f9c5d46082dbd416071977e9a64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58416f9c5d46082dbd416071977e9a64">&#9670;&#160;</a></span>USART0_enable_udre_interrupt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USART0_enable_udre_interrupt&#160;&#160;&#160;UCSR0B |= (1 &lt;&lt; UDRIE0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00015">15</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
-
-</div>
-</div>
-<a id="a2ef527bf344a6998c2fd77d087652e82" name="a2ef527bf344a6998c2fd77d087652e82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ef527bf344a6998c2fd77d087652e82">&#9670;&#160;</a></span>USART0_Init</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USART0_Init</td>
+          <td class="memname">#define UART_Init</td>
           <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uart_no, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">ubrr, </td>
         </tr>
@@ -271,89 +247,63 @@ Parameters</h2>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="avr__uart_8h.html#a902a1280cc708fdf8a73e5bcddaa0a66">_UART_Init</a>(uart_no, ubrr, rxIntEnable)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  UBRR0H = (uint8_t)(ubrr &gt;&gt; 8) &amp; 0xFF;                                        \</div>
-<div class="line">  UBRR0L = (uint8_t)(ubrr)&amp;0xFF;                                               \</div>
-<div class="line">  UCSR0A = 0;                                                                  \</div>
-<div class="line">  UCSR0C = (3 &lt;&lt; UCSZ00);                                                      \</div>
-<div class="line">  UCSR0B = (1 &lt;&lt; RXEN0) | (1 &lt;&lt; TXEN0) | (rxIntEnable &lt;&lt; RXCIE0);</div>
-</div><!-- fragment -->
-<p>Initialize USART0. </p>
+
+<p>Initialize USART. </p>
 <p>8 bit, 1 stop bit, no parity bit</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">uart_no</td><td>number of UART, like 0 or 1</td></tr>
     <tr><td class="paramname">ubrr</td><td>12 bits of uint16_t: should be clock / 16 / baud - 1</td></tr>
     <tr><td class="paramname">rxIntEnable</td><td>1 bit enable RX interrupt </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00027">27</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00020">20</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
 
 </div>
 </div>
-<a id="aefd2051f3f25ba9cf933550f7fcf0f18" name="aefd2051f3f25ba9cf933550f7fcf0f18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefd2051f3f25ba9cf933550f7fcf0f18">&#9670;&#160;</a></span>USART0_Rx</h2>
+<a id="ab941ecd64870748a76a0ba5336a6b977" name="ab941ecd64870748a76a0ba5336a6b977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab941ecd64870748a76a0ba5336a6b977">&#9670;&#160;</a></span>USART_disable_udre_interrupt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USART0_Rx</td>
+          <td class="memname">#define USART_disable_udre_interrupt</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">destVar</td><td>)</td>
-          <td></td>
+          <td class="paramname">uart_no</td><td>)</td>
+          <td>&#160;&#160;&#160;  UCSR##uart_no##B &amp;= ~(1 &lt;&lt; UDRIE##uart_no)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">while</span> (!USART0_can_read_Rx_data) {                                           \</div>
-<div class="line">  }                                                                            \</div>
-<div class="line">  destVar = UDR0;</div>
-</div><!-- fragment -->
-<p>Receive data with USART0 (blocking) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">destVar</td><td>uint8_t place to copy the data </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00049">49</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00038">38</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
 
 </div>
 </div>
-<a id="aec74d3faa3d41f141e3f10b6e69e6c45" name="aec74d3faa3d41f141e3f10b6e69e6c45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec74d3faa3d41f141e3f10b6e69e6c45">&#9670;&#160;</a></span>USART0_Tx</h2>
+<a id="a6d55d88a311aa85fadd2159b66a4e545" name="a6d55d88a311aa85fadd2159b66a4e545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d55d88a311aa85fadd2159b66a4e545">&#9670;&#160;</a></span>USART_enable_udre_interrupt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USART0_Tx</td>
+          <td class="memname">#define USART_enable_udre_interrupt</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">data</td><td>)</td>
-          <td></td>
+          <td class="paramname">uart_no</td><td>)</td>
+          <td>&#160;&#160;&#160;  UCSR##uart_no##B |= (1 &lt;&lt; UDRIE##uart_no)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">while</span> (!USART0_can_write_Tx_data) {                                          \</div>
-<div class="line">  }                                                                            \</div>
-<div class="line">  UDR0 = data;</div>
-</div><!-- fragment -->
-<p>Transmit data with USART0 (blocking) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>data to transmit uint8_t </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00039">39</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="avr__uart_8h_source.html#l00036">36</a> of file <a class="el" href="avr__uart_8h_source.html">avr_uart.h</a>.</p>
 
 </div>
 </div>

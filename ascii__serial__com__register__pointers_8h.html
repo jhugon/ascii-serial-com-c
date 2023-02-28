@@ -138,27 +138,6 @@ Macros</h2></td></tr>
 <tr class="separator:a4df89485cc6e1e6ef3f9639c31fe5e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aace58126cbbc27cf6a1b39baaf561aa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#aace58126cbbc27cf6a1b39baaf561aa4">REGPRINTTYPEHEX</a>&#160;&#160;&#160;PRIX8</td></tr>
 <tr class="separator:aace58126cbbc27cf6a1b39baaf561aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3325b3e3f6968880d905b2a796512ec1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a3325b3e3f6968880d905b2a796512ec1">_extraInputBuffer_size_</a>&#160;&#160;&#160;64</td></tr>
-<tr class="separator:a3325b3e3f6968880d905b2a796512ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a6c3f3a4bf9d312cf768ac51b53070cf8">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</a>()</td></tr>
-<tr class="memdesc:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declarations for ascii_serial_com_device and ascii_serial_com_register_pointers.  <br /></td></tr>
-<tr class="separator:a6c3f3a4bf9d312cf768ac51b53070cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67bdca177b335fe4b6296cea4500552"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#ae67bdca177b335fe4b6296cea4500552">SETUP_ASC_DEVICE_W_REGISTER_POINTERS</a>(<a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>,  <a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>,  nRegs)</td></tr>
-<tr class="memdesc:ae67bdca177b335fe4b6296cea4500552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup for ascii_serial_com_device and ascii_serial_com_register_pointers.  <br /></td></tr>
-<tr class="separator:ae67bdca177b335fe4b6296cea4500552"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fde3e11ce9e090a6b721dfef60c8216"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a0fde3e11ce9e090a6b721dfef60c8216">_serial_tx_buf_is_empty</a>(usart)&#160;&#160;&#160;((USART_ISR(usart) &amp; USART_ISR_TXE))</td></tr>
-<tr class="separator:a0fde3e11ce9e090a6b721dfef60c8216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac33b952f9337b4cab679be1c0693a77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#aac33b952f9337b4cab679be1c0693a77">_ATOMIC</a>&#160;&#160;&#160;CM_ATOMIC_BLOCK()</td></tr>
-<tr class="separator:aac33b952f9337b4cab679be1c0693a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550d7ab67435657f39b6751133cbcdaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a550d7ab67435657f39b6751133cbcdaa">HANDLE_ASC_COMM_IN_POLLING_LOOP</a>(usart)</td></tr>
-<tr class="memdesc:a550d7ab67435657f39b6751133cbcdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling for ascii_serial_com_device and ascii_serial_com_register_pointers.  <br /></td></tr>
-<tr class="separator:a550d7ab67435657f39b6751133cbcdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1ffa8d90c4185adae9f8cbff217f2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a5c1ffa8d90c4185adae9f8cbff217f2a">READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS</a></td></tr>
-<tr class="memdesc:a5c1ffa8d90c4185adae9f8cbff217f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if you should stream a message to the host.  <br /></td></tr>
-<tr class="separator:a5c1ffa8d90c4185adae9f8cbff217f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f74f60362044946364ff1567bd73c02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ascii__serial__com__register__pointers_8h.html#a3f74f60362044946364ff1567bd73c02">STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS</a>(data,  data_size)</td></tr>
-<tr class="memdesc:a3f74f60362044946364ff1567bd73c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream data to the host.  <br /></td></tr>
-<tr class="separator:a3f74f60362044946364ff1567bd73c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -199,219 +178,26 @@ Functions</h2></td></tr>
  }
 
  ascii_serial_com_register_pointers_init(&amp;rps,reg_pointers,reg_write_masks,NREGS);
-</pre> <h2><a class="anchor" id="autotoc_md15"></a>
+</pre> <h2><a class="anchor" id="autotoc_md24"></a>
 Convenience Macros</h2>
 <p>A set of convenience macros are provided to ease the common use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 Required Macros</h3>
 <p>To use the macros:</p>
 <ol type="1">
 <li>Declare the register pointer and register write mask array as above</li>
-<li>Before the main() function, put <code><a class="el" href="ascii__serial__com__register__pointers_8h.html#a6c3f3a4bf9d312cf768ac51b53070cf8" title="Declarations for ascii_serial_com_device and ascii_serial_com_register_pointers.">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS()</a></code> on a line <b>with no semicolon</b></li>
-<li>In the setup portion of main(), before the polling loop, inside a Try/Catch block, put: <code><a class="el" href="ascii__serial__com__register__pointers_8h.html#ae67bdca177b335fe4b6296cea4500552" title="Setup for ascii_serial_com_device and ascii_serial_com_register_pointers.">SETUP_ASC_DEVICE_W_REGISTER_POINTERS(reg_map,reg_write_masks, NREGS)</a>;</code>, where the variables are declared as in the previous section.</li>
-<li>Inside the polling loop and a Try/Catch block, put: <code><a class="el" href="ascii__serial__com__register__pointers_8h.html#a550d7ab67435657f39b6751133cbcdaa" title="Polling for ascii_serial_com_device and ascii_serial_com_register_pointers.">HANDLE_ASC_COMM_IN_POLLING_LOOP(USART1)</a>;</code>, replacing USART1 with the appropriate USART.</li>
+<li>Before the main() function, put <code><a class="el" href="asc__helpers_8h.html#a6c3f3a4bf9d312cf768ac51b53070cf8" title="Declarations for ascii_serial_com_device and ascii_serial_com_register_pointers.">DECLARE_ASC_DEVICE_W_REGISTER_POINTERS()</a></code> on a line <b>with no semicolon</b></li>
+<li>In the setup portion of main(), before the polling loop, inside a Try/Catch block, put: <code><a class="el" href="asc__helpers_8h.html#ae67bdca177b335fe4b6296cea4500552" title="Setup for ascii_serial_com_device and ascii_serial_com_register_pointers.">SETUP_ASC_DEVICE_W_REGISTER_POINTERS(reg_map,reg_write_masks, NREGS)</a>;</code>, where the variables are declared as in the previous section.</li>
+<li>Inside the polling loop and a Try/Catch block, put: <code><a class="el" href="asc__helpers_8h.html#a2cbfa6358f151ff04c17b64f0fa73dbb" title="Polling for ascii_serial_com_device and ascii_serial_com_register_pointers.">HANDLE_ASC_COMM_IN_POLLING_LOOP(USART1)</a>;</code>, replacing USART1 with the appropriate USART.</li>
 </ol>
 <p>Number 4 assumes something is putting received bytes into a circular_buffer_uint8 called <code>extraInputBuffer</code> (declared and setup by the macros). This can be accomplished using, for STM32, <code>def_usart_isr_push_rx_to_circ_buf(&lt;usart_isr&gt;,&lt;usart&gt;,&amp;extraInputBuffer)</code> (no semicolon)</p>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Streaming</h2>
-<p>The boolean valued macro <code>READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS</code> should be checked before actually streaming a message. and <code><a class="el" href="ascii__serial__com__register__pointers_8h.html#a3f74f60362044946364ff1567bd73c02" title="Stream data to the host.">STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS(data,data_len)</a>;</code> should be run to send the message.</p>
+<p>The boolean valued macro <code>READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS</code> should be checked before actually streaming a message. and <code><a class="el" href="asc__helpers_8h.html#a3f74f60362044946364ff1567bd73c02" title="Stream data to the host.">STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS(data,data_len)</a>;</code> should be run to send the message.</p>
 <p>The macros define a <code>bool streaming_is_on</code> that is initialized to false, set to true when a "n" message is received, and set to false when a "f" message is received. It should be used to decide when to start auxiliary routines that prepare to stream messages. </p>
 
 <p class="definition">Definition in file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aac33b952f9337b4cab679be1c0693a77" name="aac33b952f9337b4cab679be1c0693a77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac33b952f9337b4cab679be1c0693a77">&#9670;&#160;</a></span>_ATOMIC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _ATOMIC&#160;&#160;&#160;CM_ATOMIC_BLOCK()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00254">254</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a3325b3e3f6968880d905b2a796512ec1" name="a3325b3e3f6968880d905b2a796512ec1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3325b3e3f6968880d905b2a796512ec1">&#9670;&#160;</a></span>_extraInputBuffer_size_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _extraInputBuffer_size_&#160;&#160;&#160;64</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00149">149</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a0fde3e11ce9e090a6b721dfef60c8216" name="a0fde3e11ce9e090a6b721dfef60c8216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fde3e11ce9e090a6b721dfef60c8216">&#9670;&#160;</a></span>_serial_tx_buf_is_empty</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _serial_tx_buf_is_empty</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">usart</td><td>)</td>
-          <td>&#160;&#160;&#160;((USART_ISR(usart) &amp; USART_ISR_TXE))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00233">233</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a6c3f3a4bf9d312cf768ac51b53070cf8" name="a6c3f3a4bf9d312cf768ac51b53070cf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c3f3a4bf9d312cf768ac51b53070cf8">&#9670;&#160;</a></span>DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DECLARE_ASC_DEVICE_W_REGISTER_POINTERS</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordtype">void</span> _handle_nf_messages(<a class="code hl_struct" href="struct____ascii__serial__com__struct.html">ascii_serial_com</a> *asc, <span class="keywordtype">char</span> ascVersion,             \</div>
-<div class="line">                           <span class="keywordtype">char</span> appVersion, <span class="keywordtype">char</span> command, <span class="keywordtype">char</span> *data,          \</div>
-<div class="line">                           <span class="keywordtype">size_t</span> dataLen, <span class="keywordtype">void</span> *state_vp);                    \</div>
-<div class="line">  <span class="keywordtype">bool</span> streaming_is_on = <span class="keyword">false</span>;                                                \</div>
-<div class="line">  <a class="code hl_struct" href="structcircular__buffer__uint8__struct.html">circular_buffer_uint8</a> extraInputBuffer;                                      \</div>
-<div class="line">                                                                               \</div>
-<div class="line">  uint8_t _tmp_byte;                                                           \</div>
-<div class="line">  uint8_t _extraInputBuffer_raw[_extraInputBuffer_size_];                      \</div>
-<div class="line">  <a class="code hl_struct" href="struct____ascii__serial__com__device.html">ascii_serial_com_device</a> _ascd;                                               \</div>
-<div class="line">  <a class="code hl_struct" href="structascii__serial__com__register__pointers__struct.html">ascii_serial_com_register_pointers</a> _reg_pointers_state;                      \</div>
-<div class="line">  <a class="code hl_struct" href="struct____ascii__serial__com__device__config.html">ascii_serial_com_device_config</a> _ascd_config = {                              \</div>
-<div class="line">      .<a class="code hl_variable" href="struct____ascii__serial__com__device__config.html#ad82da2188d2ed727175b54ca69ab4a29">func_rw</a> = <a class="code hl_function" href="ascii__serial__com__register__pointers_8h.html#a8e049b9e6bf675f4681768da154cefce">ascii_serial_com_register_pointers_handle_message</a>,            \</div>
-<div class="line">      .state_rw = &amp;_reg_pointers_state,                                        \</div>
-<div class="line">      .func_nf = _handle_nf_messages,                                          \</div>
-<div class="line">      .state_nf = &amp;streaming_is_on};                                           \</div>
-<div class="line">  <span class="keywordtype">void</span> _handle_nf_messages(__attribute__((unused)) <a class="code hl_struct" href="struct____ascii__serial__com__struct.html">ascii_serial_com</a> *asc,      \</div>
-<div class="line">                           __attribute__((unused)) <span class="keywordtype">char</span> ascVersion,            \</div>
-<div class="line">                           __attribute__((unused)) <span class="keywordtype">char</span> appVersion,            \</div>
-<div class="line">                           <span class="keywordtype">char</span> command, __attribute__((unused)) <span class="keywordtype">char</span> *data,   \</div>
-<div class="line">                           __attribute__((unused)) <span class="keywordtype">size_t</span> dataLen,             \</div>
-<div class="line">                           <span class="keywordtype">void</span> *state_vp) {                                   \</div>
-<div class="line">    <span class="keywordtype">bool</span> *state = (<span class="keywordtype">bool</span> *)state_vp;                                            \</div>
-<div class="line">    if (command == <span class="charliteral">&#39;n&#39;</span>) {                                                      \</div>
-<div class="line">      *state = <span class="keyword">true</span>;                                                           \</div>
-<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="charliteral">&#39;f&#39;</span>) {                                               \</div>
-<div class="line">      *state = <span class="keyword">false</span>;                                                          \</div>
-<div class="line">    }                                                                          \</div>
-<div class="line">  }</div>
-<div class="ttc" id="aascii__serial__com__register__pointers_8h_html_a8e049b9e6bf675f4681768da154cefce"><div class="ttname"><a href="ascii__serial__com__register__pointers_8h.html#a8e049b9e6bf675f4681768da154cefce">ascii_serial_com_register_pointers_handle_message</a></div><div class="ttdeci">void ascii_serial_com_register_pointers_handle_message(ascii_serial_com *asc, char ascVersion, char appVersion, char command, char *data, size_t dataLen, void *register_pointers_state)</div><div class="ttdoc">ASCII Serial Com Register Pointers handle message.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__register__pointers_8c_source.html#l00026">ascii_serial_com_register_pointers.c:26</a></div></div>
-<div class="ttc" id="astruct____ascii__serial__com__device__config_html"><div class="ttname"><a href="struct____ascii__serial__com__device__config.html">__ascii_serial_com_device_config</a></div><div class="ttdoc">ASCII Serial Com Device Config Struct.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8h_source.html#l00025">ascii_serial_com_device.h:25</a></div></div>
-<div class="ttc" id="astruct____ascii__serial__com__device__config_html_ad82da2188d2ed727175b54ca69ab4a29"><div class="ttname"><a href="struct____ascii__serial__com__device__config.html#ad82da2188d2ed727175b54ca69ab4a29">__ascii_serial_com_device_config::func_rw</a></div><div class="ttdeci">void(* func_rw)(ascii_serial_com *, char, char, char, char *data, size_t, void *)</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8h_source.html#l00026">ascii_serial_com_device.h:26</a></div></div>
-<div class="ttc" id="astruct____ascii__serial__com__device_html"><div class="ttname"><a href="struct____ascii__serial__com__device.html">__ascii_serial_com_device</a></div><div class="ttdoc">ASCII Serial Com Device State struct.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8h_source.html#l00046">ascii_serial_com_device.h:46</a></div></div>
-<div class="ttc" id="astruct____ascii__serial__com__struct_html"><div class="ttname"><a href="struct____ascii__serial__com__struct.html">__ascii_serial_com_struct</a></div><div class="ttdoc">ASCII Serial Com Interface State struct.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com_8h_source.html#l00054">ascii_serial_com.h:54</a></div></div>
-<div class="ttc" id="astructascii__serial__com__register__pointers__struct_html"><div class="ttname"><a href="structascii__serial__com__register__pointers__struct.html">ascii_serial_com_register_pointers_struct</a></div><div class="ttdoc">ASCII Serial Com Register Pointers State struct.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__register__pointers_8h_source.html#l00098">ascii_serial_com_register_pointers.h:98</a></div></div>
-<div class="ttc" id="astructcircular__buffer__uint8__struct_html"><div class="ttname"><a href="structcircular__buffer__uint8__struct.html">circular_buffer_uint8_struct</a></div><div class="ttdoc">circular buffer struct</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00020">circular_buffer.h:20</a></div></div>
-</div><!-- fragment -->
-<p>Declarations for ascii_serial_com_device and ascii_serial_com_register_pointers. </p>
-<p>Declarations that should be outside of (and before) main() to ease use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<p>The only "public" variables are: </p><pre class="fragment"> bool streaming_is_on;
- circular_buffer_uint8 extraInputBuffer;
-</pre> <h2><a class="anchor" id="autotoc_md18"></a>
-Notes</h2>
-<p><b>Don't follow this with a semicolon</b></p>
-<h2><a class="anchor" id="autotoc_md19"></a>
-Parameters</h2>
-<p>None </p>
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00171">171</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a550d7ab67435657f39b6751133cbcdaa" name="a550d7ab67435657f39b6751133cbcdaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a550d7ab67435657f39b6751133cbcdaa">&#9670;&#160;</a></span>HANDLE_ASC_COMM_IN_POLLING_LOOP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define HANDLE_ASC_COMM_IN_POLLING_LOOP</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">usart</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_function" href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a>(                                         \</div>
-<div class="line">          <a class="code hl_function" href="ascii__serial__com__device_8c.html#a0ca264bb34cc83c56582f012c5044007">ascii_serial_com_device_get_output_buffer</a>(&amp;_ascd)) &amp;&amp;                \</div>
-<div class="line">      _serial_tx_buf_is_empty(usart)) {                                        \</div>
-<div class="line">    _tmp_byte = <a class="code hl_function" href="circular__buffer_8c.html#a7254c69a64c6b43ad9cb69faee9f7e70">circular_buffer_pop_front_uint8</a>(                               \</div>
-<div class="line">        <a class="code hl_function" href="ascii__serial__com__device_8c.html#a0ca264bb34cc83c56582f012c5044007">ascii_serial_com_device_get_output_buffer</a>(&amp;_ascd));                    \</div>
-<div class="line">    usart_send(usart, _tmp_byte);                                              \</div>
-<div class="line">  }                                                                            \</div>
-<div class="line">  if (!<a class="code hl_function" href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a>(&amp;extraInputBuffer)) {                    \</div>
-<div class="line">    _ATOMIC {                                                                  \</div>
-<div class="line">      _tmp_byte = <a class="code hl_function" href="circular__buffer_8c.html#a7254c69a64c6b43ad9cb69faee9f7e70">circular_buffer_pop_front_uint8</a>(&amp;extraInputBuffer);          \</div>
-<div class="line">    }                                                                          \</div>
-<div class="line">    circular_buffer_push_back_uint8(                                           \</div>
-<div class="line">        <a class="code hl_function" href="ascii__serial__com__device_8c.html#a7472b9ad6b9acc183597d22353a8e9a0">ascii_serial_com_device_get_input_buffer</a>(&amp;_ascd), _tmp_byte);          \</div>
-<div class="line">  }                                                                            \</div>
-<div class="line">  ascii_serial_com_device_receive(&amp;_ascd)</div>
-<div class="ttc" id="aascii__serial__com__device_8c_html_a0ca264bb34cc83c56582f012c5044007"><div class="ttname"><a href="ascii__serial__com__device_8c.html#a0ca264bb34cc83c56582f012c5044007">ascii_serial_com_device_get_output_buffer</a></div><div class="ttdeci">circular_buffer_uint8 * ascii_serial_com_device_get_output_buffer(ascii_serial_com_device *ascd)</div><div class="ttdoc">ASCII Serial Com Device get output buffer.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8c_source.html#l00063">ascii_serial_com_device.c:63</a></div></div>
-<div class="ttc" id="aascii__serial__com__device_8c_html_a7472b9ad6b9acc183597d22353a8e9a0"><div class="ttname"><a href="ascii__serial__com__device_8c.html#a7472b9ad6b9acc183597d22353a8e9a0">ascii_serial_com_device_get_input_buffer</a></div><div class="ttdeci">circular_buffer_uint8 * ascii_serial_com_device_get_input_buffer(ascii_serial_com_device *ascd)</div><div class="ttdoc">ASCII Serial Com Device get input buffer.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8c_source.html#l00058">ascii_serial_com_device.c:58</a></div></div>
-<div class="ttc" id="acircular__buffer_8c_html_a7254c69a64c6b43ad9cb69faee9f7e70"><div class="ttname"><a href="circular__buffer_8c.html#a7254c69a64c6b43ad9cb69faee9f7e70">circular_buffer_pop_front_uint8</a></div><div class="ttdeci">uint8_t circular_buffer_pop_front_uint8(circular_buffer_uint8 *circ_buf)</div><div class="ttdoc">circular buffer pop front</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8c_source.html#l00159">circular_buffer.c:159</a></div></div>
-<div class="ttc" id="acircular__buffer_8c_html_ab5f8992d7f4538522df8c6966c36c2c1"><div class="ttname"><a href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a></div><div class="ttdeci">bool circular_buffer_is_empty_uint8(const circular_buffer_uint8 *circ_buf)</div><div class="ttdoc">circular buffer get if empty</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8c_source.html#l00068">circular_buffer.c:68</a></div></div>
-</div><!-- fragment -->
-<p>Polling for ascii_serial_com_device and ascii_serial_com_register_pointers. </p>
-<p>Within the polling loop, handles transmitting bytes, processing received bytes, and handling received messages. This is part of a group of macros to ease use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
-Notes</h2>
-<p><b>Assumes that something else receives bytes and puts them in</b> <code>extraInputBuffer</code></p>
-<p><b>Make sure this is inside a Try/Catch block</b></p>
-<p><b>Follow this with a semicolon</b></p>
-<h2><a class="anchor" id="autotoc_md23"></a>
-Parameters</h2>
-<p>usart: the address of the USART used for transmitting bytes. For STM32: USART1, USART2, .... For AVR: UDR0, .... </p>
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00285">285</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a5c1ffa8d90c4185adae9f8cbff217f2a" name="a5c1ffa8d90c4185adae9f8cbff217f2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c1ffa8d90c4185adae9f8cbff217f2a">&#9670;&#160;</a></span>READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  (streaming_is_on &amp;&amp;                                                          \</div>
-<div class="line">   circular_buffer_get_size_uint8(                                             \</div>
-<div class="line">       <a class="code hl_function" href="ascii__serial__com__device_8c.html#a0ca264bb34cc83c56582f012c5044007">ascii_serial_com_device_get_output_buffer</a>(&amp;_ascd)) == 0)</div>
-</div><!-- fragment -->
-<p>Check if you should stream a message to the host. </p>
-<p>This is a boolean value macro that checks if streaming is enabled and the transmit buffer is empty. If true, the user may stream a message to the host now with STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS</p>
-<p>This is part of a group of macros to ease use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
-Notes</h2>
-<p><b>Make sure this is inside a Try/Catch block</b> </p>
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00316">316</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
 <a id="aace58126cbbc27cf6a1b39baaf561aa4" name="aace58126cbbc27cf6a1b39baaf561aa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aace58126cbbc27cf6a1b39baaf561aa4">&#9670;&#160;</a></span>REGPRINTTYPEHEX</h2>
 
@@ -489,107 +275,6 @@ Notes</h2>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00081">81</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="ae67bdca177b335fe4b6296cea4500552" name="ae67bdca177b335fe4b6296cea4500552"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae67bdca177b335fe4b6296cea4500552">&#9670;&#160;</a></span>SETUP_ASC_DEVICE_W_REGISTER_POINTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SETUP_ASC_DEVICE_W_REGISTER_POINTERS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">nRegs&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_function" href="ascii__serial__com__register__pointers_8h.html#ad378330066529cae2d2ffbba258ea7c5">ascii_serial_com_register_pointers_init</a>(&amp;_reg_pointers_state, <a class="code hl_variable" href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>,  \</div>
-<div class="line">                                          <a class="code hl_variable" href="stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a>, nRegs);        \</div>
-<div class="line">  ascii_serial_com_device_init(&amp;_ascd, &amp;_ascd_config);                         \</div>
-<div class="line">                                                                               \</div>
-<div class="line">  circular_buffer_init_uint8(&amp;extraInputBuffer, _extraInputBuffer_size_,       \</div>
-<div class="line">                             _extraInputBuffer_raw)</div>
-<div class="ttc" id="aascii__serial__com__register__pointers_8h_html_ad378330066529cae2d2ffbba258ea7c5"><div class="ttname"><a href="ascii__serial__com__register__pointers_8h.html#ad378330066529cae2d2ffbba258ea7c5">ascii_serial_com_register_pointers_init</a></div><div class="ttdeci">void ascii_serial_com_register_pointers_init(ascii_serial_com_register_pointers *register_pointers_state, volatile REGTYPE **pointers, REGTYPE *write_masks, uint16_t n_regs)</div><div class="ttdoc">ASCII Serial Com Register Pointers init.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__register__pointers_8c_source.html#l00018">ascii_serial_com_register_pointers.c:18</a></div></div>
-<div class="ttc" id="astm32f091nucleo64__adc__streaming_8c_html_a8ce5ed9fb99b3661a174ff2db6345b2a"><div class="ttname"><a href="stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a">register_write_masks</a></div><div class="ttdeci">REGTYPE register_write_masks[nRegs]</div><div class="ttdoc">Write masks for register_map.</div><div class="ttdef"><b>Definition:</b> <a href="stm32f091nucleo64__adc__streaming_8c_source.html#l00138">stm32f091nucleo64_adc_streaming.c:138</a></div></div>
-<div class="ttc" id="astm32f091nucleo64__adc__streaming_8c_html_aff7ce78116e86a9fa3895ff53dee84c8"><div class="ttname"><a href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a></div><div class="ttdeci">volatile REGTYPE * register_map[nRegs]</div><div class="ttdoc">Register Map.</div><div class="ttdef"><b>Definition:</b> <a href="stm32f091nucleo64__adc__streaming_8c_source.html#l00119">stm32f091nucleo64_adc_streaming.c:119</a></div></div>
-</div><!-- fragment -->
-<p>Setup for ascii_serial_com_device and ascii_serial_com_register_pointers. </p>
-<p>Setup that should be inside main() before the polling loop. This is part of a group of macros to ease use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<h2><a class="anchor" id="autotoc_md20"></a>
-Notes</h2>
-<p><b>Make sure this is inside a Try/Catch block</b></p>
-<p><b>Follow this with a semicolon</b></p>
-<h2><a class="anchor" id="autotoc_md21"></a>
-Parameters</h2>
-<p>register_map: the register map, type: REGTYPE * array</p>
-<p>register_write_masks: the register write masks, type: REGTYPE array</p>
-<p>nRegs: the length of the two arrays above </p>
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00223">223</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
-
-</div>
-</div>
-<a id="a3f74f60362044946364ff1567bd73c02" name="a3f74f60362044946364ff1567bd73c02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f74f60362044946364ff1567bd73c02">&#9670;&#160;</a></span>STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define STREAM_TO_HOST_ASC_DEVICE_W_REGISTER_POINTERS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">data, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">data_size&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_function" href="ascii__serial__com__device_8c.html#a5b3173bf4dbb145a9da84b75dc978989">ascii_serial_com_device_put_s_message_in_output_buffer</a>(&amp;_ascd, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;0&#39;</span>,     \</div>
-<div class="line">                                                         data, data_size)</div>
-<div class="ttc" id="aascii__serial__com__device_8c_html_a5b3173bf4dbb145a9da84b75dc978989"><div class="ttname"><a href="ascii__serial__com__device_8c.html#a5b3173bf4dbb145a9da84b75dc978989">ascii_serial_com_device_put_s_message_in_output_buffer</a></div><div class="ttdeci">void ascii_serial_com_device_put_s_message_in_output_buffer(ascii_serial_com_device *ascd, char ascVersion, char appVersion, char *data, size_t dataLen)</div><div class="ttdoc">ASCII Serial Com Device put a 's' message in output buffer.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com__device_8c_source.html#l00074">ascii_serial_com_device.c:74</a></div></div>
-</div><!-- fragment -->
-<p>Stream data to the host. </p>
-<p>This macro puts a message in the output buffer</p>
-<p>This is part of a group of macros to ease use of ascii_serial_com_register_pointers with ascii_serial_com_device.</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
-Notes</h2>
-<p><b>Make sure this is inside a Try/Catch block</b></p>
-<h2><a class="anchor" id="autotoc_md26"></a>
-Parameters</h2>
-<p>data: a pointer to data or array of data to be sent</p>
-<p>data_size: a uint describing the data size in bytes </p>
-
-<p class="definition">Definition at line <a class="el" href="ascii__serial__com__register__pointers_8h_source.html#l00339">339</a> of file <a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>.</p>
 
 </div>
 </div>

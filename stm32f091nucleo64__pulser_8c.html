@@ -95,6 +95,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="stm__timers_8h_source.html">arm/stm_timers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stm__usart_8h_source.html">arm/stm_usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="asc__exception_8h_source.html">asc_exception.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="asc__helpers_8h_source.html">asc_helpers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com_8h_source.html">ascii_serial_com.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com__device_8h_source.html">ascii_serial_com_device.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>&quot;</code><br />
@@ -105,31 +106,32 @@ Include dependency graph for stm32f091nucleo64_pulser.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="stm32f091nucleo64__pulser_8c__incl.png" border="0" usemap="#aarm_2stm32f091nucleo64__pulser_8c" alt=""/></div>
 <map name="aarm_2stm32f091nucleo64__pulser_8c" id="aarm_2stm32f091nucleo64__pulser_8c">
-<area shape="rect" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="1023,5,1184,45"/>
+<area shape="rect" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="1071,5,1232,45"/>
 <area shape="rect" title=" " alt="" coords="5,101,172,126"/>
 <area shape="rect" title=" " alt="" coords="197,101,351,126"/>
 <area shape="rect" title=" " alt="" coords="375,101,538,126"/>
 <area shape="rect" title=" " alt="" coords="562,101,725,126"/>
-<area shape="rect" title=" " alt="" coords="851,181,1017,207"/>
-<area shape="rect" title=" " alt="" coords="1786,101,1946,126"/>
-<area shape="rect" title=" " alt="" coords="605,181,775,207"/>
-<area shape="rect" title=" " alt="" coords="1093,181,1263,207"/>
+<area shape="rect" title=" " alt="" coords="728,181,895,207"/>
+<area shape="rect" title=" " alt="" coords="1926,101,2086,126"/>
+<area shape="rect" title=" " alt="" coords="482,181,653,207"/>
+<area shape="rect" title=" " alt="" coords="970,181,1141,207"/>
 <area shape="rect" href="stm__timers_8h.html" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="799,101,922,126"/>
 <area shape="rect" href="stm__usart_8h.html" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="997,101,1113,126"/>
-<area shape="rect" href="asc__exception_8h.html" title=" " alt="" coords="1691,255,1806,280"/>
-<area shape="rect" href="ascii__serial__com_8h.html" title=" " alt="" coords="1339,181,1468,207"/>
-<area shape="rect" href="circular__buffer_8h.html" title=" " alt="" coords="1248,255,1361,280"/>
-<area shape="rect" href="ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1485,101,1660,126"/>
-<area shape="rect" href="ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1240,93,1409,133"/>
-<area shape="rect" href="millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="1437,255,1549,280"/>
-<area shape="rect" title=" " alt="" coords="1083,328,1147,353"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="1745,328,1899,353"/>
-<area shape="rect" title=" " alt="" coords="1787,401,1857,427"/>
-<area shape="rect" title=" " alt="" coords="1643,328,1721,353"/>
-<area shape="rect" title=" " alt="" coords="1171,328,1246,353"/>
-<area shape="rect" title=" " alt="" coords="1271,328,1339,353"/>
-<area shape="rect" title=" " alt="" coords="1363,328,1423,353"/>
-<area shape="rect" title=" " alt="" coords="1447,328,1619,353"/>
+<area shape="rect" href="asc__exception_8h.html" title=" " alt="" coords="1763,255,1878,280"/>
+<area shape="rect" href="asc__helpers_8h.html" title=" " alt="" coords="1304,101,1407,126"/>
+<area shape="rect" href="ascii__serial__com_8h.html" title=" " alt="" coords="1505,181,1635,207"/>
+<area shape="rect" href="circular__buffer_8h.html" title=" " alt="" coords="1317,255,1431,280"/>
+<area shape="rect" href="ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1676,101,1851,126"/>
+<area shape="rect" href="ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1431,93,1600,133"/>
+<area shape="rect" href="millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="1130,255,1242,280"/>
+<area shape="rect" title=" " alt="" coords="1010,328,1074,353"/>
+<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="1744,328,1897,353"/>
+<area shape="rect" title=" " alt="" coords="1785,401,1856,427"/>
+<area shape="rect" title=" " alt="" coords="1579,328,1657,353"/>
+<area shape="rect" title=" " alt="" coords="1379,328,1454,353"/>
+<area shape="rect" title=" " alt="" coords="1483,328,1551,353"/>
+<area shape="rect" title=" " alt="" coords="1295,328,1355,353"/>
+<area shape="rect" title=" " alt="" coords="1099,328,1271,353"/>
 </map>
 </div>
 </div>
@@ -137,6 +139,8 @@ Include dependency graph for stm32f091nucleo64_pulser.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a8988aea2132a48b4e7c203c0fb2638ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__pulser_8c.html#a8988aea2132a48b4e7c203c0fb2638ce">ASC_USART_NO</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a8988aea2132a48b4e7c203c0fb2638ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e154c38881ad5e863d937bf85ae76c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__pulser_8c.html#a5e154c38881ad5e863d937bf85ae76c3">ASC_USART</a>&#160;&#160;&#160;USART2</td></tr>
 <tr class="separator:a5e154c38881ad5e863d937bf85ae76c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad749b15dc3958f6b4a88a969e2a2ca9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__pulser_8c.html#ad749b15dc3958f6b4a88a969e2a2ca9d">PORT_LED</a>&#160;&#160;&#160;GPIOA</td></tr>
@@ -226,7 +230,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00041">41</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00043">43</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -242,7 +246,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00033">33</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00035">35</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+
+</div>
+</div>
+<a id="a8988aea2132a48b4e7c203c0fb2638ce" name="a8988aea2132a48b4e7c203c0fb2638ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8988aea2132a48b4e7c203c0fb2638ce">&#9670;&#160;</a></span>ASC_USART_NO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASC_USART_NO&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00034">34</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -258,7 +278,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00055">55</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00057">57</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -274,7 +294,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00050">50</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00052">52</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -290,7 +310,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00049">49</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00051">51</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -306,7 +326,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00051">51</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00053">53</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -322,7 +342,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00053">53</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00055">55</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -338,7 +358,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00054">54</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00056">56</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -354,7 +374,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00052">52</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00054">54</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -370,7 +390,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00071">71</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00073">73</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -386,7 +406,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00036">36</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00038">38</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -402,7 +422,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00035">35</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00037">37</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -418,7 +438,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00045">45</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00047">47</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -434,7 +454,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00044">44</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00046">46</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -450,7 +470,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00046">46</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00048">48</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -466,7 +486,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00037">37</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00039">39</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -482,7 +502,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00040">40</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00042">42</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -498,7 +518,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00038">38</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00040">40</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -514,7 +534,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00039">39</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00041">41</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -542,7 +562,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00153">153</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00155">155</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -562,7 +582,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00129">129</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00131">131</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -579,7 +599,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00062">62</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00064">64</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -595,7 +615,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00058">58</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00060">60</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -611,7 +631,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00057">57</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00059">59</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -627,7 +647,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00056">56</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00058">58</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -643,7 +663,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00065">65</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00067">67</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -659,7 +679,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00063">63</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00065">65</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -675,7 +695,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00069">69</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00071">71</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -733,7 +753,7 @@ Register Map</h2>
 </table>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="stm32f091nucleo64__pulser_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a" title="Write masks for register_map.">register_write_masks</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00093">93</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00095">95</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>
@@ -764,7 +784,7 @@ Register Map</h2>
 <p>Write masks for <a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>. </p>
 <p>These define whether the given register in register_map is writable or not </p>
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00111">111</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__pulser_8c_source.html#l00113">113</a> of file <a class="el" href="stm32f091nucleo64__pulser_8c_source.html">stm32f091nucleo64_pulser.c</a>.</p>
 
 </div>
 </div>

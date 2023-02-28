@@ -94,6 +94,7 @@ $(function() {
 <code>#include &lt;libopencm3/stm32/usart.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="stm__usart_8h_source.html">arm/stm_usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="asc__exception_8h_source.html">asc_exception.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="asc__helpers_8h_source.html">asc_helpers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com_8h_source.html">ascii_serial_com.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com__device_8h_source.html">ascii_serial_com_device.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ascii__serial__com__register__pointers_8h_source.html">ascii_serial_com_register_pointers.h</a>&quot;</code><br />
@@ -104,30 +105,31 @@ Include dependency graph for stm32f091nucleo64_adc_streaming.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="stm32f091nucleo64__adc__streaming_8c__incl.png" border="0" usemap="#aarm_2stm32f091nucleo64__adc__streaming_8c" alt=""/></div>
 <map name="aarm_2stm32f091nucleo64__adc__streaming_8c" id="aarm_2stm32f091nucleo64__adc__streaming_8c">
-<area shape="rect" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="1156,5,1317,45"/>
+<area shape="rect" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="1159,5,1320,45"/>
 <area shape="rect" title=" " alt="" coords="5,101,172,126"/>
 <area shape="rect" title=" " alt="" coords="197,101,351,126"/>
 <area shape="rect" title=" " alt="" coords="375,101,538,126"/>
 <area shape="rect" title=" " alt="" coords="562,101,725,126"/>
-<area shape="rect" title=" " alt="" coords="807,181,973,207"/>
+<area shape="rect" title=" " alt="" coords="1083,181,1249,207"/>
 <area shape="rect" title=" " alt="" coords="799,101,959,126"/>
 <area shape="rect" title=" " alt="" coords="983,101,1154,126"/>
-<area shape="rect" title=" " alt="" coords="1175,181,1346,207"/>
-<area shape="rect" href="stm__usart_8h.html" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="1179,101,1295,126"/>
-<area shape="rect" href="asc__exception_8h.html" title=" " alt="" coords="1326,255,1441,280"/>
-<area shape="rect" href="ascii__serial__com_8h.html" title=" " alt="" coords="1495,181,1624,207"/>
-<area shape="rect" href="circular__buffer_8h.html" title=" " alt="" coords="1648,255,1761,280"/>
-<area shape="rect" href="ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1472,101,1647,126"/>
-<area shape="rect" href="ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1671,93,1840,133"/>
-<area shape="rect" href="millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="1786,255,1898,280"/>
-<area shape="rect" title=" " alt="" coords="1486,328,1550,353"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="1307,328,1460,353"/>
-<area shape="rect" title=" " alt="" coords="1348,401,1419,427"/>
-<area shape="rect" title=" " alt="" coords="1851,328,1929,353"/>
-<area shape="rect" title=" " alt="" coords="1667,328,1742,353"/>
-<area shape="rect" title=" " alt="" coords="1575,328,1643,353"/>
-<area shape="rect" title=" " alt="" coords="1767,328,1827,353"/>
-<area shape="rect" title=" " alt="" coords="1953,328,2125,353"/>
+<area shape="rect" title=" " alt="" coords="1325,181,1495,207"/>
+<area shape="rect" href="stm__usart_8h.html" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="1229,101,1345,126"/>
+<area shape="rect" href="asc__exception_8h.html" title=" " alt="" coords="921,255,1035,280"/>
+<area shape="rect" href="asc__helpers_8h.html" title=" " alt="" coords="1865,101,1968,126"/>
+<area shape="rect" href="ascii__serial__com_8h.html" title=" " alt="" coords="1520,181,1649,207"/>
+<area shape="rect" href="circular__buffer_8h.html" title=" " alt="" coords="1876,255,1989,280"/>
+<area shape="rect" href="ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1421,101,1596,126"/>
+<area shape="rect" href="ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1620,93,1789,133"/>
+<area shape="rect" href="millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="2014,255,2126,280"/>
+<area shape="rect" title=" " alt="" coords="1603,328,1667,353"/>
+<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="901,328,1055,353"/>
+<area shape="rect" title=" " alt="" coords="943,401,1013,427"/>
+<area shape="rect" title=" " alt="" coords="1798,328,1875,353"/>
+<area shape="rect" title=" " alt="" coords="1699,328,1774,353"/>
+<area shape="rect" title=" " alt="" coords="2180,328,2248,353"/>
+<area shape="rect" title=" " alt="" coords="1900,328,1960,353"/>
+<area shape="rect" title=" " alt="" coords="1984,328,2156,353"/>
 </map>
 </div>
 </div>
@@ -135,6 +137,8 @@ Include dependency graph for stm32f091nucleo64_adc_streaming.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a8988aea2132a48b4e7c203c0fb2638ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#a8988aea2132a48b4e7c203c0fb2638ce">ASC_USART_NO</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a8988aea2132a48b4e7c203c0fb2638ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e154c38881ad5e863d937bf85ae76c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#a5e154c38881ad5e863d937bf85ae76c3">ASC_USART</a>&#160;&#160;&#160;USART2</td></tr>
 <tr class="separator:a5e154c38881ad5e863d937bf85ae76c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad749b15dc3958f6b4a88a969e2a2ca9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#ad749b15dc3958f6b4a88a969e2a2ca9d">PORT_LED</a>&#160;&#160;&#160;GPIOA</td></tr>
@@ -213,7 +217,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00038">38</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00040">40</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+
+</div>
+</div>
+<a id="a8988aea2132a48b4e7c203c0fb2638ce" name="a8988aea2132a48b4e7c203c0fb2638ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8988aea2132a48b4e7c203c0fb2638ce">&#9670;&#160;</a></span>ASC_USART_NO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASC_USART_NO&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00039">39</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -229,7 +249,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00054">54</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00056">56</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -245,7 +265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00060">60</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00062">62</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -261,7 +281,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00041">41</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00043">43</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -277,7 +297,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00040">40</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00042">42</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -293,7 +313,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00042">42</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00044">44</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -322,7 +342,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00163">163</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00165">165</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -350,7 +370,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00193">193</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00195">195</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -369,7 +389,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00153">153</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00155">155</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -389,7 +409,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00221">221</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00223">223</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -406,7 +426,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00052">52</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00054">54</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -422,7 +442,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00051">51</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00053">53</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -438,7 +458,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00050">50</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00052">52</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -454,7 +474,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00151">151</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00153">153</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -470,7 +490,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00053">53</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00055">55</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -486,7 +506,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00046">46</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00048">48</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -502,7 +522,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00049">49</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00051">51</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -518,7 +538,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00047">47</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00049">49</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -534,7 +554,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00058">58</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00060">60</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -618,7 +638,7 @@ Waveform generation with register 9</h3>
 </ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a" title="Write masks for register_map.">register_write_masks</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00119">119</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00121">121</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -649,7 +669,7 @@ Waveform generation with register 9</h3>
 <p>Write masks for <a class="el" href="stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8">register_map</a>. </p>
 <p>These define whether the given register in register_map is writable or not </p>
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00138">138</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00140">140</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>
@@ -665,7 +685,7 @@ Waveform generation with register 9</h3>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00220">220</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html#l00222">222</a> of file <a class="el" href="stm32f091nucleo64__adc__streaming_8c_source.html">stm32f091nucleo64_adc_streaming.c</a>.</p>
 
 </div>
 </div>

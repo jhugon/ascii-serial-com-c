@@ -78,68 +78,68 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="asc__exception_8h.html">asc_exception.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="ascii__serial__com_8h.html">ascii_serial_com.h</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="avr__uart_8h.html">avr/avr_uart.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define F_CPU 16000000L</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;util/delay.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define FOSC 16000000L</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define BAUD 9600</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define MYUBRR (FOSC / 16 / BAUD - 1)</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>CEXCEPTION_T e;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>uint16_t nExceptions;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><a class="code hl_struct" href="struct____ascii__serial__com__struct.html">ascii_serial_com</a> asc;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_struct" href="structcircular__buffer__uint8__struct.html">circular_buffer_uint8</a> *asc_out_buf;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">const</span> <span class="keywordtype">char</span> ascVersion = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">const</span> <span class="keywordtype">char</span> appVersion = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">char</span> dataBuffer[2];</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> <span class="keywordtype">size_t</span> dataLen = 2;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="asc__helpers_8h.html">asc_helpers.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="ascii__serial__com_8h.html">ascii_serial_com.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="avr__uart_8h.html">avr/avr_uart.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define UART_NO 0</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define F_CPU 16000000L</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;util/delay.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define FOSC 16000000L</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define BAUD 9600</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define MYUBRR (FOSC / 16 / BAUD - 1)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>CEXCEPTION_T e;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>uint16_t nExceptions;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><a class="code hl_struct" href="struct____ascii__serial__com__struct.html">ascii_serial_com</a> asc;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_struct" href="structcircular__buffer__uint8__struct.html">circular_buffer_uint8</a> *asc_out_buf;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> <span class="keywordtype">char</span> ascVersion = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> <span class="keywordtype">char</span> appVersion = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">char</span> dataBuffer[2];</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> <span class="keywordtype">size_t</span> dataLen = 2;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  Try {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="ascii__serial__com_8c.html#a33be034ceca7e75eee63367377c99350">ascii_serial_com_init</a>(&amp;asc);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    ascii_serial_com_set_ignore_CRC_mismatch(&amp;asc);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    asc_out_buf = <a class="code hl_function" href="ascii__serial__com_8c.html#a238d81ed410539c1905bb9c0603acb42">ascii_serial_com_get_output_buffer</a>(&amp;asc);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    dataBuffer[0] = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    dataBuffer[1] = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  Catch(e) { <span class="keywordflow">return</span> e; }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_define" href="avr__uart_8h.html#a2ef527bf344a6998c2fd77d087652e82">USART0_Init</a>(MYUBRR, 0);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  Try {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="ascii__serial__com_8c.html#a33be034ceca7e75eee63367377c99350">ascii_serial_com_init</a>(&amp;asc);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ascii_serial_com_set_ignore_CRC_mismatch(&amp;asc);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    asc_out_buf = <a class="code hl_function" href="ascii__serial__com_8c.html#a238d81ed410539c1905bb9c0603acb42">ascii_serial_com_get_output_buffer</a>(&amp;asc);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    dataBuffer[0] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    dataBuffer[1] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  Catch(e) { <span class="keywordflow">return</span> e; }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    Try {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a>(asc_out_buf)) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_function" href="ascii__serial__com_8c.html#a315624600e249297c3cba043d77d653a">ascii_serial_com_put_s_message_in_output_buffer</a>(</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            &amp;asc, ascVersion, appVersion, dataBuffer, dataLen);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (dataBuffer[0] == <span class="charliteral">&#39;9&#39;</span>) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>          dataBuffer[0] = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          dataBuffer[0]++;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a>(asc_out_buf) &amp;&amp;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          USART0_can_write_Tx_data) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        UDR0 = <a class="code hl_function" href="circular__buffer_8c.html#a7254c69a64c6b43ad9cb69faee9f7e70">circular_buffer_pop_front_uint8</a>(asc_out_buf);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    Catch(e) { nExceptions++; }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_define" href="avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe">UART_Init</a>(UART_NO, MYUBRR, 0);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Try {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a>(asc_out_buf)) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="ascii__serial__com_8c.html#a315624600e249297c3cba043d77d653a">ascii_serial_com_put_s_message_in_output_buffer</a>(</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            &amp;asc, ascVersion, appVersion, dataBuffer, dataLen);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (dataBuffer[0] == <span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          dataBuffer[0] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          dataBuffer[0]++;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_define" href="asc__helpers_8h.html#af301b731590759f45fb5e701c1985f8f">uart_tx_from_circ_buf</a>(UART_NO, asc_out_buf);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Catch(e) { nExceptions++; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 <div class="ttc" id="aasc__exception_8h_html"><div class="ttname"><a href="asc__exception_8h.html">asc_exception.h</a></div></div>
+<div class="ttc" id="aasc__helpers_8h_html"><div class="ttname"><a href="asc__helpers_8h.html">asc_helpers.h</a></div></div>
+<div class="ttc" id="aasc__helpers_8h_html_af301b731590759f45fb5e701c1985f8f"><div class="ttname"><a href="asc__helpers_8h.html#af301b731590759f45fb5e701c1985f8f">uart_tx_from_circ_buf</a></div><div class="ttdeci">#define uart_tx_from_circ_buf(uart_no, circ_buf_ptr)</div><div class="ttdoc">Transmit a byte from the circular buffer.</div><div class="ttdef"><b>Definition:</b> <a href="asc__helpers_8h_source.html#l00194">asc_helpers.h:194</a></div></div>
 <div class="ttc" id="aascii__serial__com_8c_html_a238d81ed410539c1905bb9c0603acb42"><div class="ttname"><a href="ascii__serial__com_8c.html#a238d81ed410539c1905bb9c0603acb42">ascii_serial_com_get_output_buffer</a></div><div class="ttdeci">circular_buffer_uint8 * ascii_serial_com_get_output_buffer(ascii_serial_com *asc)</div><div class="ttdoc">ASCII Serial Com get output buffer.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com_8c_source.html#l00169">ascii_serial_com.c:169</a></div></div>
 <div class="ttc" id="aascii__serial__com_8c_html_a315624600e249297c3cba043d77d653a"><div class="ttname"><a href="ascii__serial__com_8c.html#a315624600e249297c3cba043d77d653a">ascii_serial_com_put_s_message_in_output_buffer</a></div><div class="ttdeci">void ascii_serial_com_put_s_message_in_output_buffer(ascii_serial_com *asc, char ascVersion, char appVersion, const char *data, size_t dataLen)</div><div class="ttdoc">ASCII Serial Com Pack and put 's' message in output buffer.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com_8c_source.html#l00219">ascii_serial_com.c:219</a></div></div>
 <div class="ttc" id="aascii__serial__com_8c_html_a33be034ceca7e75eee63367377c99350"><div class="ttname"><a href="ascii__serial__com_8c.html#a33be034ceca7e75eee63367377c99350">ascii_serial_com_init</a></div><div class="ttdeci">void ascii_serial_com_init(ascii_serial_com *asc)</div><div class="ttdoc">ASCII Serial Com Interface init method.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com_8c_source.html#l00038">ascii_serial_com.c:38</a></div></div>
 <div class="ttc" id="aascii__serial__com_8h_html"><div class="ttname"><a href="ascii__serial__com_8h.html">ascii_serial_com.h</a></div></div>
 <div class="ttc" id="aavr__uart_8h_html"><div class="ttname"><a href="avr__uart_8h.html">avr_uart.h</a></div></div>
-<div class="ttc" id="aavr__uart_8h_html_a2ef527bf344a6998c2fd77d087652e82"><div class="ttname"><a href="avr__uart_8h.html#a2ef527bf344a6998c2fd77d087652e82">USART0_Init</a></div><div class="ttdeci">#define USART0_Init(ubrr, rxIntEnable)</div><div class="ttdoc">Initialize USART0.</div><div class="ttdef"><b>Definition:</b> <a href="avr__uart_8h_source.html#l00027">avr_uart.h:27</a></div></div>
-<div class="ttc" id="acircular__buffer_8c_html_a7254c69a64c6b43ad9cb69faee9f7e70"><div class="ttname"><a href="circular__buffer_8c.html#a7254c69a64c6b43ad9cb69faee9f7e70">circular_buffer_pop_front_uint8</a></div><div class="ttdeci">uint8_t circular_buffer_pop_front_uint8(circular_buffer_uint8 *circ_buf)</div><div class="ttdoc">circular buffer pop front</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8c_source.html#l00159">circular_buffer.c:159</a></div></div>
+<div class="ttc" id="aavr__uart_8h_html_a7eb4809457317a59f4ac4ded3bcffdfe"><div class="ttname"><a href="avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe">UART_Init</a></div><div class="ttdeci">#define UART_Init(uart_no, ubrr, rxIntEnable)</div><div class="ttdoc">Initialize USART.</div><div class="ttdef"><b>Definition:</b> <a href="avr__uart_8h_source.html#l00020">avr_uart.h:20</a></div></div>
 <div class="ttc" id="acircular__buffer_8c_html_ab5f8992d7f4538522df8c6966c36c2c1"><div class="ttname"><a href="circular__buffer_8c.html#ab5f8992d7f4538522df8c6966c36c2c1">circular_buffer_is_empty_uint8</a></div><div class="ttdeci">bool circular_buffer_is_empty_uint8(const circular_buffer_uint8 *circ_buf)</div><div class="ttdoc">circular buffer get if empty</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8c_source.html#l00068">circular_buffer.c:68</a></div></div>
 <div class="ttc" id="astruct____ascii__serial__com__struct_html"><div class="ttname"><a href="struct____ascii__serial__com__struct.html">__ascii_serial_com_struct</a></div><div class="ttdoc">ASCII Serial Com Interface State struct.</div><div class="ttdef"><b>Definition:</b> <a href="ascii__serial__com_8h_source.html#l00054">ascii_serial_com.h:54</a></div></div>
 <div class="ttc" id="astructcircular__buffer__uint8__struct_html"><div class="ttname"><a href="structcircular__buffer__uint8__struct.html">circular_buffer_uint8_struct</a></div><div class="ttdoc">circular buffer struct</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00020">circular_buffer.h:20</a></div></div>
