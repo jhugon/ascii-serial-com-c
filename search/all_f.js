@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['uart_5finit_0',['UART_Init',['../avr__uart_8h.html#a7eb4809457317a59f4ac4ded3bcffdfe',1,'avr_uart.h']]],
-  ['uart_5frx_1',['uart_rx',['../asc__helpers_8h.html#aefa789f5dca84fd7b8ca05b47e9355ca',1,'asc_helpers.h']]],
-  ['uart_5frx_5fblocking_2',['uart_rx_blocking',['../asc__helpers_8h.html#a6d4efb1587f3ace8c4391f8b006be8d1',1,'asc_helpers.h']]],
-  ['uart_5frx_5fto_5fcirc_5fbuf_3',['uart_rx_to_circ_buf',['../asc__helpers_8h.html#a6624dac4b2f31568a20340a2e5b23334',1,'asc_helpers.h']]],
-  ['uart_5ftx_4',['uart_tx',['../asc__helpers_8h.html#a2fcff3a6e4bcb7c4f1a2703cb9aa44f7',1,'asc_helpers.h']]],
-  ['uart_5ftx_5fblocking_5',['uart_tx_blocking',['../asc__helpers_8h.html#a912691f94aae1f6f8d7ddce5811bef16',1,'asc_helpers.h']]],
-  ['uart_5ftx_5ffrom_5fcirc_5fbuf_6',['uart_tx_from_circ_buf',['../asc__helpers_8h.html#af301b731590759f45fb5e701c1985f8f',1,'asc_helpers.h']]],
-  ['unity_5fstorage_5ft_7',['UNITY_STORAGE_T',['../structUNITY__STORAGE__T.html',1,'']]]
+  ['raw_5fbuffer_0',['raw_buffer',['../struct____ascii__serial__com__struct.html#a2b2efd57fb6e9dafd0abdb555def5017',1,'__ascii_serial_com_struct']]],
+  ['ready_5fto_5fstream_5fasc_5fdevice_5fw_5fregister_5fpointers_1',['READY_TO_STREAM_ASC_DEVICE_W_REGISTER_POINTERS',['../asc__helpers_8h.html#a5c1ffa8d90c4185adae9f8cbff217f2a',1,'asc_helpers.h']]],
+  ['receive_5fstream_5fframe_5fcounter_2',['receive_stream_frame_counter',['../struct____ascii__serial__com__struct.html#a1c33f35d36579663e1ae5453a777d4f2',1,'__ascii_serial_com_struct']]],
+  ['receive_5fstream_5fframe_5fcounter_5finitialized_3',['receive_stream_frame_counter_initialized',['../struct____ascii__serial__com__struct.html#a8c3f1d1718f403167ca5f5a66f60e3dc',1,'__ascii_serial_com_struct']]],
+  ['register_209_4',['Waveform generation with register 9',['../stm32f091nucleo64__adc__streaming_8c.html#autotoc_md2',1,'']]],
+  ['register_20map_5',['Register Map',['../stm32f091nucleo64__adc__streaming_8c.html#autotoc_md0',1,'Register Map'],['../stm32f091nucleo64__pulser_8c.html#autotoc_md3',1,'Register Map'],['../neorv32__asc__gpio_8c.html#autotoc_md32',1,'Register Map'],['../neorv32__asc__pulse__counter_8c.html#autotoc_md33',1,'Register Map']]],
+  ['register_5fmap_6',['register_map',['../stm32f091nucleo64__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8',1,'register_map:&#160;stm32f091nucleo64_adc_streaming.c'],['../stm32f091nucleo64__pulser_8c.html#aff7ce78116e86a9fa3895ff53dee84c8',1,'register_map:&#160;stm32f091nucleo64_pulser.c'],['../arduino__uno__adc__streaming_8c.html#aff7ce78116e86a9fa3895ff53dee84c8',1,'register_map:&#160;arduino_uno_adc_streaming.c'],['../neorv32__asc__gpio_8c.html#aff7ce78116e86a9fa3895ff53dee84c8',1,'register_map:&#160;neorv32_asc_gpio.c'],['../neorv32__asc__pulse__counter_8c.html#aff7ce78116e86a9fa3895ff53dee84c8',1,'register_map:&#160;neorv32_asc_pulse_counter.c']]],
+  ['register_5fwrite_5fmasks_7',['register_write_masks',['../stm32f091nucleo64__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a',1,'register_write_masks:&#160;stm32f091nucleo64_adc_streaming.c'],['../stm32f091nucleo64__pulser_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a',1,'register_write_masks:&#160;stm32f091nucleo64_pulser.c'],['../arduino__uno__adc__streaming_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a',1,'register_write_masks:&#160;arduino_uno_adc_streaming.c'],['../neorv32__asc__gpio_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a',1,'register_write_masks:&#160;neorv32_asc_gpio.c'],['../neorv32__asc__pulse__counter_8c.html#a8ce5ed9fb99b3661a174ff2db6345b2a',1,'register_write_masks:&#160;neorv32_asc_pulse_counter.c']]],
+  ['registers_20relevant_20to_20ascii_20serial_20com_8',['Registers Relevant to Ascii Serial Com',['../stm__timers_8h.html#autotoc_md5',1,'Registers Relevant to Ascii-Serial-Com'],['../stm__timers_8h.html#autotoc_md9',1,'Registers Relevant to Ascii-Serial-Com']]],
+  ['relevant_20to_20ascii_20serial_20com_9',['Relevant to Ascii Serial Com',['../stm__timers_8h.html#autotoc_md5',1,'Registers Relevant to Ascii-Serial-Com'],['../stm__timers_8h.html#autotoc_md9',1,'Registers Relevant to Ascii-Serial-Com']]],
+  ['required_20macros_10',['Required Macros',['../ascii__serial__com__register__pointers_8h.html#autotoc_md25',1,'']]],
+  ['rom_11',['Write FW into FPGA design ROM',['..//github/workspace/riscv/neorv32/README.md#autotoc_md35',1,'']]]
 ];

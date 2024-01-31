@@ -1,5 +1,7 @@
 <map id="riscv/neorv32/neorv32_char_loopback.c" name="riscv/neorv32/neorv32_char_loopback.c">
-<area shape="rect" id="node1" title="Simple blinking LED demo program using the lowest 8 bits of the GPIO.output port." alt="" coords="20,5,171,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,84,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="109,93,183,119"/>
+<area shape="rect" id="Node000001" title="Simple blinking LED demo program using the lowest 8 bits of the GPIO.output port." alt="" coords="19,5,168,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,83,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,48,62,82,57,79,79,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,94,181,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,45,130,79,126,82,104,48"/>
 </map>

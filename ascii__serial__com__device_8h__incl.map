@@ -1,13 +1,27 @@
 <map id="ascii_serial_com_device.h" name="ascii_serial_com_device.h">
-<area shape="rect" id="node1" title="ASCII Serial Com Device." alt="" coords="197,5,371,31"/>
-<area shape="rect" id="node2" href="$ascii__serial__com_8h.html" title=" " alt="" coords="219,79,349,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,225,83,251"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,225,181,251"/>
-<area shape="rect" id="node5" title=" " alt="" coords="290,225,358,251"/>
-<area shape="rect" id="node6" title=" " alt="" coords="383,225,447,251"/>
-<area shape="rect" id="node7" href="$asc__exception_8h.html" title=" " alt="" coords="464,152,579,177"/>
-<area shape="rect" id="node10" href="$circular__buffer_8h.html" title=" " alt="" coords="181,152,294,177"/>
-<area shape="rect" id="node8" href="$CException_8h_source.html" title=" " alt="" coords="471,225,625,251"/>
-<area shape="rect" id="node9" title=" " alt="" coords="513,299,583,324"/>
-<area shape="rect" id="node11" title=" " alt="" coords="206,225,266,251"/>
+<area shape="rect" id="Node000001" title="ASCII Serial Com Device." alt="" coords="194,5,368,31"/>
+<area shape="rect" id="Node000002" href="$ascii__serial__com_8h.html" title=" " alt="" coords="217,79,345,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,31,284,63,278,63,278,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,226,82,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,108,200,128,149,155,105,186,68,218,65,214,102,182,146,150,198,123,246,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="106,226,179,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="241,108,202,126,184,139,168,154,154,182,147,212,142,211,149,180,164,151,180,135,199,121,239,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="287,226,355,252"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="288,104,305,152,319,211,313,212,300,153,283,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="379,226,442,252"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="293,103,392,213,388,217,289,107"/>
+<area shape="rect" id="Node000007" href="$asc__exception_8h.html" title=" " alt="" coords="458,153,573,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="321,103,462,145,460,150,320,108"/>
+<area shape="rect" id="Node000010" href="$circular__buffer_8h.html" title=" " alt="" coords="178,153,290,178"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="275,106,253,141,248,138,271,103"/>
+<area shape="rect" id="Node000008" href="$CException_8h_source.html" title=" " alt="" coords="466,226,618,252"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="522,178,535,211,530,213,517,179"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="507,300,577,326"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="545,252,545,284,540,284,540,252"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="203,181,91,223,89,218,201,176"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="220,181,171,219,168,215,217,177"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="251,177,296,214,293,218,247,181"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="265,176,367,218,365,223,263,181"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="203,226,263,252"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="237,179,236,211,231,210,231,179"/>
 </map>

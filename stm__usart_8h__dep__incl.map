@@ -1,8 +1,13 @@
 <map id="arm/stm_usart.h" name="arm/stm_usart.h">
-<area shape="rect" id="node1" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="399,5,515,31"/>
-<area shape="rect" id="node2" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,79,167,119"/>
-<area shape="rect" id="node3" href="$stm32f091nucleo64__asc__loopback_8c_source.html" title=" " alt="" coords="191,79,352,119"/>
-<area shape="rect" id="node4" href="$stm32f091nucleo64__char__loopback_8c_source.html" title=" " alt="" coords="376,79,537,119"/>
-<area shape="rect" id="node5" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="561,79,723,119"/>
-<area shape="rect" id="node6" href="$stm32f091nucleo64__write__pattern__to__serial_8c_source.html" title=" " alt="" coords="747,79,918,119"/>
+<area shape="rect" id="Node000001" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="396,5,511,31"/>
+<area shape="rect" id="Node000002" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,79,166,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="383,37,167,83,166,78,382,32"/>
+<area shape="rect" id="Node000003" href="$stm32f091nucleo64__asc__loopback_8c_source.html" title=" " alt="" coords="189,79,350,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="412,40,316,81,314,76,410,35"/>
+<area shape="rect" id="Node000004" href="$stm32f091nucleo64__char__loopback_8c_source.html" title=" " alt="" coords="373,79,534,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="456,46,456,79,451,79,451,46"/>
+<area shape="rect" id="Node000005" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="557,79,718,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,35,593,76,591,81,495,40"/>
+<area shape="rect" id="Node000006" href="$stm32f091nucleo64__write__pattern__to__serial_8c_source.html" title=" " alt="" coords="742,79,912,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="526,32,742,78,741,83,525,37"/>
 </map>

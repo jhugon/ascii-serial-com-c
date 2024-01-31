@@ -1,5 +1,7 @@
 <map id="asc_exception.h" name="asc_exception.h">
-<area shape="rect" id="node1" title=" " alt="" coords="25,5,139,31"/>
-<area shape="rect" id="node2" href="$CException_8h_source.html" title=" " alt="" coords="5,79,159,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="47,152,117,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,5,139,31"/>
+<area shape="rect" id="Node000002" href="$CException_8h_source.html" title=" " alt="" coords="5,79,158,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,31,84,63,79,63,79,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="46,153,117,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,105,84,137,79,137,79,105"/>
 </map>

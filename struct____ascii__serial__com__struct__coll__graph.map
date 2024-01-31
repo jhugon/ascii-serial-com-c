@@ -1,4 +1,5 @@
 <map id="__ascii_serial_com_struct" name="__ascii_serial_com_struct">
-<area shape="rect" id="node1" title="ASCII Serial Com Interface State struct." alt="" coords="8,123,141,163"/>
-<area shape="rect" id="node2" href="$structcircular__buffer__uint8__struct.html" title="circular buffer struct" alt="" coords="5,5,144,45"/>
+<area shape="rect" id="Node000001" title="ASCII Serial Com Interface State struct." alt="" coords="8,124,140,165"/>
+<area shape="rect" id="Node000002" href="$structcircular__buffer__uint8__struct.html" title="circular buffer struct" alt="" coords="5,5,143,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,61,77,123,71,123,71,61"/>
 </map>

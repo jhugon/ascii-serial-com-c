@@ -1,15 +1,28 @@
 <map id="circular_buffer.c" name="circular_buffer.c">
-<area shape="rect" id="node1" title=" " alt="" coords="511,5,625,31"/>
-<area shape="rect" id="node2" href="$circular__buffer_8h.html" title=" " alt="" coords="225,79,338,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="387,152,447,177"/>
-<area shape="rect" id="node8" href="$asc__exception_8h.html" title=" " alt="" coords="455,79,569,104"/>
-<area shape="rect" id="node11" title=" " alt="" coords="594,79,657,104"/>
-<area shape="rect" id="node12" title=" " alt="" coords="681,79,743,104"/>
-<area shape="rect" id="node13" title=" " alt="" coords="767,79,833,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,83,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,152,181,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="206,152,274,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="299,152,363,177"/>
-<area shape="rect" id="node9" href="$CException_8h_source.html" title=" " alt="" coords="471,152,625,177"/>
-<area shape="rect" id="node10" title=" " alt="" coords="513,225,583,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="506,5,618,31"/>
+<area shape="rect" id="Node000002" href="$circular__buffer_8h.html" title=" " alt="" coords="222,79,334,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="515,34,342,77,341,72,513,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="382,153,441,178"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="516,34,475,52,456,65,439,81,424,108,416,138,411,137,419,106,435,77,452,61,472,47,514,29"/>
+<area shape="rect" id="Node000008" href="$asc__exception_8h.html" title=" " alt="" coords="449,79,563,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="555,33,527,68,523,65,551,30"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="587,79,649,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="574,30,601,65,597,68,569,33"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="673,79,734,105"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="587,29,667,69,665,74,585,34"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="758,79,825,105"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="602,29,745,73,743,78,600,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,82,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,108,98,151,96,145,238,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="106,153,179,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="256,108,180,147,177,143,254,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,153,271,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="274,106,254,141,249,138,269,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="295,153,358,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="288,103,312,138,307,141,284,106"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="302,103,377,143,374,147,300,108"/>
+<area shape="rect" id="Node000009" href="$CException_8h_source.html" title=" " alt="" coords="465,153,617,178"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="514,104,531,137,526,140,509,106"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="506,226,576,252"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="544,179,544,211,538,211,538,179"/>
 </map>

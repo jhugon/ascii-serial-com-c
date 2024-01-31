@@ -1,10 +1,17 @@
 <map id="millisec_timer.h" name="millisec_timer.h">
-<area shape="rect" id="node1" title="Portable millisecond timer." alt="" coords="543,5,655,31"/>
-<area shape="rect" id="node2" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,79,167,119"/>
-<area shape="rect" id="node3" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="191,79,352,119"/>
-<area shape="rect" id="node4" href="$arduino__uno__adc__streaming_8c.html" title="Uses timer to set interval between ADC single conversions that are then sent as stream messages to ho..." alt="" coords="376,79,519,119"/>
-<area shape="rect" id="node5" href="$millisec__timer_8c.html" title=" " alt="" coords="543,86,655,111"/>
-<area shape="rect" id="node6" href="$neorv32__asc__gpio_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="680,79,831,119"/>
-<area shape="rect" id="node7" href="$neorv32__asc__pulse__counter_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="855,79,1005,119"/>
-<area shape="rect" id="node8" href="$test__millisec__timer_8c_source.html" title=" " alt="" coords="1030,79,1179,119"/>
+<area shape="rect" id="Node000001" title="Portable millisecond timer." alt="" coords="539,5,651,31"/>
+<area shape="rect" id="Node000002" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,79,166,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="524,31,365,52,178,82,167,84,166,78,177,76,364,47,523,26"/>
+<area shape="rect" id="Node000003" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="189,79,350,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="531,38,351,81,349,76,529,33"/>
+<area shape="rect" id="Node000004" href="$arduino__uno__adc__streaming_8c.html" title="Uses timer to set interval between ADC single conversions that are then sent as stream messages to ho..." alt="" coords="374,79,515,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="560,41,483,81,480,76,557,36"/>
+<area shape="rect" id="Node000005" href="$millisec__timer_8c.html" title=" " alt="" coords="539,87,651,112"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="598,47,598,86,592,86,592,47"/>
+<area shape="rect" id="Node000006" href="$neorv32__asc__gpio_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="675,79,824,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="633,36,712,76,710,81,631,41"/>
+<area shape="rect" id="Node000007" href="$neorv32__asc__pulse__counter_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="848,79,998,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="661,33,848,77,847,83,659,38"/>
+<area shape="rect" id="Node000008" href="$test__millisec__timer_8c_source.html" title=" " alt="" coords="1022,79,1170,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="666,25,824,47,1010,76,1022,79,1021,84,1009,82,823,52,665,31"/>
 </map>

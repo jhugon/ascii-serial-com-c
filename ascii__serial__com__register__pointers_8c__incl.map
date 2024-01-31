@@ -1,15 +1,32 @@
 <map id="ascii_serial_com_register_pointers.c" name="ascii_serial_com_register_pointers.c">
-<area shape="rect" id="node1" title=" " alt="" coords="374,5,543,45"/>
-<area shape="rect" id="node2" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="246,93,415,133"/>
-<area shape="rect" id="node8" href="$asc__exception_8h.html" title=" " alt="" coords="408,255,523,280"/>
-<area shape="rect" id="node13" title=" " alt="" coords="497,101,565,126"/>
-<area shape="rect" id="node3" href="$ascii__serial__com_8h.html" title=" " alt="" coords="255,181,385,207"/>
-<area shape="rect" id="node4" title=" " alt="" coords="93,328,171,353"/>
-<area shape="rect" id="node5" title=" " alt="" coords="280,328,355,353"/>
-<area shape="rect" id="node6" title=" " alt="" coords="379,328,447,353"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,328,69,353"/>
-<area shape="rect" id="node11" href="$circular__buffer_8h.html" title=" " alt="" coords="169,255,282,280"/>
-<area shape="rect" id="node9" href="$CException_8h_source.html" title=" " alt="" coords="471,328,625,353"/>
-<area shape="rect" id="node10" title=" " alt="" coords="513,401,583,427"/>
-<area shape="rect" id="node12" title=" " alt="" coords="195,328,255,353"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="370,5,539,46"/>
+<area shape="rect" id="Node000002" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="244,94,412,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,49,370,87,367,83,424,44"/>
+<area shape="rect" id="Node000008" href="$asc__exception_8h.html" title=" " alt="" coords="404,256,518,282"/>
+<area shape="poly" id="edge16_Node000001_Node000008" title=" " alt="" coords="458,46,463,241,458,241,452,46"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="491,102,559,127"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="472,45,508,88,504,91,468,48"/>
+<area shape="rect" id="Node000003" href="$ascii__serial__com_8h.html" title=" " alt="" coords="252,183,380,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,135,322,167,317,167,322,135"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="92,330,169,356"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,209,201,227,177,240,156,258,141,285,134,315,129,314,136,283,152,255,174,236,198,222,250,204"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="276,330,350,356"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="318,209,316,315,311,315,313,209"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="374,330,441,356"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="325,207,394,315,390,318,321,210"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,330,69,356"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="262,211,200,230,137,259,95,289,60,321,56,317,91,285,134,254,198,225,260,206"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="341,206,424,247,421,251,339,211"/>
+<area shape="rect" id="Node000011" href="$circular__buffer_8h.html" title=" " alt="" coords="166,256,279,282"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="301,211,252,249,248,245,298,207"/>
+<area shape="rect" id="Node000009" href="$CException_8h_source.html" title=" " alt="" coords="465,330,617,356"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="476,281,518,318,515,322,473,285"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="506,404,576,429"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="544,356,544,388,538,388,538,356"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="208,285,159,323,156,318,205,280"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="239,280,288,318,284,323,236,285"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="255,280,363,322,361,326,253,285"/>
+<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="192,285,84,326,82,322,190,280"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="193,330,252,356"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="225,282,225,314,220,314,220,282"/>
 </map>

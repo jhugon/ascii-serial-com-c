@@ -1,9 +1,15 @@
 <map id="millisec_timer.h" name="millisec_timer.h">
-<area shape="rect" id="node1" title="Portable millisecond timer." alt="" coords="229,5,341,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,83,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="107,79,181,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="206,79,274,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="299,79,363,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="387,79,447,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="471,79,643,104"/>
+<area shape="rect" id="Node000001" title="Portable millisecond timer." alt="" coords="225,5,337,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,82,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,34,97,77,96,72,240,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,79,179,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,34,181,74,178,69,256,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,79,271,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="276,33,255,67,250,64,271,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="295,79,358,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="291,30,313,64,308,67,286,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="382,79,441,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="304,29,378,69,375,74,302,34"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="466,79,637,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="327,29,491,72,490,77,326,34"/>
 </map>

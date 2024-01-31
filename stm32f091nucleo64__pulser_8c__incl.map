@@ -1,28 +1,78 @@
 <map id="arm/stm32f091nucleo64_pulser.c" name="arm/stm32f091nucleo64_pulser.c">
-<area shape="rect" id="node1" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="1071,5,1232,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,101,172,126"/>
-<area shape="rect" id="node3" title=" " alt="" coords="197,101,351,126"/>
-<area shape="rect" id="node4" title=" " alt="" coords="375,101,538,126"/>
-<area shape="rect" id="node5" title=" " alt="" coords="562,101,725,126"/>
-<area shape="rect" id="node6" title=" " alt="" coords="728,181,895,207"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1926,101,2086,126"/>
-<area shape="rect" id="node8" title=" " alt="" coords="482,181,653,207"/>
-<area shape="rect" id="node9" title=" " alt="" coords="970,181,1141,207"/>
-<area shape="rect" id="node10" href="$stm__timers_8h.html" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="799,101,922,126"/>
-<area shape="rect" id="node12" href="$stm__usart_8h.html" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="997,101,1113,126"/>
-<area shape="rect" id="node13" href="$asc__exception_8h.html" title=" " alt="" coords="1763,255,1878,280"/>
-<area shape="rect" id="node16" href="$asc__helpers_8h.html" title=" " alt="" coords="1304,101,1407,126"/>
-<area shape="rect" id="node20" href="$ascii__serial__com_8h.html" title=" " alt="" coords="1505,181,1635,207"/>
-<area shape="rect" id="node21" href="$circular__buffer_8h.html" title=" " alt="" coords="1317,255,1431,280"/>
-<area shape="rect" id="node23" href="$ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1676,101,1851,126"/>
-<area shape="rect" id="node24" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1431,93,1600,133"/>
-<area shape="rect" id="node25" href="$millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="1130,255,1242,280"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1010,328,1074,353"/>
-<area shape="rect" id="node14" href="$CException_8h_source.html" title=" " alt="" coords="1744,328,1897,353"/>
-<area shape="rect" id="node15" title=" " alt="" coords="1785,401,1856,427"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1579,328,1657,353"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1379,328,1454,353"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1483,328,1551,353"/>
-<area shape="rect" id="node22" title=" " alt="" coords="1295,328,1355,353"/>
-<area shape="rect" id="node26" title=" " alt="" coords="1099,328,1271,353"/>
+<area shape="rect" id="Node000001" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="1067,5,1227,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,102,171,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1066,32,685,50,435,69,183,97,158,101,157,95,182,91,435,63,684,44,1066,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="195,102,349,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1066,33,756,53,560,72,362,97,339,101,338,95,361,91,559,66,756,48,1066,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="374,102,536,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1066,36,833,59,548,97,525,101,524,95,548,91,833,54,1066,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="560,102,723,127"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1067,42,742,97,719,101,718,96,741,91,1066,37"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="727,183,892,208"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1088,49,1036,70,984,96,959,116,933,137,854,179,851,174,931,132,955,112,981,92,1034,65,1086,44"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1915,102,2074,127"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1228,29,1523,50,1709,68,1896,91,1923,96,1922,101,1896,97,1708,74,1522,56,1227,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="482,183,652,208"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1066,33,1003,40,932,52,858,70,786,96,772,106,762,115,751,126,736,137,682,162,629,180,628,175,680,157,733,132,748,122,758,112,768,101,784,92,856,65,931,46,1003,35,1066,28"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="967,183,1137,208"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1148,47,1142,89,1134,113,1124,136,1106,158,1086,175,1083,171,1102,154,1119,133,1129,112,1136,88,1143,46"/>
+<area shape="rect" id="Node000010" href="$stm__timers_8h.html" title="To be used with the timer peripherals on STM32 microcontrollers." alt="" coords="798,102,920,127"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1082,49,915,99,913,94,1080,44"/>
+<area shape="rect" id="Node000012" href="$stm__usart_8h.html" title="To be used with the USART peripherals on STM32 microcontrollers." alt="" coords="994,102,1110,127"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1127,48,1078,93,1074,89,1123,45"/>
+<area shape="rect" id="Node000013" href="$asc__exception_8h.html" title=" " alt="" coords="1755,256,1869,282"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="1227,26,1393,32,1590,43,1762,63,1821,76,1841,83,1854,92,1865,110,1871,129,1871,150,1867,171,1851,212,1832,245,1827,242,1846,209,1861,170,1865,150,1865,130,1861,112,1850,96,1839,88,1820,81,1761,68,1590,49,1393,37,1227,31"/>
+<area shape="rect" id="Node000016" href="$asc__helpers_8h.html" title=" " alt="" coords="1299,102,1400,127"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="1194,44,1308,93,1306,98,1192,49"/>
+<area shape="rect" id="Node000020" href="$ascii__serial__com_8h.html" title=" " alt="" coords="1500,183,1628,208"/>
+<area shape="poly" id="edge38_Node000001_Node000020" title=" " alt="" coords="1227,24,1329,27,1442,38,1495,46,1542,58,1580,73,1606,92,1614,112,1611,133,1601,154,1588,172,1584,169,1597,151,1606,132,1609,113,1602,96,1578,78,1541,63,1494,51,1442,43,1329,33,1227,29"/>
+<area shape="rect" id="Node000021" href="$circular__buffer_8h.html" title=" " alt="" coords="1313,256,1426,282"/>
+<area shape="poly" id="edge43_Node000001_Node000021" title=" " alt="" coords="1166,44,1350,243,1346,246,1163,48"/>
+<area shape="rect" id="Node000023" href="$ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="1667,102,1840,127"/>
+<area shape="poly" id="edge39_Node000001_Node000023" title=" " alt="" coords="1227,34,1420,58,1648,91,1675,96,1674,101,1648,97,1419,64,1227,39"/>
+<area shape="rect" id="Node000024" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="1424,94,1592,135"/>
+<area shape="poly" id="edge41_Node000001_Node000024" title=" " alt="" coords="1228,44,1412,87,1410,93,1227,49"/>
+<area shape="rect" id="Node000025" href="$millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="1127,256,1238,282"/>
+<area shape="poly" id="edge44_Node000001_Node000025" title=" " alt="" coords="1152,46,1181,240,1176,241,1147,47"/>
+<area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="853,129,827,171,823,168,849,126"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="814,130,627,181,626,176,813,125"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1007,330,1070,356"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="805,130,766,143,731,161,720,171,713,182,711,194,717,207,743,238,775,265,811,286,850,302,927,325,992,335,991,341,925,330,848,307,809,290,772,269,740,242,712,210,706,194,708,180,716,167,729,156,764,138,803,125"/>
+<area shape="poly" id="edge14_Node000012_Node000006" title=" " alt="" coords="1015,130,862,180,860,175,1014,125"/>
+<area shape="poly" id="edge15_Node000012_Node000009" title=" " alt="" coords="1055,128,1055,167,1049,167,1049,128"/>
+<area shape="poly" id="edge16_Node000012_Node000011" title=" " alt="" coords="1022,130,986,151,970,166,957,184,951,202,951,220,955,239,964,257,988,290,1014,318,1010,321,984,294,959,259,950,240,946,221,946,201,952,181,966,163,983,147,1019,125"/>
+<area shape="rect" id="Node000014" href="$CException_8h_source.html" title=" " alt="" coords="1736,330,1888,356"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="1815,282,1815,314,1809,314,1809,282"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1777,404,1847,429"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="1815,356,1815,388,1809,388,1809,356"/>
+<area shape="poly" id="edge24_Node000016_Node000011" title=" " alt="" coords="1322,130,1191,190,1125,226,1081,258,1061,286,1048,316,1044,314,1056,284,1077,254,1122,222,1189,185,1319,125"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1573,330,1649,356"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="1388,125,1413,132,1448,138,1481,139,1539,135,1566,136,1592,142,1617,156,1642,181,1652,197,1656,215,1655,252,1643,287,1629,318,1624,315,1638,286,1649,251,1651,215,1647,199,1638,184,1614,161,1590,147,1565,142,1539,141,1481,144,1448,143,1411,137,1386,130"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1374,330,1447,356"/>
+<area shape="poly" id="edge22_Node000016_Node000018" title=" " alt="" coords="1342,129,1323,158,1303,197,1297,218,1294,240,1296,261,1304,281,1315,295,1329,307,1361,324,1358,329,1326,311,1311,299,1299,283,1291,262,1289,240,1292,217,1298,195,1318,155,1337,126"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1476,330,1543,356"/>
+<area shape="poly" id="edge23_Node000016_Node000019" title=" " alt="" coords="1360,126,1494,316,1490,319,1356,129"/>
+<area shape="poly" id="edge25_Node000016_Node000020" title=" " alt="" coords="1383,125,1518,174,1516,179,1381,130"/>
+<area shape="poly" id="edge37_Node000016_Node000021" title=" " alt="" coords="1354,127,1368,240,1363,241,1348,128"/>
+<area shape="poly" id="edge29_Node000020_Node000011" title=" " alt="" coords="1500,203,1403,209,1292,220,1188,236,1146,247,1116,259,1098,271,1081,286,1056,318,1051,315,1077,283,1094,267,1113,254,1145,242,1187,231,1291,215,1403,204,1499,197"/>
+<area shape="poly" id="edge30_Node000020_Node000013" title=" " alt="" coords="1607,206,1756,249,1754,254,1605,211"/>
+<area shape="poly" id="edge26_Node000020_Node000017" title=" " alt="" coords="1570,208,1605,314,1600,316,1565,209"/>
+<area shape="poly" id="edge27_Node000020_Node000018" title=" " alt="" coords="1553,211,1436,321,1432,317,1550,207"/>
+<area shape="poly" id="edge28_Node000020_Node000019" title=" " alt="" coords="1562,210,1534,283,1522,316,1517,315,1530,281,1557,208"/>
+<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="1532,211,1418,253,1416,248,1530,206"/>
+<area shape="poly" id="edge35_Node000021_Node000011" title=" " alt="" coords="1313,284,1086,332,1085,327,1312,279"/>
+<area shape="poly" id="edge32_Node000021_Node000017" title=" " alt="" coords="1411,280,1558,323,1557,328,1410,285"/>
+<area shape="poly" id="edge33_Node000021_Node000018" title=" " alt="" coords="1378,281,1398,315,1394,318,1374,284"/>
+<area shape="poly" id="edge34_Node000021_Node000019" title=" " alt="" coords="1394,280,1473,320,1471,325,1392,285"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="1290,330,1350,356"/>
+<area shape="poly" id="edge36_Node000021_Node000022" title=" " alt="" coords="1363,284,1339,319,1335,316,1359,281"/>
+<area shape="poly" id="edge40_Node000023_Node000020" title=" " alt="" coords="1725,130,1608,179,1606,174,1723,125"/>
+<area shape="poly" id="edge42_Node000024_Node000020" title=" " alt="" coords="1524,134,1549,168,1544,171,1520,137"/>
+<area shape="poly" id="edge48_Node000025_Node000011" title=" " alt="" coords="1159,285,1078,325,1075,320,1157,280"/>
+<area shape="poly" id="edge45_Node000025_Node000017" title=" " alt="" coords="1239,276,1555,327,1558,328,1557,333,1554,333,1238,281"/>
+<area shape="poly" id="edge46_Node000025_Node000018" title=" " alt="" coords="1222,280,1360,323,1358,328,1221,285"/>
+<area shape="poly" id="edge47_Node000025_Node000019" title=" " alt="" coords="1239,280,1459,327,1461,328,1460,333,1458,333,1238,285"/>
+<area shape="poly" id="edge49_Node000025_Node000022" title=" " alt="" coords="1207,280,1284,320,1282,325,1205,285"/>
+<area shape="rect" id="Node000026" title=" " alt="" coords="1094,330,1266,356"/>
+<area shape="poly" id="edge50_Node000025_Node000026" title=" " alt="" coords="1185,282,1184,315,1178,314,1180,282"/>
 </map>

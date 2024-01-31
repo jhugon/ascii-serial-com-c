@@ -1,12 +1,21 @@
 <map id="ascii_serial_com_register_pointers.h" name="ascii_serial_com_register_pointers.h">
-<area shape="rect" id="node1" title="ASCII Serial Com Register Pointers." alt="" coords="733,5,903,45"/>
-<area shape="rect" id="node2" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,101,167,141"/>
-<area shape="rect" id="node3" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="191,101,352,141"/>
-<area shape="rect" id="node4" href="$ascii__serial__com__register__pointers_8c.html" title=" " alt="" coords="376,101,545,141"/>
-<area shape="rect" id="node5" href="$arduino__uno__adc__streaming_8c.html" title="Uses timer to set interval between ADC single conversions that are then sent as stream messages to ho..." alt="" coords="569,101,712,141"/>
-<area shape="rect" id="node6" href="$arduino__uno__register__pointers_8c_source.html" title=" " alt="" coords="736,101,900,141"/>
-<area shape="rect" id="node7" href="$arduino__uno__test__device_8c_source.html" title=" " alt="" coords="924,101,1067,141"/>
-<area shape="rect" id="node8" href="$neorv32__asc__gpio_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1091,101,1241,141"/>
-<area shape="rect" id="node9" href="$neorv32__asc__pulse__counter_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1265,101,1416,141"/>
-<area shape="rect" id="node10" href="$test__ascii__serial__com__register__pointers_8c_source.html" title=" " alt="" coords="1440,93,1583,148"/>
+<area shape="rect" id="Node000001" title="ASCII Serial Com Register Pointers." alt="" coords="728,5,896,46"/>
+<area shape="rect" id="Node000002" href="$stm32f091nucleo64__adc__streaming_8c.html" title="Streams ADC data from pin A0 (happens to be labelled A0 on the Arduino connector of nucleo&#45;f091rc boa..." alt="" coords="5,102,166,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="713,35,468,55,323,73,178,97,149,104,147,98,177,91,322,67,468,50,712,29"/>
+<area shape="rect" id="Node000003" href="$stm32f091nucleo64__pulser_8c.html" title="Outputs a pulser and (one day will) measures pulses." alt="" coords="189,102,350,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="713,41,548,63,362,97,334,103,333,98,361,91,547,58,712,35"/>
+<area shape="rect" id="Node000004" href="$ascii__serial__com__register__pointers_8c.html" title=" " alt="" coords="373,102,542,142"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="722,53,554,97,529,103,528,98,553,91,720,48"/>
+<area shape="rect" id="Node000005" href="$arduino__uno__adc__streaming_8c.html" title="Uses timer to set interval between ADC single conversions that are then sent as stream messages to ho..." alt="" coords="566,102,707,142"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="763,56,674,103,672,99,761,51"/>
+<area shape="rect" id="Node000006" href="$arduino__uno__register__pointers_8c_source.html" title=" " alt="" coords="731,102,894,142"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="815,62,815,101,810,101,810,62"/>
+<area shape="rect" id="Node000007" href="$arduino__uno__test__device_8c_source.html" title=" " alt="" coords="918,102,1061,142"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="864,51,954,99,951,103,862,56"/>
+<area shape="rect" id="Node000008" href="$neorv32__asc__gpio_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1084,102,1234,142"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="907,48,1073,91,1097,98,1095,103,1071,97,906,53"/>
+<area shape="rect" id="Node000009" href="$neorv32__asc__pulse__counter_8c.html" title="Test that ASC can communicate with GPIOs." alt="" coords="1258,102,1407,142"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="912,36,1070,58,1246,91,1273,98,1271,103,1245,97,1069,63,911,41"/>
+<area shape="rect" id="Node000010" href="$test__ascii__serial__com__register__pointers_8c_source.html" title=" " alt="" coords="1431,94,1572,150"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="912,29,1145,49,1283,67,1419,91,1431,94,1430,99,1418,97,1282,72,1144,54,912,35"/>
 </map>

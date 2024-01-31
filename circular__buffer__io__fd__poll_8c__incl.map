@@ -1,13 +1,26 @@
 <map id="circular_buffer_io_fd_poll.c" name="circular_buffer_io_fd_poll.c">
-<area shape="rect" id="node1" title=" " alt="" coords="403,5,523,45"/>
-<area shape="rect" id="node2" href="$circular__buffer__io__fd__poll_8h.html" title="Circular buffer IO with file descriptor polling." alt="" coords="255,93,375,133"/>
-<area shape="rect" id="node8" title=" " alt="" coords="387,255,447,280"/>
-<area shape="rect" id="node9" title=" " alt="" coords="373,181,425,207"/>
-<area shape="rect" id="node10" title=" " alt="" coords="500,101,561,126"/>
-<area shape="rect" id="node11" title=" " alt="" coords="585,101,652,126"/>
-<area shape="rect" id="node3" href="$circular__buffer_8h.html" title=" " alt="" coords="183,181,297,207"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,255,83,280"/>
-<area shape="rect" id="node5" title=" " alt="" coords="107,255,181,280"/>
-<area shape="rect" id="node6" title=" " alt="" coords="206,255,274,280"/>
-<area shape="rect" id="node7" title=" " alt="" coords="299,255,363,280"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="396,5,515,46"/>
+<area shape="rect" id="Node000002" href="$circular__buffer__io__fd__poll_8h.html" title="Circular buffer IO with file descriptor polling." alt="" coords="248,94,367,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,49,355,88,353,84,421,44"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="382,256,441,282"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="457,47,448,118,433,209,423,242,418,241,428,208,443,118,451,46"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="367,183,419,208"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="451,47,405,169,400,167,446,45"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="493,102,554,127"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="473,45,507,88,503,91,469,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="578,102,645,127"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="492,44,578,91,575,96,490,49"/>
+<area shape="rect" id="Node000003" href="$circular__buffer_8h.html" title=" " alt="" coords="181,183,293,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,137,260,173,256,169,288,133"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="318,134,335,169,358,207,390,244,386,247,353,210,330,171,313,136"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="330,133,370,170,367,174,327,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,256,82,282"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,211,92,253,90,248,203,206"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="106,256,179,282"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="222,211,172,249,169,245,219,207"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="203,256,271,282"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="240,209,240,241,234,241,234,209"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="295,256,358,282"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="254,207,301,244,298,249,250,211"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="267,206,369,248,367,252,265,211"/>
 </map>

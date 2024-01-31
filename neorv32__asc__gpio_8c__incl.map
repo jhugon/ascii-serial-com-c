@@ -1,18 +1,47 @@
 <map id="riscv/neorv32/neorv32_asc_gpio.c" name="riscv/neorv32/neorv32_asc_gpio.c">
-<area shape="rect" id="node1" title="Test that ASC can communicate with GPIOs." alt="" coords="229,5,380,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="198,328,273,353"/>
-<area shape="rect" id="node3" title=" " alt="" coords="75,101,153,126"/>
-<area shape="rect" id="node4" href="$asc__exception_8h.html" title=" " alt="" coords="25,255,139,280"/>
-<area shape="rect" id="node7" href="$ascii__serial__com_8h.html" title=" " alt="" coords="303,181,432,207"/>
-<area shape="rect" id="node11" href="$circular__buffer_8h.html" title=" " alt="" coords="412,255,525,280"/>
-<area shape="rect" id="node13" href="$ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="280,101,455,126"/>
-<area shape="rect" id="node14" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="479,93,648,133"/>
-<area shape="rect" id="node15" href="$millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="550,255,662,280"/>
-<area shape="rect" id="node5" href="$CException_8h_source.html" title=" " alt="" coords="5,328,159,353"/>
-<area shape="rect" id="node6" title=" " alt="" coords="47,401,117,427"/>
-<area shape="rect" id="node8" title=" " alt="" coords="390,328,467,353"/>
-<area shape="rect" id="node9" title=" " alt="" coords="297,328,365,353"/>
-<area shape="rect" id="node10" title=" " alt="" coords="773,328,837,353"/>
-<area shape="rect" id="node12" title=" " alt="" coords="492,328,552,353"/>
-<area shape="rect" id="node16" title=" " alt="" coords="576,328,748,353"/>
+<area shape="rect" id="Node000001" title="Test that ASC can communicate with GPIOs." alt="" coords="227,5,376,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="197,330,270,356"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,48,270,70,257,95,242,155,234,216,234,315,229,315,229,215,237,154,252,93,266,67,282,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="75,102,152,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,49,155,97,152,92,258,44"/>
+<area shape="rect" id="Node000004" href="$asc__exception_8h.html" title=" " alt="" coords="24,256,139,282"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="227,41,129,63,89,78,65,96,55,112,50,131,50,170,59,209,71,241,66,243,54,210,45,171,45,130,51,110,61,92,87,73,128,58,226,35"/>
+<area shape="rect" id="Node000007" href="$ascii__serial__com_8h.html" title=" " alt="" coords="300,183,428,208"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="288,48,276,67,266,89,262,112,268,133,288,157,314,174,312,178,285,161,263,136,257,112,261,87,271,64,283,45"/>
+<area shape="rect" id="Node000011" href="$circular__buffer_8h.html" title=" " alt="" coords="408,256,520,282"/>
+<area shape="poly" id="edge22_Node000001_Node000011" title=" " alt="" coords="377,28,455,34,538,46,611,65,638,77,657,92,669,117,668,142,654,165,632,187,573,225,513,253,510,248,570,220,628,183,650,162,662,140,664,118,653,96,635,82,609,70,537,51,454,40,377,33"/>
+<area shape="rect" id="Node000013" href="$ascii__serial__com__device_8h.html" title="ASCII Serial Com Device." alt="" coords="278,102,451,127"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="318,45,349,88,345,91,314,48"/>
+<area shape="rect" id="Node000014" href="$ascii__serial__com__register__pointers_8h.html" title="ASCII Serial Com Register Pointers." alt="" coords="475,94,643,135"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="361,44,487,86,485,91,359,49"/>
+<area shape="rect" id="Node000015" href="$millisec__timer_8h.html" title="Portable millisecond timer." alt="" coords="545,256,656,282"/>
+<area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="377,27,461,32,551,44,630,63,660,76,681,92,692,112,695,132,691,154,682,175,656,215,626,247,623,244,651,212,677,173,686,152,689,132,687,113,677,96,658,81,629,68,550,49,460,38,377,32"/>
+<area shape="rect" id="Node000005" href="$CException_8h_source.html" title=" " alt="" coords="5,330,158,356"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="84,282,84,314,79,314,79,282"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="46,404,117,429"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="84,356,84,388,79,388,79,356"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="355,210,256,320,252,317,351,207"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="317,211,145,255,144,249,316,206"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="386,330,462,356"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="371,208,399,281,414,315,409,317,394,283,366,209"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="295,330,362,356"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="364,209,337,316,332,314,359,208"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="766,330,829,356"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="429,199,543,217,607,233,669,254,726,284,773,318,770,322,724,289,667,259,606,238,542,222,428,205"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="383,207,436,245,433,249,380,211"/>
+<area shape="poly" id="edge14_Node000011_Node000002" title=" " alt="" coords="426,285,286,328,284,323,424,280"/>
+<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="460,284,441,318,436,315,455,281"/>
+<area shape="poly" id="edge15_Node000011_Node000009" title=" " alt="" coords="442,285,366,325,363,320,440,280"/>
+<area shape="poly" id="edge16_Node000011_Node000010" title=" " alt="" coords="521,279,751,327,750,332,520,284"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="487,330,546,356"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="475,281,501,316,496,319,471,284"/>
+<area shape="poly" id="edge19_Node000013_Node000007" title=" " alt="" coords="367,128,367,167,362,167,362,128"/>
+<area shape="poly" id="edge21_Node000014_Node000007" title=" " alt="" coords="511,138,409,179,407,174,509,133"/>
+<area shape="poly" id="edge25_Node000015_Node000002" title=" " alt="" coords="544,283,286,332,285,327,543,278"/>
+<area shape="poly" id="edge24_Node000015_Node000008" title=" " alt="" coords="571,285,469,326,467,321,569,280"/>
+<area shape="poly" id="edge26_Node000015_Node000009" title=" " alt="" coords="555,285,378,331,376,326,553,280"/>
+<area shape="poly" id="edge27_Node000015_Node000010" title=" " alt="" coords="635,280,752,322,750,327,633,285"/>
+<area shape="poly" id="edge28_Node000015_Node000012" title=" " alt="" coords="588,285,544,322,540,318,584,281"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="571,330,742,356"/>
+<area shape="poly" id="edge29_Node000015_Node000016" title=" " alt="" coords="612,281,639,316,635,319,607,284"/>
 </map>

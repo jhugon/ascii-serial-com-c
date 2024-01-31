@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['n_5fregs_0',['n_regs',['../structascii__serial__com__register__block__struct.html#acec6247586e40d90173e88ccf6e29806',1,'ascii_serial_com_register_block_struct::n_regs()'],['../structascii__serial__com__register__pointers__struct.html#af03a1920b9c59e146f66bbc1d65fa4fa',1,'ascii_serial_com_register_pointers_struct::n_regs()']]],
-  ['neorv32_5fasc_5fgpio_2ec_1',['neorv32_asc_gpio.c',['../neorv32__asc__gpio_8c.html',1,'']]],
-  ['neorv32_5fasc_5fpulse_5fcounter_2ec_2',['neorv32_asc_pulse_counter.c',['../neorv32__asc__pulse__counter_8c.html',1,'']]],
-  ['neorv32_5fblink_5fled_2ec_3',['neorv32_blink_led.c',['../neorv32__blink__led_8c.html',1,'']]],
-  ['neorv32_5fchar_5floopback_2ec_4',['neorv32_char_loopback.c',['../neorv32__char__loopback_8c.html',1,'']]]
+  ['ignorecrcmismatch_0',['ignoreCRCMismatch',['../struct____ascii__serial__com__struct.html#ae7b82b98a17393cb9618ff658d711d02',1,'__ascii_serial_com_struct']]],
+  ['in_5fbuf_1',['in_buf',['../struct____ascii__serial__com__struct.html#a273f670305a68794f55d216bc8b843f8',1,'__ascii_serial_com_struct']]],
+  ['into_20fpga_20design_20rom_2',['Write FW into FPGA design ROM',['..//github/workspace/riscv/neorv32/README.md#autotoc_md35',1,'']]],
+  ['is_5fuart_5fready_5fto_5ftx_3',['is_uart_ready_to_tx',['../asc__helpers_8h.html#a93c3548fc9181238f689d8fa608684b1',1,'asc_helpers.h']]],
+  ['is_5fuart_5frx_5fdata_5fwaiting_4',['is_uart_rx_data_waiting',['../asc__helpers_8h.html#a74a558389287b4e28a32f5b4439b932b',1,'asc_helpers.h']]],
+  ['istart_5',['iStart',['../structcircular__buffer__uint8__struct.html#aae7cacdca39c17d4005ed61ad2780142',1,'circular_buffer_uint8_struct']]],
+  ['istop_6',['iStop',['../structcircular__buffer__uint8__struct.html#a43f56d798cdf6a05e965e63db5069843',1,'circular_buffer_uint8_struct']]]
 ];
